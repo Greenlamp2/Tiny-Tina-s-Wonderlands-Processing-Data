@@ -420,6 +420,16 @@ for (cname, cobj) in [
     ("ElderWyvern", '/Game/Gear/Rings/_Shared/_Unique/ElderWyvern/Balance/Balance_Ring_ElderWyvern'),
     ("Sharklescent", '/Game/Gear/Rings/_Shared/_Unique/Sharklescent/Balance/Balance_Ring_Sharklescent'),
     ("InsightRing", '/Game/Gear/Rings/_Shared/_Unique/InsightRing/Balance/Balance_Rings_InsightRing'),
+    ("DriftwoodRing", '/Game/Gear/Rings/_Shared/_Unique/DriftwoodRing/Balance_Rings_DriftwoodRing'),
+    ("Cond_LowHealth", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowHealth/Balance_R_LowHealth'),
+    ("Cond_Dungeon", '/Game/Gear/Rings/_Shared/_Unique/Cond_Dungeon/Balance_R_Dungeon'),
+    ("Cond_Boss", '/Game/Gear/Rings/_Shared/_Unique/Cond_Boss/Balance_R_Boss'),
+    ("Cond_FullShield", '/Game/Gear/Rings/_Shared/_Unique/Cond_FullShield/Balance_R_FullShield'),
+    ("Cond_Healthy", '/Game/Gear/Rings/_Shared/_Unique/Cond_Healthy/Balance_R_Healthy'),
+    ("Cond_LowAmmo", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowAmmo/Balance_R_LowAmmo'),
+    ("Cond_LowShield", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowShield/Balance_R_LowShield'),
+    ("Cond_SkillCooldown", '/Game/Gear/Rings/_Shared/_Unique/Cond_SkillCooldown/Balance_R_SkillCooldown'),
+    ("Cond_SkillReady", '/Game/Gear/Rings/_Shared/_Unique/Cond_SkillReady/Balance_R_SkillReady'),
 ]:
     ring_balances.append((cname, 'Ring', 'Named Ring', cobj))
 ring_balances.sort()

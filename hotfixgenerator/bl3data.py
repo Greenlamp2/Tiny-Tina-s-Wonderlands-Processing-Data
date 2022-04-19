@@ -110,6 +110,7 @@ class BL3Data(object):
         'RARITY',
         'MAJOR',
         'MINOR',
+        'LEGENDARY AUG',
     ]
     cats_spells = [
         'Body',
@@ -611,8 +612,6 @@ class BL3Data(object):
         elif any([v in balance_name for v in ["/Ring", "/Rings", "\\Ring", "\\Rings"]]):
             return self.cats_rings[cat_idx]
         elif any([v in balance_name for v in ["/SpellMod", "/SpellMods", "\\SpellMod", "\\SpellMods"]]):
-            if cat_idx == 3:
-                print('')
             return self.cats_spells[cat_idx]
         elif 'Weapons' not in balance_name:
             print("ok")
