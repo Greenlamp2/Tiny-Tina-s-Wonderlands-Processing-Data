@@ -1,0 +1,3 @@
+appdirs
+flatten_json
+py2exe
