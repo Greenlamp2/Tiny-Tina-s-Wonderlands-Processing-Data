@@ -334,6 +334,57 @@ for (cname, cobj) in [
     amu_balances.append((cname, 'Amulet', 'Named Amulet', cobj))
 amu_balances.sort()
 
+#Melee
+melee_balances = []
+for glob_pattern, re_pat, extra_label in [
+        ('\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_*_*',
+            r'^\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
+            None),
+        ]:
+    pat = re.compile(re_pat)
+    for obj_name in data.glob(glob_pattern):
+        temp = pat.match(obj_name)
+        match = pat.match(obj_name).groupdict()
+        rarity_lower = match['rarity'].lower()
+        if rarity_lower == '01_common':
+            rarity = '01/Common'
+        elif rarity_lower == '02_uncommon':
+            rarity = '02/Uncommon'
+        elif rarity_lower == '03_rare':
+            rarity = '03/Rare'
+        elif rarity_lower == '04_veryrare':
+            rarity = '04/Very Rare'
+        elif rarity_lower == '05_legendary':
+            rarity = '05/Legendary'
+        else:
+            raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
+        melee_balances.append((
+            'Melee',
+            match['type'],
+            rarity,
+            obj_name,
+            ))
+
+for (cname, cobj) in [
+    ("SmithCharade", '/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_MissionWeapon'),
+    ("IntroMission", '/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission'),
+    ("IntroMission", '/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission_SkellySword'),
+    ("PaladinSword", '/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/PaladinSword/Balance/Balance_M_Sword2H_PaladinSword'),
+    ("BodySpray", '/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/BodySpray/Balance/Balance_M_Axe_BodySpray'),
+    ("Tidesorrow", '/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow/Balance/Balance_M_Sword_Tidesorrow'),
+    ("SmithCharade", '/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_Reward'),
+    ("Minstrel", '/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Minstrel/Balance/Balance_M_Blunt_Minstrel'),
+    ("GoblinsBane", '/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/GoblinsBane/Balance/Balance_M_Sword_GoblinsBane'),
+    ("Tidesorrow_leg", '/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow_leg/Balance/Balance_M_Sword_Tidesorrow_Leg'),
+]:
+    melee_balances.append((
+        cname,
+        '',
+        'Named Melee Weapon',
+        cobj,
+        ))
+melee_balances.sort()
+
 
 # Loop through
 part_cache = {}
@@ -368,6 +419,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             'MINOR STAT',
             'RARITY',
             ]),
+        ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
         ]:
 
     print('Processing {}'.format(filename))

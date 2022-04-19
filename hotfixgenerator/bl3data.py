@@ -70,33 +70,42 @@ class BL3Data(object):
 
     # Hardcoded part-category values
     cats_shields = [
-            'BODY',
-            'RARITY',
-            'LEGENDARY AUG',
-            'AUGMENT',
-            'ELEMENT',
-            'MATERIAL',
-            ]
+        'BODY',
+        'RARITY',
+        'LEGENDARY AUG',
+        'AUGMENT',
+        'ELEMENT',
+        'MATERIAL',
+        ]
     cats_pauldrons = [
-            'BODY',
-            'CLASS',
-            'BODY SECONDARY',
-            'CLASS SECONDARY',
-            'CLASS STAT',
-            'CLASS STAT SECONDARY',
-            'LEGENDARY AUG',
-            'PASSIVE SKILL COMBO',
-            'PASSIVE SKILL PARTS',
-            'PLAYER STAT',
-            'RARITY',
-            ]
+        'BODY',
+        'CLASS',
+        'BODY SECONDARY',
+        'CLASS SECONDARY',
+        'CLASS STAT',
+        'CLASS STAT SECONDARY',
+        'LEGENDARY AUG',
+        'PASSIVE SKILL COMBO',
+        'PASSIVE SKILL PARTS',
+        'PLAYER STAT',
+        'RARITY',
+        ]
     cats_amulets = [
-            'BODY',
-            'CLASS STAT',
-            'ELEMENT',
-            'MINOR STAT',
-            'RARITY',
-            ]
+        'BODY',
+        'CLASS STAT',
+        'ELEMENT',
+        'MINOR STAT',
+        'RARITY',
+        ]
+    cats_melee = [
+        'BODY',
+        'ELEMENT',
+        'BLADE',
+        'HILT',
+        'HILT MOD',
+        'RARITY',
+        'MATERIAL',
+    ]
 
     def __init__(self):
         """
@@ -582,6 +591,8 @@ class BL3Data(object):
             return self.cats_pauldrons[cat_idx]
         elif any([v in balance_name for v in ["/Amulet", "/Amulets", "\\Amulet", "\\Amulets"]]):
             return self.cats_amulets[cat_idx]
+        elif any([v in balance_name for v in ["/Melee", "\\Melee"]]):
+            return self.cats_melee[cat_idx]
         elif 'Weapons' not in balance_name:
             print("ok")
 

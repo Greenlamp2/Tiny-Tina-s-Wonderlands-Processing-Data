@@ -1,0 +1,447 @@
+Name,Type,Rarity,Balance,Category,Min Parts,Max Parts,Weight,Part,Dependencies,Excluders
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,BODY,1,1,1,Part_M_Axe_Blade_BodySpray,,
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,BLADE,3,3,1,Part_M_Axe_Blade_02_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,BLADE,3,3,1,Part_M_Axe_Blade_01_B,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,HILT,1,1,1,Part_M_Axe_Hilt_02,,
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,HILT MOD,1,1,1,Part_M_Axe_HiltMod_05_Mission,,
+BodySpray,,Named Melee Weapon,Balance_M_Axe_BodySpray,RARITY,1,1,1,Part_M_Axe_03_Rare,,
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,BODY,1,1,1,Part_M_Sword_Blade_GoblinsBane,,
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,ELEMENT,1,1,1,Part_M_Sword_Ele_Fire,,
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,BLADE,1,1,1,Part_M_Sword_Blade_01_B,,"Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,HILT MOD,1,1,1,Part_M_Sword_HiltMod_07_Mission,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07_Override, Part_M_Sword_HiltMod_08"
+GoblinsBane,,Named Melee Weapon,Balance_M_Sword_GoblinsBane,RARITY,1,1,1,Part_M_Sword_03_Rare,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission,BODY,1,1,1,Part_M_Sword_Blade_01,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission,HILT MOD,1,1,1,Part_M_Sword_HiltMod_C_01,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission,RARITY,1,1,1,Part_M_Sword_01_Common,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission_SkellySword,BODY,1,1,1,Part_M_Sword_Intro_SkellySword,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission_SkellySword,BLADE,1,1,1,Part_M_Sword_Blade_02_B,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission_SkellySword,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission_SkellySword,HILT MOD,1,1,1,Part_M_Sword_HiltMod_C_08,,
+IntroMission,,Named Melee Weapon,Balance_M_Sword_IntroMission_SkellySword,RARITY,1,1,1,Part_M_Sword_02_UnCommon,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,BODY,1,1,1,Part_M_Axe_Blade_01,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,BODY,1,1,1,Part_M_Axe_Blade_02,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,BODY,1,1,1,Part_M_Axe_Blade_03,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,ELEMENT,1,1,1,Part_Axe_Ele_None,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT,1,1,1,Part_M_Axe_Hilt_02,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT,1,1,1,Part_M_Axe_Hilt_03,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT MOD,1,1,1,Part_M_Axe_HiltMod_C_01,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT MOD,1,1,1,Part_M_Axe_HiltMod_C_02,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,HILT MOD,1,1,1,Part_M_Axe_HiltMod_C_03,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,RARITY,1,1,1,Part_M_Axe_01_Common,,
+Melee,Axe,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_01_Common,MATERIAL,1,1,1,Part_Axe_Material_01_Common,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BODY,1,1,1,Part_M_Axe_Blade_01,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BODY,1,1,1,Part_M_Axe_Blade_02,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BODY,1,1,1,Part_M_Axe_Blade_03,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Axe_Ele_Cryo,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Axe_Ele_Shock,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Axe_Ele_Poison,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Axe_Ele_Fire,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Axe_Ele_Dark,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,ELEMENT,1,1,3,Part_Axe_Ele_None,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_01_A,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_01_B,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_02_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_02_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_03_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,BLADE,0,1,1,Part_M_Axe_Blade_03_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT,1,1,1,Part_M_Axe_Hilt_02,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT,1,1,1,Part_M_Axe_Hilt_03,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_01,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_02,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_03,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_04,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_05,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_06,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_07,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,HILT MOD,1,1,1,Part_M_Axe_HiltMod_08,"Part_M_Axe_Ele_Cryo, Part_M_Axe_Ele_Dark, Part_M_Axe_Ele_Fire, Part_M_Axe_Ele_Poison, Part_M_Axe_Ele_Shock",
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,RARITY,1,1,1,Part_M_Axe_02_Uncommon,,
+Melee,Axe,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_02_Uncommon,MATERIAL,1,1,1,Part_Axe_Material_02_Uncommon,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BODY,1,1,1,Part_M_Axe_Blade_01,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BODY,1,1,1,Part_M_Axe_Blade_02,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BODY,1,1,1,Part_M_Axe_Blade_03,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,0.15,Part_M_Axe_Ele_Cryo,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,0.15,Part_M_Axe_Ele_Shock,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,0.15,Part_M_Axe_Ele_Poison,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,0.15,Part_M_Axe_Ele_Fire,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,0.15,Part_M_Axe_Ele_Dark,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,ELEMENT,1,1,2.5,Part_Axe_Ele_None,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_01_A,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_01_B,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_02_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_02_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_03_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,BLADE,1,1,1,Part_M_Axe_Blade_03_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT,1,1,1,Part_M_Axe_Hilt_02,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT,1,1,1,Part_M_Axe_Hilt_03,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_01,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_02,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_03,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_04,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_05,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_06,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_07,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_08,"Part_M_Axe_Ele_Cryo, Part_M_Axe_Ele_Dark, Part_M_Axe_Ele_Fire, Part_M_Axe_Ele_Poison, Part_M_Axe_Ele_Shock",
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,RARITY,1,1,1,Part_M_Axe_03_Rare,,
+Melee,Axe,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_03_Rare,MATERIAL,1,1,1,Part_Axe_Material_03_Rare,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BODY,1,1,1,Part_M_Axe_Blade_01,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BODY,1,1,1,Part_M_Axe_Blade_02,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BODY,1,1,1,Part_M_Axe_Blade_03,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Axe_Ele_Cryo,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Axe_Ele_Shock,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Axe_Ele_Poison,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Axe_Ele_Fire,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Axe_Ele_Dark,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,ELEMENT,1,1,1.8,Part_Axe_Ele_None,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_01_A,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_01_B,,"Part_M_Axe_Blade_02, Part_M_Axe_Blade_03"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_02_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_02_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_03"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_03_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,BLADE,1,2,1,Part_M_Axe_Blade_03_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT,1,1,1,Part_M_Axe_Hilt_02,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT,1,1,1,Part_M_Axe_Hilt_03,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_01,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_02,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_03,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_04,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_05,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_06,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_07,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,HILT MOD,1,1,1,Part_M_Axe_HiltMod_08,"Part_M_Axe_Ele_Cryo, Part_M_Axe_Ele_Dark, Part_M_Axe_Ele_Fire, Part_M_Axe_Ele_Poison, Part_M_Axe_Ele_Shock",
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,RARITY,1,1,1,Part_M_Axe_04_VeryRare,,
+Melee,Axe,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Axe_04_VeryRare,MATERIAL,1,1,1,Part_Axe_Material_04_VeryRare,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,BODY,1,1,1,Part_M_Blunt_Blade_01,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,BODY,1,1,1,Part_M_Blunt_Blade_02,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,BODY,1,1,1,Part_M_Blunt_Blade_03,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,ELEMENT,1,1,1,Part_M_Blunt_Ele_None,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT,1,1,1,Part_M_Blunt_Hilt_01,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT,1,1,1,Part_M_Blunt_Hilt_02,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT,1,1,1,Part_M_Blunt_Hilt_03,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_C_01,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_C_02,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_C_03,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,RARITY,1,1,1,Part_M_Blunt_01_Common,,
+Melee,Blunt,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_01_Common,MATERIAL,1,1,1,Part_Blunt_Material_01_Common,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BODY,1,1,1,Part_M_Blunt_Blade_01,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BODY,1,1,1,Part_M_Blunt_Blade_02,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BODY,1,1,1,Part_M_Blunt_Blade_03,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Blunt_Ele_Cryo,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Blunt_Ele_Shock,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Blunt_Ele_Poison,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Blunt_Ele_Fire,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Blunt_Ele_Dark,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,ELEMENT,1,1,3,Part_M_Blunt_Ele_None,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_01_A,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_01_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_02_B,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_02_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_03_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,BLADE,0,1,1,Part_M_Blunt_Blade_03_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT,1,1,1,Part_M_Blunt_Hilt_01,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT,1,1,1,Part_M_Blunt_Hilt_02,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT,1,1,1,Part_M_Blunt_Hilt_03,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_01,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_02,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_03,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_04,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_05,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_06,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_07,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_08,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,RARITY,1,1,1,Part_M_Blunt_02_Uncommon,,
+Melee,Blunt,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_02_Uncommon,MATERIAL,1,1,1,Part_Blunt_Material_02_Uncommon,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BODY,1,1,1,Part_M_Blunt_Blade_01,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BODY,1,1,1,Part_M_Blunt_Blade_02,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BODY,1,1,1,Part_M_Blunt_Blade_03,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,0.15,Part_M_Blunt_Ele_Cryo,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,0.15,Part_M_Blunt_Ele_Shock,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,0.15,Part_M_Blunt_Ele_Poison,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,0.15,Part_M_Blunt_Ele_Fire,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,0.15,Part_M_Blunt_Ele_Dark,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,ELEMENT,1,1,2.5,Part_M_Blunt_Ele_None,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_01_A,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_01_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_02_B,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_02_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_03_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,BLADE,1,1,1,Part_M_Blunt_Blade_03_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT,1,1,1,Part_M_Blunt_Hilt_01,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT,1,1,1,Part_M_Blunt_Hilt_02,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT,1,1,1,Part_M_Blunt_Hilt_03,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_01,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_02,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_03,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_04,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_05,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_06,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_07,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_08,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,RARITY,1,1,1,Part_M_Blunt_03_Rare,,
+Melee,Blunt,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_03_Rare,MATERIAL,1,1,1,Part_Blunt_Material_03_Rare,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BODY,1,1,1,Part_M_Blunt_Blade_01,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BODY,1,1,1,Part_M_Blunt_Blade_02,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BODY,1,1,1,Part_M_Blunt_Blade_03,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Blunt_Ele_Cryo,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Blunt_Ele_Dark,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Blunt_Ele_Fire,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Blunt_Ele_Poison,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Blunt_Ele_Shock,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,ELEMENT,1,1,1.8,Part_M_Blunt_Ele_None,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_01_A,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_01_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_02_B,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_02_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_03"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_03_A,,"Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,BLADE,1,2,1,Part_M_Blunt_Blade_03_B,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_01, Part_M_Blunt_Blade_02"
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT,1,1,1,Part_M_Blunt_Hilt_01,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT,1,1,1,Part_M_Blunt_Hilt_02,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT,1,1,1,Part_M_Blunt_Hilt_03,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_01,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_02,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_03,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_04,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_05,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_06,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_07,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_08,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,RARITY,1,1,1,Part_M_Blunt_04_VeryRare,,
+Melee,Blunt,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Blunt_04_VeryRare,MATERIAL,1,1,1,Part_Blunt_Material_04_VeryRare,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,BODY,1,1,1,Part_M_Sword_Blade_01,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,BODY,1,1,1,Part_M_Sword_Blade_02,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,BODY,1,1,1,Part_M_Sword_Blade_03,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,ELEMENT,1,1,1,Part_M_Sword_Ele_None,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT,1,1,1,Part_M_Sword_Hilt_02,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT,1,1,1,Part_M_Sword_Hilt_03,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock",
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT MOD,1,1,1,Part_M_Sword_HiltMod_C_01,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT MOD,1,1,1,Part_M_Sword_HiltMod_C_02,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,HILT MOD,1,1,1,Part_M_Sword_HiltMod_C_08,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,RARITY,1,1,1,Part_M_Sword_01_Common,,
+Melee,Sword,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_01_Common,MATERIAL,1,1,1,Part_Sword_Material_01_Common,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BODY,1,1,1,Part_M_Sword_Blade_01,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BODY,1,1,1,Part_M_Sword_Blade_02,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BODY,1,1,1,Part_M_Sword_Blade_03,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword_Ele_Cryo,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword_Ele_Dark,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword_Ele_Fire,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword_Ele_Poison,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword_Ele_Shock,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,ELEMENT,1,1,3,Part_M_Sword_Ele_None,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_01_A,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_01_B,,"Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_02_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_02_B,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_03_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,BLADE,0,1,1,Part_M_Sword_Blade_03_B,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT,1,1,1,Part_M_Sword_Hilt_02,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT,1,1,1,Part_M_Sword_Hilt_03,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock",
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_01,,"Part_M_Sword_HiltMod_01_Override, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_02,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02_Override, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_03,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03_Override, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_04,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04_Override, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_05,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05_Override, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_06,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06_Override, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_07,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07_Override, Part_M_Sword_HiltMod_08"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword_HiltMod_08,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08_Override"
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,RARITY,1,1,1,Part_M_Sword_02_UnCommon,,
+Melee,Sword,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_02_Uncommon,MATERIAL,1,1,1,Part_Sword_Material_02_UnCommon,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BODY,1,1,1,Part_M_Sword_Blade_01,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BODY,1,1,1,Part_M_Sword_Blade_02,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BODY,1,1,1,Part_M_Sword_Blade_03,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,0.15,Part_M_Sword_Ele_Cryo,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,0.15,Part_M_Sword_Ele_Shock,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,0.15,Part_M_Sword_Ele_Poison,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,0.15,Part_M_Sword_Ele_Fire,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,0.15,Part_M_Sword_Ele_Dark,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,ELEMENT,0,1,2.5,Part_M_Sword_Ele_None,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_01_A,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_01_B,,"Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_02_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_02_B,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_03_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,BLADE,1,1,1,Part_M_Sword_Blade_03_B,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT,1,1,1,Part_M_Sword_Hilt_02,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT,1,1,1,Part_M_Sword_Hilt_03,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock",
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_01,,"Part_M_Sword_HiltMod_01_Override, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_02,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02_Override, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_03,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03_Override, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_04,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04_Override, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_05,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05_Override, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_06,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06_Override, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_07,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07_Override, Part_M_Sword_HiltMod_08"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_08,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08_Override"
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,RARITY,1,1,1,Part_M_Sword_03_Rare,,
+Melee,Sword,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_03_Rare,MATERIAL,1,1,1,Part_Sword_Material_03_Rare,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BODY,1,1,1,Part_M_Sword_Blade_01,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BODY,1,1,1,Part_M_Sword_Blade_02,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BODY,1,1,1,Part_M_Sword_Blade_03,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword_Ele_Cryo,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword_Ele_Shock,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword_Ele_Poison,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword_Ele_Fire,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword_Ele_Dark,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,ELEMENT,1,1,1.8,Part_M_Sword_Ele_None,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_01_A,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_01_B,,"Part_M_Sword_Blade_02, Part_M_Sword_Blade_03"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_02_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_02_B,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_Blade_01, Part_M_Sword_Blade_03"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_03_A,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,BLADE,1,2,1,Part_M_Sword_Blade_03_B,,"Part_M_Sword_Blade_01, Part_M_Sword_Blade_02"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT,1,1,1,Part_M_Sword_Hilt_01,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT,1,1,1,Part_M_Sword_Hilt_02,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT,1,1,1,Part_M_Sword_Hilt_03,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock",
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_01,,"Part_M_Sword_HiltMod_01_Override, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_02,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02_Override, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_03,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03_Override, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_04,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04_Override, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_05,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05_Override, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_06,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06_Override, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_07,,"Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07_Override, Part_M_Sword_HiltMod_08"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword_HiltMod_08,"Part_M_Sword_Ele_Cryo, Part_M_Sword_Ele_Dark, Part_M_Sword_Ele_Fire, Part_M_Sword_Ele_Poison, Part_M_Sword_Ele_Shock","Part_M_Sword_HiltMod_01, Part_M_Sword_HiltMod_02, Part_M_Sword_HiltMod_03, Part_M_Sword_HiltMod_04, Part_M_Sword_HiltMod_05, Part_M_Sword_HiltMod_06, Part_M_Sword_HiltMod_07, Part_M_Sword_HiltMod_08_Override"
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,RARITY,1,1,1,Part_M_Sword_04_VeryRare,,
+Melee,Sword,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword_04_VeryRare,MATERIAL,1,1,1,Part_Sword_Material_04_VeryRare,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,BODY,1,1,1,Part_M_Sword2H_Blade_01,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,BODY,1,1,1,Part_M_Sword2H_Blade_02,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,BODY,1,1,1,Part_M_Sword2H_Blade_03,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,ELEMENT,1,1,1,Part_M_Sword2H_Ele_None,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT,1,1,1,Part_M_Sword2H_Hilt_02,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT,1,1,1,Part_M_Sword2H_Hilt_03,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_C_01,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_C_02,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_C_03,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,RARITY,1,1,1,Part_M_Sword2H_01_Common,,
+Melee,Sword2H,01/Common,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_01_Common,MATERIAL,1,1,1,Part_2HSword_Material_01_Common,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BODY,1,1,1,Part_M_Sword2H_Blade_01,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BODY,1,1,1,Part_M_Sword2H_Blade_02,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BODY,1,1,1,Part_M_Sword2H_Blade_03,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword2H_Ele_Cryo,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword2H_Ele_Shock,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword2H_Ele_Poison,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword2H_Ele_Fire,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,0.1,Part_M_Sword2H_Ele_Dark,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,ELEMENT,1,1,3,Part_M_Sword2H_Ele_None,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_01_A,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_01_B,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_02_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_02_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_03_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,BLADE,0,1,1,Part_M_Sword2H_Blade_03_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT,1,1,1,Part_M_Sword2H_Hilt_02,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT,1,1,1,Part_M_Sword2H_Hilt_03,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_01,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_02,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_03,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_04,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_05,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_06,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_07,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_08,"Part_M_Sword2H_Ele_Cryo, Part_M_Sword2H_Ele_Dark, Part_M_Sword2H_Ele_Fire, Part_M_Sword2H_Ele_Poison, Part_M_Sword2H_Ele_Shock",
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,RARITY,1,1,1,Part_M_Sword2H_02_Uncommon,,
+Melee,Sword2H,02/Uncommon,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_02_Uncommon,MATERIAL,1,1,1,Part_2HSword_Material_02_UnCommon,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BODY,1,1,1,Part_M_Sword2H_Blade_01,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BODY,1,1,1,Part_M_Sword2H_Blade_02,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BODY,1,1,1,Part_M_Sword2H_Blade_03,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,0.15,Part_M_Sword2H_Ele_Cryo,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,0.15,Part_M_Sword2H_Ele_Shock,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,0.15,Part_M_Sword2H_Ele_Poison,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,0.15,Part_M_Sword2H_Ele_Fire,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,0.15,Part_M_Sword2H_Ele_Dark,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,ELEMENT,1,1,2.5,Part_M_Sword2H_Ele_None,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_01_A,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_01_B,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_02_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_02_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_03_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,BLADE,1,1,1,Part_M_Sword2H_Blade_03_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT,1,1,1,Part_M_Sword2H_Hilt_02,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT,1,1,1,Part_M_Sword2H_Hilt_03,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_01,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_02,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_03,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_04,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_05,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_06,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_07,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_08,"Part_M_Sword2H_Ele_Cryo, Part_M_Sword2H_Ele_Dark, Part_M_Sword2H_Ele_Fire, Part_M_Sword2H_Ele_Poison, Part_M_Sword2H_Ele_Shock",
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,RARITY,1,1,1,Part_M_Sword2H_03_Rare,,
+Melee,Sword2H,03/Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_03_Rare,MATERIAL,1,1,1,Part_2HSword_Material_03_Rare,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BODY,1,1,1,Part_M_Sword2H_Blade_01,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BODY,1,1,1,Part_M_Sword2H_Blade_02,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BODY,1,1,1,Part_M_Sword2H_Blade_03,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword2H_Ele_Cryo,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword2H_Ele_Shock,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword2H_Ele_Poison,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword2H_Ele_Fire,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,0.25,Part_M_Sword2H_Ele_Dark,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,ELEMENT,1,1,1.8,Part_M_Sword2H_Ele_None,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_01_A,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_01_B,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_02_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_02_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_03"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_03_A,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,BLADE,1,2,1,Part_M_Sword2H_Blade_03_B,,"Part_M_Sword2H_Blade_01, Part_M_Sword2H_Blade_02"
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT,1,1,1,Part_M_Sword2H_Hilt_02,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT,1,1,1,Part_M_Sword2H_Hilt_03,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_01,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_02,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_03,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_04,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_05,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_06,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_07,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_08,"Part_M_Sword2H_Ele_Cryo, Part_M_Sword2H_Ele_Dark, Part_M_Sword2H_Ele_Fire, Part_M_Sword2H_Ele_Poison, Part_M_Sword2H_Ele_Shock",
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,RARITY,1,1,1,Part_M_Sword2H_04_VeryRare,,
+Melee,Sword2H,04/Very Rare,\Game\Gear\Melee\_Shared\_Design\Balance\Balance_M_Sword2H_04_VeryRare,MATERIAL,1,1,1,Part_2HSword_Material_04_VeryRare,,
+Minstrel,,Named Melee Weapon,Balance_M_Blunt_Minstrel,BODY,1,1,1,Part_M_Blunt_Minstrel,,
+Minstrel,,Named Melee Weapon,Balance_M_Blunt_Minstrel,BLADE,1,1,1,Part_M_Blunt_Blade_Minstrel_A,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock","Part_M_Blunt_Blade_02, Part_M_Blunt_Blade_03"
+Minstrel,,Named Melee Weapon,Balance_M_Blunt_Minstrel,HILT,1,1,1,Part_M_Blunt_Hilt_01,"Part_M_Blunt_Ele_Cryo, Part_M_Blunt_Ele_Dark, Part_M_Blunt_Ele_Fire, Part_M_Blunt_Ele_Poison, Part_M_Blunt_Ele_Shock",
+Minstrel,,Named Melee Weapon,Balance_M_Blunt_Minstrel,HILT MOD,1,1,1,Part_M_Blunt_HiltMod_06_Mission,,
+Minstrel,,Named Melee Weapon,Balance_M_Blunt_Minstrel,RARITY,1,1,1,Part_M_Blunt_03_Rare,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,BODY,1,1,1,Part_M_Sword2H_Blade_PaladinSword,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,ELEMENT,1,1,1,Part_M_Sword2H_Ele_Fire,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,BLADE,2,2,1,Part_M_Sword2H_Blade_01_A,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,BLADE,2,2,1,Part_M_Sword2H_Blade_01_B,,"Part_M_Sword2H_Blade_02, Part_M_Sword2H_Blade_03"
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,HILT MOD,2,2,1,Part_M_Sword2H_HiltMod_04_Mission,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,HILT MOD,2,2,1,Part_M_Sword2H_HiltMod_06_Mission,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,RARITY,1,1,1,Part_M_Sword2H_04_VeryRare,,
+PaladinSword,,Named Melee Weapon,Balance_M_Sword2H_PaladinSword,MATERIAL,1,1,1,Part_2HSword_Material_04_VeryRare,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_MissionWeapon,BODY,1,1,1,Part_M_Axe_SmithCharade_MissionWeapon,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_MissionWeapon,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_MissionWeapon,RARITY,1,1,1,Part_M_Axe_03_Rare,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,BODY,1,1,1,Part_M_Axe_SmithCharade_Reward,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,ELEMENT,1,1,1,Part_M_Axe_Ele_Cryo,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,BLADE,2,2,1,Part_M_Axe_Blade_03_A,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,BLADE,2,2,1,Part_M_Axe_Blade_03_B,,"Part_M_Axe_Blade_01, Part_M_Axe_Blade_02"
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,HILT,1,1,1,Part_M_Axe_Hilt_01,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,HILT MOD,1,1,1,Part_M_Axe_HiltMod_04_Mission,,
+SmithCharade,,Named Melee Weapon,Balance_M_Axe_SmithCharade_Reward,RARITY,1,1,1,Part_M_Axe_03_Rare,,
+Tidesorrow,,Named Melee Weapon,Balance_M_Sword_Tidesorrow,BODY,1,1,1,Part_M_Sword2H_Blade_Tidesorrow,,
+Tidesorrow,,Named Melee Weapon,Balance_M_Sword_Tidesorrow,ELEMENT,1,1,1,Part_M_Sword2H_Ele_Shock,,
+Tidesorrow,,Named Melee Weapon,Balance_M_Sword_Tidesorrow,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Tidesorrow,,Named Melee Weapon,Balance_M_Sword_Tidesorrow,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_Tidesorrow,,
+Tidesorrow,,Named Melee Weapon,Balance_M_Sword_Tidesorrow,RARITY,1,1,1,Part_M_Sword2H_04_VeryRare,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,BODY,1,1,1,Part_M_Sword2H_Blade_Tidesorrow_Leg,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,ELEMENT,1,1,1,Part_M_Sword2H_Ele_Shock,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT,1,1,1,Part_M_Sword2H_Hilt_01,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_01,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_02,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_03,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_04,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_05,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_06,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_07,,
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,HILT MOD,1,1,1,Part_M_Sword2H_HiltMod_08,"Part_M_Sword2H_Ele_Cryo, Part_M_Sword2H_Ele_Dark, Part_M_Sword2H_Ele_Fire, Part_M_Sword2H_Ele_Poison, Part_M_Sword2H_Ele_Shock",
+Tidesorrow_leg,,Named Melee Weapon,Balance_M_Sword_Tidesorrow_Leg,RARITY,1,1,1,Part_M_Sword2H_05_Legendary,,
