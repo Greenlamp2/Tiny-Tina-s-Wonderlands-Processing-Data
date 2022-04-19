@@ -342,9 +342,19 @@ for glob_pattern, re_pat, extra_label in [
             ))
 # Base-game Legendary COMs as dropped by Trials Bosses (as of M4/Maliwan Takedown) update
 for (cname, cobj) in [
-        ('Balance_Armor_Amalgam', '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam'),
-        ('Balance_Armor_BigBMittens', '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens'),
-        ]:
+    ("SelectiveAmnesia", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SelectiveAmnesia/Balance/Balance_Armor_SelectiveAmnesia'),
+    ("Claw", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Claw/Balance/Balance_Armor_MantisClaw'),
+    ("DiamondGauntlets", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DiamondGauntlets/Balance/Balance_Armor_DiamondGauntlets'),
+    ("HeadOfTheSnake", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/HeadOfTheSnake/Balance/Balance_Armor_HeadOfTheSnake'),
+    ("Pandemecium", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Pandemecium/Balance/Balance_Armor_Pandemecium'),
+    ("SmartArmor", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SmartArmor/Balance/Balance_Armor_SmartArmor'),
+    ("SteelGauntlets", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SteelGauntlets/Balance/Balance_Armor_SteelGauntlets'),
+    ("CorruptedPlatemail", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/CorruptedPlatemail/Balance/Balance_Armor_CorruptedPlatemail'),
+    ("DeathlessMantle", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DeathlessMantle/Balance/Balance_Armor_DeathlessMantle'),
+    ("Amalgam", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam'),
+    ("BigBMittens", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens'),
+    ("Tabula", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula'),
+]:
     com_balances.append((cname, 'Class Mod', 'Pauldron', cobj))
 com_balances.sort()
 
