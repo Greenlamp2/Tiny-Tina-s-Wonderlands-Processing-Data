@@ -424,6 +424,72 @@ for (cname, cobj) in [
     ring_balances.append((cname, 'Ring', 'Named Ring', cobj))
 ring_balances.sort()
 
+#Spell
+spell_balances = []
+for glob_pattern, re_pat, extra_label in [
+        ('\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_*_*',
+            r'^\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
+            None),
+        ]:
+    pat = re.compile(re_pat)
+    for obj_name in data.glob(glob_pattern):
+        temp = pat.match(obj_name)
+        match = pat.match(obj_name).groupdict()
+        rarity_lower = match['rarity'].lower()
+        if rarity_lower == '01_common':
+            rarity = '01/Common'
+        elif rarity_lower == '02_uncommon':
+            rarity = '02/Uncommon'
+        elif rarity_lower == '03_rare':
+            rarity = '03/Rare'
+        elif rarity_lower == '04_veryrare':
+            rarity = '04/Very Rare'
+        elif rarity_lower == '05_legendary':
+            rarity = '05/Legendary'
+        else:
+            raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
+        spell_balances.append((
+            'Spell',
+            match['type'],
+            rarity,
+            obj_name,
+            ))
+
+for (cname, cobj) in [
+    ("DestructionRains", '/Game/Gear/SpellMods/_Unique/_MissionUniques/DestructionRains/Balance/Balance_Spell_DestructionRains'),
+    ("LavaGoodTime", '/Game/Gear/SpellMods/_Unique/_MissionUniques/LavaGoodTime/Balance/Balance_Spell_LavaGoodTime'),
+    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v1'),
+    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v2'),
+    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v3'),
+    ("HoleyHandGrenade", '/Game/Gear/SpellMods/_Unique/_MissionUniques/HoleyHandGrenade/Balance/Balance_Spell_HoleyHandGrenade'),
+    ("LittleBluePill", '/Game/Gear/SpellMods/_Unique/_MissionUniques/LittleBluePill/Balance/Balance_Spell_LittleBluePill'),
+    ("JaggedToothCrew", '/Game/Gear/SpellMods/_Unique/_MissionUniques/JaggedToothCrew/Balance/Balance_Spell_JaggedTooth'),
+    ("Frostburn", '/Game/Gear/SpellMods/_Unique/_MissionUniques/Frostburn/Balance/Balance_Spell_Frostburn'),
+    ("TimeSkip", '/Game/Gear/SpellMods/_Unique/TimeSkip/Balance/Balance_Spell_TimeSkip'),
+    ("Dazzler", '/Game/Gear/SpellMods/_Unique/Dazzler/Balance/Balance_Spell_Dazzler'),
+    ("FrozenOrb", '/Game/Gear/SpellMods/_Unique/FrozenOrb/Balance/Balance_Spell_FrozenOrb'),
+    ("Laserhand", '/Game/Gear/SpellMods/_Unique/Laserhand/Balance/Balance_Spell_Laserhand'),
+    ("Marshmellow", '/Game/Gear/SpellMods/_Unique/Marshmellow/Balance/Balance_Spell_Marshmellow'),
+    ("GelSphere", '/Game/Gear/SpellMods/_Unique/GelSphere/Balance/Balance_Spell_GelSphere'),
+    ("Barrelmaker", '/Game/Gear/SpellMods/_Unique/Barrelmaker/Balance/Balance_Spell_Barrelmaker'),
+    ("Buffmeister", '/Game/Gear/SpellMods/_Unique/Buffmeister/Balance/Balance_Spell_Buffmeister'),
+    ("Reviver", '/Game/Gear/SpellMods/_Unique/Reviver/Balance/Balance_Spell_Reviver'),
+    ("Inflammation", '/Game/Gear/SpellMods/_Unique/Inflammation/Balance/Balance_Spell_Inflammation'),
+    ("GlacialCascade", '/Game/Gear/SpellMods/_Unique/GlacialCascade/Balance/Balance_Spell_GlacialCascade'),
+    ("ThreadOfFate", '/Game/Gear/SpellMods/_Unique/ThreadOfFate/Balance/Balance_Spell_ThreadOfFate'),
+    ("Twister", '/Game/Gear/SpellMods/_Unique/Twister/Balance/Balance_Spell_Twister'),
+    ("ArcaneBolt", '/Game/Gear/SpellMods/_Unique/ArcaneBolt/Balance/Balance_Spell_ArcaneBolt'),
+    ("Sawblades", '/Game/Gear/SpellMods/_Unique/Sawblades/Balance/Balance_Spell_Sawblades'),
+    ("Watcher", '/Game/Gear/SpellMods/_Unique/Watcher/Balance/Balance_Spell_Watcher'),
+]:
+    spell_balances.append((
+        cname,
+        '',
+        'Named Spell',
+        cobj,
+        ))
+spell_balances.sort()
+
 
 # Loop through
 part_cache = {}
@@ -460,6 +526,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             ]),
         ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
         ('ring_balances.csv', 'ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
+        ('spell_balances.csv', 'spell_balances_long.csv', spell_balances, 'Name', 'Type', None),
         ]:
 
     print('Processing {}'.format(filename))
