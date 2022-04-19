@@ -349,14 +349,25 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             'MATERIAL',
             ]),
         ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Character/Name', None, [
-            'MODTYPE',
+            'BODY',
+            'CLASS',
+            'BODY SECONDARY',
+            'CLASS SECONDARY',
+            'CLASS STAT',
+            'CLASS STAT SECONDARY',
+            'LEGENDARY AUG',
+            'PASSIVE SKILL COMBO',
+            'PASSIVE SKILL PARTS',
+            'PLAYER STAT',
             'RARITY',
-            'PRIMARY',
-            'SECONDARY',
-            'SKILLS',
-            '(unknown)',
             ]),
-        ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, None),
+        ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, [
+            'BODY',
+            'CLASS STAT',
+            'ELEMENT',
+            'MINOR STAT',
+            'RARITY',
+            ]),
         ]:
 
     print('Processing {}'.format(filename))
