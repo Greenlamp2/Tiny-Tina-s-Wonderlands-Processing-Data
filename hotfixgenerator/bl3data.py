@@ -106,6 +106,14 @@ class BL3Data(object):
         'RARITY',
         'MATERIAL',
     ]
+    cats_rings = [
+        'RARITY',
+        'MAJOR',
+        'MINOR',
+        '',
+        '',
+        '',
+    ]
 
     def __init__(self):
         """
@@ -593,6 +601,8 @@ class BL3Data(object):
             return self.cats_amulets[cat_idx]
         elif any([v in balance_name for v in ["/Melee", "\\Melee"]]):
             return self.cats_melee[cat_idx]
+        elif any([v in balance_name for v in ["/Ring", "/Rings", "\\Ring", "\\Rings"]]):
+            return self.cats_rings[cat_idx]
         elif 'Weapons' not in balance_name:
             print("ok")
 

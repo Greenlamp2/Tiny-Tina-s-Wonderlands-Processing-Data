@@ -385,6 +385,45 @@ for (cname, cobj) in [
         ))
 melee_balances.sort()
 
+#Ring
+ring_balances = []
+for glob_pattern, re_pat, extra_label in [
+        ('\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_*_*',
+            r'^\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_(?P<rarity>\d+_.*?)$',
+            None),
+        ]:
+    pat = re.compile(re_pat)
+    for obj_name in data.glob(glob_pattern):
+        temp = pat.match(obj_name)
+        match = pat.match(obj_name).groupdict()
+        rarity_lower = match['rarity'].lower()
+        if rarity_lower == '01_common':
+            rarity = '01/Common'
+        elif rarity_lower == '02_uncommon':
+            rarity = '02/Uncommon'
+        elif rarity_lower == '03_rare':
+            rarity = '03/Rare'
+        elif rarity_lower == '04_veryrare':
+            rarity = '04/Very Rare'
+        elif rarity_lower == '05_legendary':
+            rarity = '05/Legendary'
+        else:
+            raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
+        ring_balances.append((
+            '',
+            'Ring',
+            rarity,
+            obj_name,
+            ))
+
+for (cname, cobj) in [
+    ("ElderWyvern", '/Game/Gear/Rings/_Shared/_Unique/ElderWyvern/Balance/Balance_Ring_ElderWyvern'),
+    ("Sharklescent", '/Game/Gear/Rings/_Shared/_Unique/Sharklescent/Balance/Balance_Ring_Sharklescent'),
+    ("InsightRing", '/Game/Gear/Rings/_Shared/_Unique/InsightRing/Balance/Balance_Rings_InsightRing'),
+]:
+    ring_balances.append((cname, 'Ring', 'Named Ring', cobj))
+ring_balances.sort()
+
 
 # Loop through
 part_cache = {}
@@ -420,6 +459,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             'RARITY',
             ]),
         ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
+        ('ring_balances.csv', 'ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
         ]:
 
     print('Processing {}'.format(filename))
