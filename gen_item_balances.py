@@ -235,88 +235,13 @@ for (sname, sobj) in [
 ]:
     shield_balances.append((sname, 'Shield', 'Named Shield', sobj))
 
-# Grenades
-# grenade_balances = []
-# glob_pattern = '/Game/Gear/GrenadeMods/_Design/InvBalance/InvBalD_GrenadeMod_*_*_*'
-# pat = re.compile(r'^/Game/Gear/GrenadeMods/_Design/InvBalance/InvBalD_GrenadeMod_(?P<manufacturer>.*?)_(?P<rarity>\d+_.*?)$')
-# for obj_name in data.glob(glob_pattern):
-#     match = pat.match(obj_name).groupdict()
-#     rarity_lower = match['rarity'].lower()
-#     if rarity_lower == '01_common':
-#         rarity = '01/Common'
-#     elif rarity_lower == '02_uncommon':
-#         rarity = '02/Uncommon'
-#     elif rarity_lower == '03_rare':
-#         rarity = '03/Rare'
-#     elif rarity_lower == '04_veryrare':
-#         rarity = '04/Very Rare'
-#     else:
-#         raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
-#     grenade_balances.append((
-#         match['manufacturer'],
-#         'Grenade',
-#         rarity,
-#         obj_name,
-#         ))
-# grenade_balances.sort()
-# for (gname, gobj) in [
-#         ("Acid Burn", '/Game/PatchDLC/Dandelion/Gear/Grenade/AcidBurn/Balance/InvBalD_GM_AcidBurn'),
-#         ("Bloodsucker", '/Game/PatchDLC/VaultCard3/Gear/GrenadeMods/Unique/Bloodsucker/Balance/InvBalD_GM_Bloodsucker'),
-#         ("Burning Summit", '/Game/Gear/GrenadeMods/_Design/_Unique/Summit/Balance/InvBalD_GM_Summit'),
-#         ("Chocolate Thunder", '/Game/Gear/GrenadeMods/_Design/_Unique/JustDeserts/Balance/InvBalD_GM_JustDeserts'),
-#         ("Chupa's Organ", '/Game/Gear/GrenadeMods/_Design/_Unique/Chupa/Balance/InvBalD_GM_Chupa'),
-#         ("Core Buster", '/Game/PatchDLC/Geranium/Gear/Grenade/CoreBurst/Balance/InvBalD_GM_CoreBurst'),
-#         ("Diamond Butt Bomb", '/Game/Gear/GrenadeMods/_Design/_Unique/ButtStallion/Balance/InvBalD_GM_ButtStallion'),
-#         ("Doc Hina's Miracle Bomb", '/Game/PatchDLC/Geranium/Gear/Grenade/SkagOil/Balance/InvBalD_GM_SkagOil'),
-#         ("ECHO-2", '/Game/Gear/GrenadeMods/_Design/_Unique/EchoV2/Balance/InvBalD_GM_EchoV2'),
-#         ("Elemental Persistent Contact Grenade", '/Game/Gear/GrenadeMods/_Design/_Unique/Mogwai/Balance/InvBalD_GM_Mogwai'),
-#         ("EMP", '/Game/Gear/GrenadeMods/_Design/_Unique/EMP/Balance/InvBalD_GM_EMP'),
-#         ("Epicenter", '/Game/Gear/GrenadeMods/_Design/_Unique/Epicenter/Balance/InvBalD_GM_Epicenter'),
-#         ("Exterminator", '/Game/Gear/GrenadeMods/_Design/_Unique/BirthdaySuprise/Balance/InvBalD_GM_BirthdaySuprise'),
-#         ("Fastball", '/Game/Gear/GrenadeMods/_Design/_Unique/Fastball/Balance/InvBalD_GM_TED_Fastball'),
-#         ("Firestorm", '/Game/Gear/GrenadeMods/_Design/_Unique/FireStorm/Balance/InvBalD_GM_VLA_FireStorm'),
-#         ("Fish Slap", '/Game/PatchDLC/Event2/Gear/GrenadeMods/FishSlap/Balance/InvBalD_GM_FishSlap'),
-#         ("Fungus Among Us", '/Game/Gear/GrenadeMods/_Design/_Unique/Mushroom/Balance/InvBalD_GM_Shroom'),
-#         ("Ghast Call", '/Game/PatchDLC/BloodyHarvest/Gear/GrenadeMods/_Design/_Unique/FontOfDarkness/Balance/InvBalD_GM_TOR_FontOfDarkness'),
-#         ("Hex", '/Game/Gear/GrenadeMods/_Design/_Unique/Seeker/Balance/InvBalD_GM_Seeker'),
-#         ("HOT Spring", '/Game/PatchDLC/Ixora/Gear/GrenadeMods/HOTSpring/Balance/InvBalD_GM_HOTSpring'),
-#         ("Hunter-Seeker", '/Game/Gear/GrenadeMods/_Design/_Unique/HunterSeeker/Balance/InvBalD_GM_HunterSeeker'),
-#         ("It's Piss", '/Game/Gear/GrenadeMods/_Design/_Unique/Piss/Balance/InvBalD_GM_Piss'),
-#         ("Kryll", '/Game/Gear/GrenadeMods/_Design/_Unique/Kryll/Balance/InvBalD_GM_Kryll'),
-#         ("Lightspeed", '/Game/PatchDLC/Takedown2/Gear/GrenadeMods/Lightspeed/Balance/InvBalD_GM_HYP_Lightspeed'),
-#         ("Mesmer", '/Game/PatchDLC/Ixora2/Gear/GrenadeMods/_Unique/Mesmer/Balance/InvBalD_GM_Mesmer'),
-#         ("Moxxi's Bouncing Pair", '/Game/Gear/GrenadeMods/_Design/_Unique/MoxiesBosom/Balance/InvBalD_GM_PAN_MoxiesBosom'),
-#         ("Nagata", '/Game/Gear/GrenadeMods/_Design/_Unique/Nagate/Balance/InvBalD_GM_Nagate'),
-#         ("NOG Potion #9", '/Game/Gear/GrenadeMods/_Design/_Unique/WizardOfNOG/Balance/InvBalD_GM_WizardOfNOG'),
-#         ("Porcelain Pipe Bomb", '/Game/Gear/GrenadeMods/_Design/_Unique/ToiletBombs/Balance/InvBalD_GM_TOR_ToiletBombs'),
-#         ("Pyroburst", '/Game/PatchDLC/VaultCard2/Gear/GrenadeMods/Unique/Pyroburst/Balance/InvBalD_GM_Pyroburst'),
-#         ("Quasar", '/Game/Gear/GrenadeMods/_Design/_Unique/Quasar/Balance/InvBalD_GM_Quasar'),
-#         ("Red Queen", '/Game/Gear/GrenadeMods/_Design/_Unique/RedQueen/Balance/InvBalD_GM_RedQueen'),
-#         ("Ringer / The Big Ringer / Dead Ringer", '/Game/PatchDLC/Ixora2/Gear/GrenadeMods/_Unique/Ringer/Balance/InvBalD_GM_Ringer'),
-#         ("Rubber Cheddar Shredder", '/Game/Gear/GrenadeMods/_Design/_Unique/CashMoneyPreorder/Balance/InvBalD_GM_CashMoneyPreorder'),
-#         ("Sidewinder", '/Game/PatchDLC/VaultCard3/Gear/GrenadeMods/Unique/Sidewinder/Balance/InvBalD_GM_Sidewinder'),
-#         ("Slider", '/Game/PatchDLC/Dandelion/Gear/Grenade/Slider/Balance/InvBalD_GM_TED_Slider'),
-#         ("Storm Front", '/Game/Gear/GrenadeMods/_Design/_Unique/StormFront/Balance/InvBalD_GM_StormFront'),
-#         ("Surge", '/Game/Gear/GrenadeMods/_Design/_Unique/Surge/Balance/InvBalD_GM_Surge'),
-#         ("Tina's Hippity Hopper", '/Game/Gear/GrenadeMods/_Design/_Unique/HipHop/Balance/InvBalD_GM_TOR_HipHop'),
-#         ("Tran-fusion", '/Game/Gear/GrenadeMods/_Design/_Unique/TranFusion/Balance/InvBalD_GM_TranFusion'),
-#         ("Ultraball", '/Game/Gear/GrenadeMods/_Design/_Unique/ToyGrenade/Balance/InvBalD_GM_ToyGrenade'),
-#         ("Whispering Ice", '/Game/Gear/GrenadeMods/_Design/_Unique/ObviousTrap/Balance/InvBalD_GM_ObviousTrap'),
-#         ("Widowmaker", '/Game/Gear/GrenadeMods/_Design/_Unique/WidowMaker/Balance/InvBalD_GM_WidowMaker'),
-#         ]:
-#     grenade_balances.append((gname, 'Grenade', 'Named Grenade', gobj))
-
-# COMs
-char_map = {
-        'BSM': 'Beastmaster',
-        }
+#Pauldrons
 com_balances = []
 for glob_pattern, re_pat, extra_label in [
         ('\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_*_*',
             r'^\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_(?P<rarity>\d+_.*?)$',
             None),
         ]:
-    # pat = re.compile(r'^\\Game\\Gear\\Shields\\_Design\\InvBalance\\InvBalD_Shield_(?P<manufacturer>.*?)_(?P<rarity>\d+_.*?)$')
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -335,12 +260,12 @@ for glob_pattern, re_pat, extra_label in [
         else:
             raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
         com_balances.append((
-            'All',
-            'Pauldrons',
+            '',
+            'Pauldron',
             rarity,
             obj_name,
             ))
-# Base-game Legendary COMs as dropped by Trials Bosses (as of M4/Maliwan Takedown) update
+
 for (cname, cobj) in [
     ("SelectiveAmnesia", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SelectiveAmnesia/Balance/Balance_Armor_SelectiveAmnesia'),
     ("Claw", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Claw/Balance/Balance_Armor_MantisClaw'),
@@ -355,69 +280,61 @@ for (cname, cobj) in [
     ("BigBMittens", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens'),
     ("Tabula", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula'),
 ]:
-    com_balances.append((cname, 'Class Mod', 'Pauldron', cobj))
+    com_balances.append((cname, 'Pauldron', 'Named Pauldron', cobj))
 com_balances.sort()
 
-# Artifacts
-# artifact_balances_base = [
-#         ('Common', 'Artifact', '01/Common', '/Game/Gear/Artifacts/_Design/BalanceDefs/InvBalD_Artifact_01_Common'),
-#         ('Uncommon', 'Artifact', '02/Uncommon', '/Game/Gear/Artifacts/_Design/BalanceDefs/InvBalD_Artifact_02_Uncommon'),
-#         ('Rare', 'Artifact', '03/Rare', '/Game/Gear/Artifacts/_Design/BalanceDefs/InvBalD_Artifact_03_Rare'),
-#         ('Very Rare', 'Artifact', '04/Very Rare', '/Game/Gear/Artifacts/_Design/BalanceDefs/InvBalD_Artifact_04_VeryRare'),
-#         ('Legendary', 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/BalanceDefs/InvBalD_Artifact_05_Legendary'),
-#         ]
-# artifact_balances_legendary = [
-#         # Not bothering to do anything fancy here since there's so few.
-#         ("Company Man (Atlas)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Atlas/Balance/InvBalD_Artifact_CompanyMan_Atlas'),
-#         ("Company Man (CoV)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/CoV/Balance/InvBalD_Artifact_CompanyMan_CoV'),
-#         ("Company Man (Dahl)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Dahl/Balance/InvBalD_Artifact_CompanyMan_Dahl'),
-#         ("Company Man (Hyperion)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Hyperion/Balance/InvBalD_Artifact_CompanyMan_Hyperion'),
-#         ("Company Man (Jakobs)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Jakobs/Balance/InvBalD_Artifact_CompanyMan_Jakobs'),
-#         ("Company Man (Maliwan)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Maliwan/Balance/InvBalD_Artifact_CompanyMan_Maliwan'),
-#         ("Company Man (Tediore)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Tediore/Balance/InvBalD_Artifact_CompanyMan_Tediore'),
-#         ("Company Man (Torgue)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Torgue/Balance/InvBalD_Artifact_CompanyMan_Torgue'),
-#         ("Company Man (Vladof)", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/CompanyMan/Vladof/Balance/InvBalD_Artifact_CompanyMan_Vladof'),
-#         ("Deathrattle", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora/Gear/Artifacts/_Design/_Unique/Deathrattle/Balance/InvBalD_Artifact_Deathrattle'),
-#         ("Electric Banjo", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/ElectricBanjo/Balance/InvBalD_Artifact_ElectricBanjo'),
-#         ("Grave", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/Grave/Balance/InvBalD_Artifact_Grave'),
-#         ("Holy Grail", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora/Gear/Artifacts/_Design/_Unique/HolyGrail/Balance/InvBalD_Artifact_HolyGrail'),
-#         ("Lunacy", 'Artifact', '05/Legendary', '/Game/PatchDLC/Hibiscus/Gear/Artifacts/_Design/_Unique/Lunacy/Balance/InvBalD_Artifact_Lunacy'),
-#         ("Mysterious Amulet", 'Artifact', '04/Very Rare', '/Game/PatchDLC/Ixora/Gear/Artifacts/_Design/_Unique/MysteriousAmulet/Balance/InvBalD_Artifact_MysteriousAmulet'),
-#         ("Mysterious Artifact", 'Artifact', '04/Very Rare', '/Game/PatchDLC/Ixora2/Gear/Artifacts/_Unique/MysteriousAmulet/Balance/InvBalD_Artifact_MysteriousAmulet'),
-#         ("Pearl of Ineffable Knowledge", 'Artifact', '05/Legendary', '/Game/PatchDLC/Hibiscus/Gear/Artifacts/_Design/_Unique/PUK/Balance/InvBalD_Artifact_PUK'),
-#         ("Phoenix Tears", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/PhoenixTears/Balance/InvBalD_Artifact_PhoenixTears'),
-#         ("Road Warrior", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/RoadWarrior/Balance/InvBalD_Artifact_RoadWarrior'),
-#         ("Shlooter", 'Artifact', '05/Legendary', '/Game/PatchDLC/VaultCard2/Gear/Artifacts/Unique/Shlooter/Balance/InvBalD_Artifact_Shlooter'),
-#         ("Toboggan", 'Artifact', '05/Legendary', '/Game/PatchDLC/Ixora/Gear/Artifacts/_Design/_Unique/Toboggan/Balance/InvBalD_Artifact_Toboggan'),
-#         ("Unleash the Dragon", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/ElDragonJr/Balance/InvBalD_Artifact_ElDragonJr'),
-#         ("Vault Hunter's Relic", 'Artifact', '05/Legendary', '/Game/Gear/Artifacts/_Design/PartSets/Abilities/_Unique/VaultHunterRelic/Balance/InvBalD_Artifact_Relic'),
-#         ("Vendetta", 'Artifact', '04/Very Rare', '/Game/PatchDLC/Geranium/Gear/Artifacts/_Design/_Unique/Vengeance/Balance/InvBalD_Artifact_Vengeance'),
-#         ]
-# # "Specific" Legendary Artifact balances added by Raid1
-# for (aname, aobj) in [
-#         ("Commander Planetoid", '/Game/PatchDLC/Raid1/Gear/Artifacts/CommanderPlanetoid/InvBalD_Artifact_CommanderPlanetoid'),
-#         ("Cosmic Crater", '/Game/PatchDLC/Raid1/Gear/Artifacts/CosmicCrater/InvBalD_Artifact_CosmicCrater'),
-#         ("Deathless", '/Game/PatchDLC/Raid1/Gear/Artifacts/Deathless/InvBalD_Artifact_Deathless'),
-#         ("Launch Pad", '/Game/PatchDLC/Raid1/Gear/Artifacts/Salvo/InvBalD_Artifact_Salvo'),
-#         ("Loaded Dice", '/Game/PatchDLC/Raid1/Gear/Artifacts/LoadedDice/InvBalD_Artifact_LoadedDice'),
-#         ("Moxxi's Endowment", '/Game/PatchDLC/Raid1/Gear/Artifacts/MoxxisEndowment/InvBalD_Artifact_MoxxisEndowment'),
-#         ("Otto Idol", '/Game/PatchDLC/Raid1/Gear/Artifacts/OttoIdol/InvBalD_Artifact_OttoIdol'),
-#         ("Pull Out Method", '/Game/PatchDLC/Raid1/Gear/Artifacts/PullOutMethod/InvBalD_Artifact_PullOutMethod'),
-#         ("Rocket Boots", '/Game/PatchDLC/Raid1/Gear/Artifacts/RocketBoots/InvBalD_Artifact_RocketBoots'),
-#         ("Safeguard", '/Game/PatchDLC/Raid1/Gear/Artifacts/Safegaurd/InvBalD_Artifact_Safegaurd'),
-#         ("Splatter Gun", '/Game/PatchDLC/Raid1/Gear/Artifacts/SplatterGun/InvBalD_Artifact_SplatterGun'),
-#         ("Static Charge", '/Game/PatchDLC/Raid1/Gear/Artifacts/StaticTouch/InvBalD_Artifact_StaticTouch'),
-#         ("Victory Rush", '/Game/PatchDLC/Raid1/Gear/Artifacts/VictoryRush/InvBalD_Artifact_VictoryRush'),
-#         ("White Elephant", '/Game/PatchDLC/Raid1/Gear/Artifacts/WhiteElephant/InvBalD_Artifact_WhiteElephant'),
-#         ]:
-#     artifact_balances_legendary.append((
-#         '{} (dedicated drop only)'.format(aname),
-#         'Artifact',
-#         '05/Legendary',
-#         aobj,
-#         ))
-# artifact_balances_legendary.sort()
-# artifact_balances = artifact_balances_base + artifact_balances_legendary
+#Amulets
+amu_balances = []
+for glob_pattern, re_pat, extra_label in [
+        ('\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_*_*',
+            r'^\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_(?P<rarity>\d+_.*?)$',
+            None),
+        ]:
+    pat = re.compile(re_pat)
+    for obj_name in data.glob(glob_pattern):
+        temp = pat.match(obj_name)
+        match = pat.match(obj_name).groupdict()
+        rarity_lower = match['rarity'].lower()
+        if rarity_lower == '01_common':
+            rarity = '01/Common'
+        elif rarity_lower == '02_uncommon':
+            rarity = '02/Uncommon'
+        elif rarity_lower == '03_rare':
+            rarity = '03/Rare'
+        elif rarity_lower == '04_veryrare':
+            rarity = '04/Very Rare'
+        elif rarity_lower == '05_legendary':
+            rarity = '05/Legendary'
+        else:
+            raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
+        amu_balances.append((
+            '',
+            'Amulet',
+            rarity,
+            obj_name,
+            ))
+
+for (cname, cobj) in [
+    ("Plot5", '/Game/Gear/Amulets/_Shared/_Unique/Plot5/Balance/Balance_Amulet_Unique_Plot5'),
+    ("BlazeOfGlory", '/Game/Gear/Amulets/_Shared/_Unique/BlazeOfGlory/Balance/Balance_Amulet_Unique_BlazeOfGlory'),
+    ("Frenzied", '/Game/Gear/Amulets/_Shared/_Unique/Frenzied/Balance/Balance_Amulet_Unique_Frenzied'),
+    ("GTFO", '/Game/Gear/Amulets/_Shared/_Unique/GTFO/Balance/Balance_Amulet_Unique_GTFO'),
+    ("RonRivote", '/Game/Gear/Amulets/_Shared/_Unique/RonRivote/Balance/Balance_Amulet_Unique_RonRivote'),
+    ("JointTraining", '/Game/Gear/Amulets/_Shared/_Unique/JointTraining/Balance/Balance_Amulet_Unique_JointTraining'),
+    ("Bradluck", '/Game/Gear/Amulets/_Shared/_Unique/Bradluck/Balance/Balance_Amulet_Unique_Bradluck'),
+    ("UniversalSoldier", '/Game/Gear/Amulets/_Shared/_Unique/UniversalSoldier/Balance/Balance_Amulet_Unique_UniversalSoldier'),
+    ("Harbinger", '/Game/Gear/Amulets/_Shared/_Unique/Harbinger/Balance/Balance_Amulet_Unique_Harbinger'),
+    ("Theruge", '/Game/Gear/Amulets/_Shared/_Unique/Theruge/Balance/Balance_Amulet_Unique_Theruge'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Barb'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_GunMage'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_KotC'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Necro'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Ranger'),
+    ("HarmoniousDingleDangle", '/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Rogue'),
+]:
+    amu_balances.append((cname, 'Amulet', 'Named Amulet', cobj))
+amu_balances.sort()
+
 
 # Loop through
 part_cache = {}
