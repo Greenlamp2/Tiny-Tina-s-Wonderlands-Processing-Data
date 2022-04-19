@@ -28,7 +28,8 @@ import sqlite3
 import subprocess
 import configparser
 
-from bl3hotfixmod import BVC
+from bl3hotfixmod.bl3hotfixmod import BVC
+
 
 class BL3Data(object):
     """
@@ -122,11 +123,11 @@ class BL3Data(object):
         if not os.path.exists(self.config_file):
             config = configparser.ConfigParser()
             config['filesystem'] = {
-                    'data_dir': 'extracted_new',
-                    'ueserialize_path': 'john-wick-parse.exe',
+                    'data_dir': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\extracted_new',
+                    'ueserialize_path': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\john-wick-parse.exe',
                     }
             config['database'] = {
-                    'dbfile': 'bl3refs.sqlite3',
+                    'dbfile': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\bl3refs.sqlite3',
                     }
             with open(self.config_file, 'w') as odf:
                 config.write(odf)
@@ -199,6 +200,7 @@ class BL3Data(object):
             if not os.path.exists(json_file):
                 # PyPy3 is still on 3.6, which doesn't have capture_output
                 #subprocess.run([self.config['filesystem']['ueserialize_path'], base_path], encoding='utf-8', capture_output=True)
+                temp = self.config['filesystem']['ueserialize_path']
                 subprocess.run([self.config['filesystem']['ueserialize_path'], 'serialize', base_path], encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             if os.path.exists(json_file):
                 with open(json_file) as df:
@@ -393,7 +395,29 @@ class BL3Data(object):
                 lookup_export = base[0]['ValueResolver']['export']
                 lookup = self.get_export_idx(attr_name, lookup_export)
                 lookup_type = lookup['export_type']
-                if lookup_type == 'ConstantAttributeValueResolver':
+                if lookup_type == 'SimpleMathValueResolver':
+                    operator = lookup['Operator']
+                    bvcA = 0.0
+                    bvcB = 0.0
+                    if 'DataTableValue' in lookup['ValueA']:
+                        table_name = lookup['ValueA']['DataTableValue']['DataTable'][1]
+                        row = lookup['ValueA']['DataTableValue']['RowName']
+                        value = self.datatable_lookup(table_name, row, 'Value')
+                        bvcA = value['BaseValueConstant']
+                    else:
+                        bvcA = lookup['ValueA']['BaseValueScale']
+                    if 'DataTableValue' in lookup['ValueB']:
+                        table_name = lookup['ValueB']['DataTableValue']['DataTable'][1]
+                        row = lookup['ValueB']['DataTableValue']['RowName']
+                        value = self.datatable_lookup(table_name, row, 'Value')
+                        bvcB = value['BaseValueConstant']
+                    else:
+                        bvcB = lookup['ValueB']['BaseValueScale']
+                    if 'Add' in operator:
+                        bvc = bvcA + bvcB
+                    else:
+                        print('ok')
+                elif lookup_type == 'ConstantAttributeValueResolver':
                     bvc = lookup['Value']['BaseValueConstant']
                     #print('{} -> {}'.format(attr_name, bvc))
                 elif lookup_type == 'DataTableAttributeValueResolver':
@@ -415,6 +439,8 @@ class BL3Data(object):
                 # player count and game mode (NVHM/TVHM).  This code's going to assume
                 # 1-player NVHM, which is 1, so no actual changes.
                 print('WARNING: Assuming 1-player NVHM while processing Enemy_MajorUpgrade_PerPlayer')
+            elif bvc_obj.ai == '/Game/GameData/Loot/CharacterWeighting/Init_CharacterWeight_Armor_PetClasses_StatWeight':
+                print('WARNING: DON\'T KNOW WHAT IS Init_CharacterWeight_Armor_PetClasses_StatWeight')
             else:
                 raise Exception('Unknown AI: {}'.format(bvc_obj.ai))
 
@@ -475,10 +501,16 @@ class BL3Data(object):
                         return self._cache_part_category_name(part_name, 'TRACKING METHOD')
                     elif ui_label.endswith(' SHIELD'):
                         return self._cache_part_category_name(part_name, 'SHIELD TYPE')
+                    elif ui_label.endswith(' WARD'):
+                        return self._cache_part_category_name(part_name, 'WARD TYPE')
                     elif ui_label.endswith(' MODULE'):
                         return self._cache_part_category_name(part_name, 'RELOAD TYPE')
                     elif ui_label.startswith('UNDERBARREL '):
                         return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
+                    elif ui_label.startswith('UNDERBARREL '):
+                        return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
+                    elif ui_label.startswith('BARREL '):
+                        return self._cache_part_category_name(part_name, 'BARREL')
                     else:
                         return self._cache_part_category_name(part_name, ui_label)
 
@@ -501,6 +533,9 @@ class BL3Data(object):
                 elif 'underbarrel' in part_lower:
                     return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
 
+                elif 'pincushion' in part_lower:
+                    return self._cache_part_category_name(part_name, 'PINCUSHION TYPE')
+
                 elif 'magazine' in part_lower or '_mag_' in part_lower:
                     return self._cache_part_category_name(part_name, 'MAGAZINE')
 
@@ -510,14 +545,50 @@ class BL3Data(object):
                 elif '_sight_' in part_lower:
                     return self._cache_part_category_name(part_name, 'SIGHT')
 
+                elif '_class' in part_lower:
+                    return self._cache_part_category_name(part_name, 'CLASS')
+
                 elif '_trigger_' in part_lower:
                     return self._cache_part_category_name(part_name, 'BODY ACCESSORY')
+
+                elif '_base' in part_lower:
+                    return self._cache_part_category_name(part_name, 'BASE')
+
+                elif 'body' in part_lower:
+                    return self._cache_part_category_name(part_name, 'BODY')
+
+                elif 'part_rarity' in part_lower or '/rarity' in part_lower:
+                    return self._cache_part_category_name(part_name, 'RARITY')
+
+                elif 'part_augment' in part_lower:
+                    return self._cache_part_category_name(part_name, 'AUGMENT')
+
+                elif 'element' in part_lower:
+                    return self._cache_part_category_name(part_name, 'ELEMENT')
+
+                elif '/passive' in part_lower:
+                    return self._cache_part_category_name(part_name, 'PASSIVE')
+
+                elif '/base' in part_lower:
+                    return self._cache_part_category_name(part_name, 'BASE')
+
+                elif '/playerstat' in part_lower:
+                    return self._cache_part_category_name(part_name, 'PLAYER STAT')
 
                 elif part_lower.endswith('_boomsickle'):
                     return self._cache_part_category_name(part_name, 'BOOM SICKLE')
 
+                elif part_lower.endswith('_amalgam'):
+                    return self._cache_part_category_name(part_name, 'AMALGAM')
+
+                elif part_lower.endswith('_bigbmittens'):
+                    return self._cache_part_category_name(part_name, 'BIG B MITTENS')
+
                 elif part_lower.endswith('/part_ar_cov_scopemount'):
                     return self._cache_part_category_name(part_name, 'RAIL')
+
+                elif part_lower.endswith('/part_ar_cov_bottle'):
+                    return self._cache_part_category_name(part_name, 'BODY')
 
                 elif part_lower.endswith('/part_sg_jak_body') \
                         or part_lower.endswith('/part_ps_mal_body') \
@@ -549,6 +620,8 @@ class BL3Data(object):
         # Construct a sort of label histogram
         valid_labels = {}
         for part_name in part_names:
+            if balance_name == '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam':
+                print("ok")
             label = self.guess_part_category_name(part_name)
             if label:
                 if label in valid_labels:
@@ -601,30 +674,6 @@ class BL3Data(object):
             self.balance_to_extra_anoints = {}
 
             for expansion_name in [
-                    '/Game/PatchDLC/Raid1/Gear/_GearExtension/GParts/GPartExpansion_Grenades_Raid1',
-                    '/Game/PatchDLC/Raid1/Gear/_GearExtension/GParts/GPartExpansion_Shields_Raid1',
-                    '/Game/PatchDLC/Raid1/Gear/_GearExtension/GParts/GPartExpansion_Weapons_Raid1',
-                    # Cartels expansions have become part of the base game, add those in.
-                    '/Game/PatchDLC/Event2/Gear/_Design/_GearExtension/GParts/GPartExpansion_Grenades_Event2',
-                    '/Game/PatchDLC/Event2/Gear/_Design/_GearExtension/GParts/GPartExpansion_Shields_Event2',
-                    '/Game/PatchDLC/Event2/Gear/_Design/_GearExtension/GParts/GPartExpansion_Weapons_Event2',
-                    # Designer's Cut expansion (yep, just weapons)
-                    '/Game/PatchDLC/Ixora/Gear/_GearExtension/GParts/GPartExpansion_Weapons_Ixora',
-                    # These objects do exist, but they don't actually add any parts, so whatever.
-                    # The BloodyHarvest ones *do* add them, but only during the event, so we're ignoring
-                    # those too.
-                    #'/Game/PatchDLC/BloodyHarvest/Gear/_Design/_GearExtension/GParts/GPartExpansion_Grenades_BloodyHarvest',
-                    #'/Game/PatchDLC/BloodyHarvest/Gear/_Design/_GearExtension/GParts/GPartExpansion_Shields_BloodyHarvest',
-                    #'/Game/PatchDLC/BloodyHarvest/Gear/_Design/_GearExtension/GParts/GPartExpansion_Weapons_BloodyHarvest',
-                    #'/Game/PatchDLC/Dandelion/Gear/_GearExtension/GParts/GPartExpansion_Grenades_Dandelion',
-                    #'/Game/PatchDLC/Dandelion/Gear/_GearExtension/GParts/GPartExpansion_Shields_Dandelion',
-                    #'/Game/PatchDLC/Dandelion/Gear/_GearExtension/GParts/GPartExpansion_Weapons_Dandelion',
-                    #'/Game/PatchDLC/Hibiscus/Gear/_GearExtension/GParts/GPartExpansion_Grenades_Hibiscus',
-                    #'/Game/PatchDLC/Hibiscus/Gear/_GearExtension/GParts/GPartExpansion_Shields_Hibiscus',
-                    #'/Game/PatchDLC/Hibiscus/Gear/_GearExtension/GParts/GPartExpansion_Weapons_Hibiscus',
-                    #'/Game/PatchDLC/Geranium/Gear/_GearExtension/GParts/GPartExpansion_Weapons_Geranium',
-                    #'/Game/PatchDLC/Geranium/Gear/_GearExtension/GParts/GPartExpansion_Shields_Geranium',
-                    #'/Game/PatchDLC/Geranium/Gear/_GearExtension/GParts/GPartExpansion_Grenades_Geranium',
                     ]:
 
                 # Construct a list of anointments which this GPartExpansion provides
