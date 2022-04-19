@@ -77,32 +77,25 @@ class BL3Data(object):
             'ELEMENT',
             'MATERIAL',
             ]
-
-    cats_grenades = [
-            'MANUFACTURER',
+    cats_pauldrons = [
+            'BODY',
+            'CLASS',
+            'BODY SECONDARY',
+            'CLASS SECONDARY',
+            'CLASS STAT',
+            'CLASS STAT SECONDARY',
+            'LEGENDARY AUG',
+            'PASSIVE SKILL COMBO',
+            'PASSIVE SKILL PARTS',
+            'PLAYER STAT',
+            'RARITY',
+            ]
+    cats_amulets = [
+            'BODY',
+            'CLASS STAT',
             'ELEMENT',
+            'MINOR STAT',
             'RARITY',
-            'AUGMENT',
-            'BEHAVIOR',
-            'MATERIAL',
-            ]
-
-    cats_coms = [
-            'CHARACTER',
-            'MODTYPE',
-            'RARITY',
-            'PRIMARY',
-            'SECONDARY',
-            'SKILLS',
-            '(unknown)',
-            ]
-
-    cats_artifacts = [
-            'RARITY',
-            'LEGENDARY ABILITY',
-            'ABILITY',
-            'PRIMARY',
-            'SECONDARY',
             ]
 
     def __init__(self):
@@ -509,8 +502,6 @@ class BL3Data(object):
                         return self._cache_part_category_name(part_name, 'RELOAD TYPE')
                     elif ui_label.startswith('UNDERBARREL '):
                         return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
-                    elif ui_label.startswith('UNDERBARREL '):
-                        return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
                     elif ui_label.startswith('BARREL '):
                         return self._cache_part_category_name(part_name, 'BARREL')
                     elif ui_label.endswith(' ARCANISM'):
@@ -540,9 +531,6 @@ class BL3Data(object):
                 elif 'pincushion' in part_lower:
                     return self._cache_part_category_name(part_name, 'PINCUSHION TYPE')
 
-                elif 'part_armor_claw' in part_lower:
-                    return self._cache_part_category_name(part_name, 'CLAW ELEMENT')
-
                 elif 'magazine' in part_lower or '_mag_' in part_lower:
                     return self._cache_part_category_name(part_name, 'MAGAZINE')
 
@@ -552,50 +540,14 @@ class BL3Data(object):
                 elif '_sight_' in part_lower:
                     return self._cache_part_category_name(part_name, 'SIGHT')
 
-                elif '_class' in part_lower:
-                    return self._cache_part_category_name(part_name, 'CLASS')
-
-                elif '/secondaryclassstat' in part_lower:
-                    return self._cache_part_category_name(part_name, 'SECONDARY CLASS STAT')
-
                 elif '_trigger_' in part_lower:
                     return self._cache_part_category_name(part_name, 'BODY ACCESSORY')
-
-                elif '_base' in part_lower:
-                    return self._cache_part_category_name(part_name, 'BASE')
-
-                elif 'body' in part_lower:
-                    return self._cache_part_category_name(part_name, 'BODY')
-
-                elif 'part_rarity' in part_lower or '/rarity' in part_lower:
-                    return self._cache_part_category_name(part_name, 'RARITY')
-
-                elif 'part_augment' in part_lower:
-                    return self._cache_part_category_name(part_name, 'AUGMENT')
 
                 elif 'element' in part_lower:
                     return self._cache_part_category_name(part_name, 'ELEMENT')
 
-                elif '/passive' in part_lower:
-                    return self._cache_part_category_name(part_name, 'PASSIVE')
-
-                elif '/base' in part_lower:
-                    return self._cache_part_category_name(part_name, 'BASE')
-
-                elif '/barrel' in part_lower:
-                    return self._cache_part_category_name(part_name, 'BARREL')
-
-                elif '/playerstat' in part_lower:
-                    return self._cache_part_category_name(part_name, 'PLAYER STAT')
-
                 elif part_lower.endswith('_boomsickle'):
                     return self._cache_part_category_name(part_name, 'BOOM SICKLE')
-
-                elif part_lower.endswith('_amalgam'):
-                    return self._cache_part_category_name(part_name, 'AMALGAM')
-
-                elif part_lower.endswith('_bigbmittens'):
-                    return self._cache_part_category_name(part_name, 'BIG B MITTENS')
 
                 elif part_lower.endswith('_whiterider'):
                     return self._cache_part_category_name(part_name, 'WHITE RIDER')
@@ -603,32 +555,8 @@ class BL3Data(object):
                 elif part_lower.endswith('_tootherator'):
                     return self._cache_part_category_name(part_name, 'TOOTHERATOR')
 
-                elif part_lower.endswith('_corruptedplatemail'):
-                    return self._cache_part_category_name(part_name, 'CORRUPTED PLATEMAIL')
-
-                elif part_lower.endswith('_deathlessmantle'):
-                    return self._cache_part_category_name(part_name, 'DEATHLESS MANTLE')
-
-                elif part_lower.endswith('_headofthesnake'):
-                    return self._cache_part_category_name(part_name, 'HEAD OF THE SNAKE')
-
-                elif part_lower.endswith('_pandemecium'):
-                    return self._cache_part_category_name(part_name, 'PANDEMECIUM')
-
-                elif part_lower.endswith('_selectiveamnesia'):
-                    return self._cache_part_category_name(part_name, 'SELECTIVE AMNESIA')
-
-                elif part_lower.endswith('_smartarmor'):
-                    return self._cache_part_category_name(part_name, 'SMART ARMOR')
-
-                elif part_lower.endswith('_tabula'):
-                    return self._cache_part_category_name(part_name, 'TABULA')
-
                 elif part_lower.endswith('/part_ar_cov_scopemount'):
                     return self._cache_part_category_name(part_name, 'RAIL')
-
-                elif part_lower.endswith('/part_ar_cov_bottle'):
-                    return self._cache_part_category_name(part_name, 'BODY')
 
                 elif part_lower.endswith('/part_sg_jak_body') \
                         or part_lower.endswith('/part_ps_mal_body') \
@@ -648,18 +576,18 @@ class BL3Data(object):
 
         # First up: if we're NOT dealing with a weapon, we're using some hardcoded
         # values, 'cause it's super annoying otherwise
-        if '/Shield/' in balance_name or '/Shields/' in balance_name:
+        if any([v in balance_name for v in ["/Shield", "/Shields", "\\Shield", "\\Shields"]]):
             return self.cats_shields[cat_idx]
-        elif '/GrenadeMods/' in balance_name or '/Grenade/' in balance_name:
-            return self.cats_grenades[cat_idx]
-        elif '/ClassMods/' in balance_name or '/CM/' in balance_name:
-            return self.cats_coms[cat_idx]
-        elif '/Artifacts/' in balance_name:
-            return self.cats_artifacts[cat_idx]
+        elif any([v in balance_name for v in ["/Pauldron", "/Pauldrons", "\\Pauldron", "\\Pauldrons"]]):
+            return self.cats_pauldrons[cat_idx]
+        elif any([v in balance_name for v in ["/Amulet", "/Amulets", "\\Amulet", "\\Amulets"]]):
+            return self.cats_amulets[cat_idx]
+        elif 'Weapons' not in balance_name:
+            print("ok")
 
         # Construct a sort of label histogram
         valid_labels = {}
-        if balance_name == "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula":
+        if balance_name == "/Game/Gear/Amulets/_Shared/_Unique/Bradluck/Balance/Balance_Amulet_Unique_Bradluck":
             print("ok")
         for part_name in part_names:
             label = self.guess_part_category_name(part_name)

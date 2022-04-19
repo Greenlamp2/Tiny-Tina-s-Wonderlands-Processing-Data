@@ -315,7 +315,6 @@ for glob_pattern, re_pat, extra_label in [
             ))
 
 for (cname, cobj) in [
-    ("Plot5", '/Game/Gear/Amulets/_Shared/_Unique/Plot5/Balance/Balance_Amulet_Unique_Plot5'),
     ("BlazeOfGlory", '/Game/Gear/Amulets/_Shared/_Unique/BlazeOfGlory/Balance/Balance_Amulet_Unique_BlazeOfGlory'),
     ("Frenzied", '/Game/Gear/Amulets/_Shared/_Unique/Frenzied/Balance/Balance_Amulet_Unique_Frenzied'),
     ("GTFO", '/Game/Gear/Amulets/_Shared/_Unique/GTFO/Balance/Balance_Amulet_Unique_GTFO'),
@@ -357,6 +356,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             'SKILLS',
             '(unknown)',
             ]),
+        ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, None),
         ]:
 
     print('Processing {}'.format(filename))
@@ -487,6 +487,8 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                         continue
 
                     # Figure out what the main label should be for this part type
+                    if bal_name == "/Game/Gear/Amulets/_Shared/_Unique/BlazeOfGlory/Balance/Balance_Amulet_Unique_BlazeOfGlory":
+                        print("ok")
                     label_text = data.get_parts_category_name([p[0] for p in processed_parts], bal_name, apl_idx)
 
                     # Hardcoded fixes.  Grr.
