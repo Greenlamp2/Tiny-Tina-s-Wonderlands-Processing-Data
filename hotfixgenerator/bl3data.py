@@ -485,6 +485,8 @@ class BL3Data(object):
         # First, a hardcode for a part that we currently can't serialize
         if part_lower == '/game/gear/grenademods/_design/partsets/part_manufacturer/gm_part_manufacturer_06_pangolin':
             return self._cache_part_category_name(part_name, 'MANUFACTURER')
+        if part_lower == '/game/gear/weapons/assaultrifles/vladof/_shared/_design/parts/rails/part_ar_vla_rail_01':
+            return self._cache_part_category_name(part_name, 'IRON SIGHTS')
 
         # Grab the data itself and see if we can do anything with it.
         if part_obj is None:
@@ -511,6 +513,8 @@ class BL3Data(object):
                         return self._cache_part_category_name(part_name, 'UNDERBARREL TYPE')
                     elif ui_label.startswith('BARREL '):
                         return self._cache_part_category_name(part_name, 'BARREL')
+                    elif ui_label.endswith(' ARCANISM'):
+                        return self._cache_part_category_name(part_name, 'MOD TYPE')
                     else:
                         return self._cache_part_category_name(part_name, ui_label)
 
@@ -572,6 +576,9 @@ class BL3Data(object):
                 elif '/base' in part_lower:
                     return self._cache_part_category_name(part_name, 'BASE')
 
+                elif '/barrel' in part_lower:
+                    return self._cache_part_category_name(part_name, 'BARREL')
+
                 elif '/playerstat' in part_lower:
                     return self._cache_part_category_name(part_name, 'PLAYER STAT')
 
@@ -583,6 +590,12 @@ class BL3Data(object):
 
                 elif part_lower.endswith('_bigbmittens'):
                     return self._cache_part_category_name(part_name, 'BIG B MITTENS')
+
+                elif part_lower.endswith('_whiterider'):
+                    return self._cache_part_category_name(part_name, 'WHITE RIDER')
+
+                elif part_lower.endswith('_tootherator'):
+                    return self._cache_part_category_name(part_name, 'TOOTHERATOR')
 
                 elif part_lower.endswith('/part_ar_cov_scopemount'):
                     return self._cache_part_category_name(part_name, 'RAIL')
@@ -620,8 +633,6 @@ class BL3Data(object):
         # Construct a sort of label histogram
         valid_labels = {}
         for part_name in part_names:
-            if balance_name == '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam':
-                print("ok")
             label = self.guess_part_category_name(part_name)
             if label:
                 if label in valid_labels:

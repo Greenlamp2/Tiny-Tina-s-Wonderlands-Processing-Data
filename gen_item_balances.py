@@ -113,33 +113,9 @@ gun_balances.sort()
 
 # Uniques /  Legendaries
 for (label, balance_name) in [
-    ("Carrier", '/Game/Gear/Weapons/AssaultRifles/Atlas/_Shared/_Design/_Unique/Carrier/Balance/Balance_ATL_AR_Carrier'),
-    ("RebellYell", '/Game/Gear/Weapons/AssaultRifles/Atlas/_Shared/_Design/_Unique/RebellYell/Balance/Balance_ATL_AR_RebelYell'),
-    ("RowansCall", '/Game/Gear/Weapons/AssaultRifles/Jakobs/_Shared/_Design/_Unique/RowansCall/Balance/Balance_AR_JAK_RowansCall'),
-    ("RubysWrath", '/Game/Gear/Weapons/HeavyWeapons/ATL/_Shared/_Design/_Unique/RubysWrath/Balance/Balance_HW_ATL_RubysWrath'),
-    ("Hellshock", '/Game/Gear/Weapons/Pistols/Maliwan/_Shared/_Design/_Unique/Hellshock/Balance/Balance_PS_MAL_Hellshock'),
-    ("Plumber", '/Game/Gear/Weapons/Pistols/Maliwan/_Shared/_Design/_Unique/Plumber/Balance/Balance_PS_MAL_Plumber'),
-    ("ThunderballFist", '/Game/Gear/Weapons/Pistols/Maliwan/_Shared/_Design/_Unique/ThunderballFist/Balance/Balance_PS_MAL_ThunderballFists'),
-    ("Recursion", '/Game/Gear/Weapons/Shotguns/Maliwan/_Shared/_Design/_Unique/Recursion/Balance/Balance_SG_MAL_Recursion'),
-    ("Trev", '/Game/Gear/Weapons/Shotguns/Maliwan/_Shared/_Design/_Unique/Trev/Balance/Balance_SG_MAL_Trev'),
-    ("Wisp", '/Game/Gear/Weapons/Shotguns/Maliwan/_Shared/_Design/_Unique/Wisp/Balance/Balance_SG_MAL_Wisp'),
-    ("Flakker", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Flakker/Balance/Balance_SG_Torgue_Flakker'),
-    ("TheBoringGun", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/TheBoringGun/Balance/Balance_SG_TOR_Boring'),
-    ("TheLob", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/TheLob/Balance/Balance_SG_Torgue_ETech_TheLob'),
-    ("Cutsman", '/Game/Gear/Weapons/SMGs/Maliwan/_Shared/_Design/_Unique/Cutsman/Balance/Balance_SM_MAL_Cutsman'),
-    ("DestructoSpin", '/Game/Gear/Weapons/SMGs/Maliwan/_Shared/_Design/_Unique/DestructoSpin/Balance/Balance_SM_MAL_DestructoSpin'),
-    ("Devoted", '/Game/Gear/Weapons/SMGs/Maliwan/_Shared/_Design/_Unique/Devoted/Balance/Balance_SM_MAL_Devoted'),
-    ("MalaksBane", '/Game/Gear/Weapons/SniperRifles/Dahl/_Shared/_Design/_Unique/MalaksBane/Balance/Balance_SR_DAL_ETech_MalaksBane'),
-    ("Fearmonger", '/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/Fearmonger/Balance/Balance_SG_HYP_ETech_Fearmonger'),
-    ("IntroMission", '/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/IntroMission/Balance/Balance_PS_JAK_IntroGun'),
     ("IntroMission", '/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/IntroMission/Balance/Balance_DAL_PS_FirstGun'),
-    ("TedMagicCryo", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicCryo/Balance/Balance_SM_TED_TedMagicCryo'),
-    ("TedMagicDark", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicDark/Balance/Balance_SM_TED_TedMagicDark'),
-    ("TedMagicFire", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicFire/Balance/Balance_SM_TED_TedMagicFire'),
-    ("TedMagicShock", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicShock/Balance/Balance_SM_TED_TedMagicShock'),
     ("TheHost", '/Game/Gear/Weapons/Pistols/Tediore/Shared/_Design/_Unique/TheHost/Balance/Balance_PS_Tediore_05_TheHost'),
     ("ThrowableHole", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/ThrowableHole/Balance/Balance_SM_TED_05_ThrowableHole'),
-    ("StabbyMcStabsalot", '/Game/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/StabbyMcStabsalot/Balance/Balance_SG_Tediore_05_StabbyMcStabs'),
     ("FragmentRain", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/FragmentRain/Balance/Balance_SM_TED_05_FragmentRain'),
     ("HawkinsWrath", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/HawkinsWrath/Balance/Balance_SG_Torgue_05_HawkinsWrath'),
     ("Catatumbo", '/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Catatumbo/Balance/Balance_PS_JAK_05_Catatumbo'),
@@ -198,12 +174,6 @@ for (label, balance_name) in [
     ("KaoKhan", '/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/KaoKhan/Balance/Balance_SR_HYP_KaoKhan'),
     ("ManualTransmission", '/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/ManualTransmission/Balance/Balance_AR_VLA_ManualTrans'),
     ("Swordruption", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Swordruption/Balance/Balance_SG_Torgue_Swordruption'),
-    ("EchoingPhoenix", '/Game/PatchDLC/Indigo1/Gear/Weapons/AssualtRifles/Jakobs/_Shared/_Design/_Unique/EchoingPhoenix/Balance/Balance_AR_JAK_EchoPhoenix'),
-    ("TwistDeluge", '/Game/PatchDLC/Indigo1/Gear/Weapons/HeavyWeapons/Valdof/_Shared/_Design/_Unique/TwistDeluge/Balance/Bal_VLA_TwistDeluge'),
-    ("DieVergent", '/Game/PatchDLC/Indigo1/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/DieVergent/Balance/Balance_SG_TED_DieVergent'),
-    ("Butterboom", '/Game/PatchDLC/Indigo2/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Butterboom/Balance/Balance_PS_TOR_05_Butterbm'),
-    ("FaceStabber", '/Game/PatchDLC/Indigo3/Gear/Weapons/Shotgun/Hyperion/_Shared/_Design/_Unique/FaceStabber/Balance/Balance_SG_HYP_FacePuncher'),
-    ("MerlinsRazor", '/Game/PatchDLC/Indigo4/Gear/Weapons/Shotguns/Jakobs/_Shared/_Design/_Unique/MerlinsRazor/Balance/Bal_SG_JAK_MerlinsRazor')
 ]:
     gun_balances.append((
         label,
@@ -470,17 +440,17 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                 # Quick check...  Thus far all examples of this also have the manufacturers enumerated in the
                 # parts list, so probably we don't need to worry.
                 # (actually just commenting this for now)
-                #if len(bal.raw_bal_data['Manufacturers']) > 1:
-                #    # Excluding reporting for the ones that I've already looked at
-                #    if bal_name not in {
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/Chupa/Balance/InvBalD_GM_Chupa',
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/FireStorm/Balance/InvBalD_GM_VLA_FireStorm',
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/Quasar/Balance/InvBalD_GM_Quasar',
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/StormFront/Balance/InvBalD_GM_StormFront',
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/TranFusion/Balance/InvBalD_GM_TranFusion',
-                #            '/Game/Gear/GrenadeMods/_Design/_Unique/WidowMaker/Balance/InvBalD_GM_WidowMaker',
-                #            }:
-                #        print('WARNING: {} has {} manufacturers'.format(bal_name, len(bal.raw_bal_data['Manufacturers'])))
+                if len(bal.raw_bal_data['Manufacturers']) > 1:
+                   # Excluding reporting for the ones that I've already looked at
+                   if bal_name not in {
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/Chupa/Balance/InvBalD_GM_Chupa',
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/FireStorm/Balance/InvBalD_GM_VLA_FireStorm',
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/Quasar/Balance/InvBalD_GM_Quasar',
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/StormFront/Balance/InvBalD_GM_StormFront',
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/TranFusion/Balance/InvBalD_GM_TranFusion',
+                           '/Game/Gear/GrenadeMods/_Design/_Unique/WidowMaker/Balance/InvBalD_GM_WidowMaker',
+                           }:
+                       print('WARNING: {} has {} manufacturers'.format(bal_name, len(bal.raw_bal_data['Manufacturers'])))
 
                 # Loop through partlists
                 seen_labels = set()
@@ -566,8 +536,6 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                     if len(processed_parts) == 1 and processed_parts[0][0] == 'None':
                         continue
 
-                    # if bal_name == '\Game\Gear\Shields\_Design\InvBalance\InvBalD_Shield_Anshin_01_Common':
-                    #     print('ok')
                     # Figure out what the main label should be for this part type
                     label_text = data.get_parts_category_name([p[0] for p in processed_parts], bal_name, apl_idx)
 
