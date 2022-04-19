@@ -207,9 +207,32 @@ for obj_name in data.glob(glob_pattern):
         ))
 shield_balances.sort()
 for (sname, sobj) in [
-        ("InvBalD_Shield_CryingApple", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/CryingApple/Balance/InvBalD_Shield_CryingApple'),
-        ("InvBalD_Shield_ElementalAlements", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/ElementalAlements/Balance/InvBalD_Shield_ElementalAlements'),
-        ]:
+    ("CryingApple", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/CryingApple/Balance/InvBalD_Shield_CryingApple'),
+    ("ElementalAlements", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/ElementalAlements/Balance/InvBalD_Shield_ElementalAlements'),
+    ("RonRivote", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/RonRivote/Balance/InvBalD_Shield_RonRivote'),
+    ("PowerNap", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/PowerNap/Balance/InvBalD_Shield_PowerNap'),
+    ("TwistedSisters", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/TwistedSisters/Balance/InvBalD_Shield_TwistedSisters'),
+    ("Vamp", '/Game/Gear/Shields/_Design/_Uniques/Vamp/Balance/InvBalD_Shield_Legendary_Vamp'),
+    ("Rune_Spirit", '/Game/Gear/Shields/_Design/_Uniques/Rune_Spirit/Balance/InvBalD_Shield_SpiritRune'),
+    ("Rune_Body", '/Game/Gear/Shields/_Design/_Uniques/Rune_Body/Balance/InvBalD_Shield_Rune_Body'),
+    ("Rune_Mind", '/Game/Gear/Shields/_Design/_Uniques/Rune_Mind/Balance/InvBalD_Shield_Rune_Mind'),
+    ("HammerAnvil", '/Game/Gear/Shields/_Design/_Uniques/HammerAnvil/Balance/InvBalD_Shield_HammerAnvil'),
+    ("Rune_Master", '/Game/Gear/Shields/_Design/_Uniques/Rune_Master/Balance/InvBalD_Shield_Rune_Master'),
+    ("FullBattery", '/Game/Gear/Shields/_Design/_Uniques/FullBattery/Balance/InvBalD_Shield_FullBattery'),
+    ("UndeadPact", '/Game/Gear/Shields/_Design/_Uniques/UndeadPact/Balance/InvBalD_Shield_UndeadPAct'),
+    ("CursedWit", '/Game/Gear/Shields/_Design/_Uniques/CursedWit/Balance/InvBalD_Shield_CursedWit'),
+    ("Afterburner", '/Game/Gear/Shields/_Design/_Uniques/Afterburner/Balance/InvBalD_Shield_Afterburner'),
+    ("AncientDeity", '/Game/Gear/Shields/_Design/_Uniques/AncientDeity/Balance/InvBalD_Shield_AncientDeity'),
+    ("BadEgg", '/Game/Gear/Shields/_Design/_Uniques/BadEgg/Balance/InvBalD_Shield_BadEgg'),
+    ("BroncoBuster", '/Game/Gear/Shields/_Design/_Uniques/BroncoBuster/Balance/InvBalD_Shield_BroncoBuster'),
+    ("KineticFriction_Health", '/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Health/Balance/InvBalD_Shield_KineticFriction_Health'),
+    ("KineticFriction_Shield", '/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Shield/Balance/InvBalD_Shield_KineticFriction_Shield'),
+    ("LastGasp", '/Game/Gear/Shields/_Design/_Uniques/LastGasp/Balance/InvBalD_Shield_LastGasp'),
+    ("MacedWard", '/Game/Gear/Shields/_Design/_Uniques/MacedWard/Balance/InvBalD_Shield_MacedWard'),
+    ("Shamwai", '/Game/Gear/Shields/_Design/_Uniques/Shamwai/Balance/InvBalD_Shield_Shamwai'),
+    ("Transistor", '/Game/Gear/Shields/_Design/_Uniques/Transistor/Balance/InvBalD_Shield_Transistor'),
+    ("TrickMirror", '/Game/Gear/Shields/_Design/_Uniques/TrickMirror/Balance/InvBalD_Shield_TrickMirror'),
+]:
     shield_balances.append((sname, 'Shield', 'Named Shield', sobj))
 
 # Grenades
