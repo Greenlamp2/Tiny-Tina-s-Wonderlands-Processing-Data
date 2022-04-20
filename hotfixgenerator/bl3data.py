@@ -145,7 +145,7 @@ class BL3Data(object):
                     'ueserialize_path': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\john-wick-parse.exe',
                     }
             config['database'] = {
-                    'dbfile': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\bl3refs.sqlite3',
+                    'dbfile': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\ttwrefs.sqlite3',
                     }
             with open(self.config_file, 'w') as odf:
                 config.write(odf)
@@ -371,7 +371,7 @@ class BL3Data(object):
         """
         self._connect_db()
         self.curs.execute('select name from bl3object where name like ?',
-                (f'%/{short_name}',))
+                (f'%/{short_name}%',))
         return [row[0] for row in self.curs.fetchall()]
 
     def datatable_lookup(self, table_name, row_name, col_name):

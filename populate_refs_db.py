@@ -70,25 +70,25 @@ blacklist_to = {
 # in there.
 db = sqlite3.connect('ttwrefs.sqlite3')
 curs = db.cursor()
-curs.execute('''
-    create table bl3object
-    (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name text not null UNIQUE
-    );
-''')
-curs.execute('''
-    create table bl3refs
-    (
-        from_obj INTEGER not null,
-        to_obj INTEGER not null,
-        UNIQUE(from_obj, to_obj)
-    );
-''')
+# curs.execute('''
+#     create table bl3object
+#     (
+#         id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         name text not null UNIQUE
+#     );
+# ''')
+# curs.execute('''
+#     create table bl3refs
+#     (
+#         from_obj INTEGER not null,
+#         to_obj INTEGER not null,
+#         UNIQUE(from_obj, to_obj)
+#     );
+# ''')
 
 # Let's time this.  Obviously the ETA comparison will vary if you're not
 # on my machine.
-estimated_secs = 546
+estimated_secs = 43
 start_time = time.time()
 
 # Go ahead and auto-truncate first
@@ -98,12 +98,12 @@ print('Truncating database...')
 db.commit()
 
 def insert(db, curs, objname):
-    curs.execute('insert into bl3object (name) values (?)', (objname,))
+    curs.execute('insert or ignore into bl3object (name) values (?)', (objname,))
     new_id = curs.lastrowid
     return new_id
 
 def insert_ref(db, curs, from_num, to_num):
-    curs.execute('insert into bl3refs (from_obj, to_obj) values (?, ?)', (from_num, to_num))
+    curs.execute('insert or ignore into bl3refs (from_obj, to_obj) values (?, ?)', (from_num, to_num))
 
 def read_int(df):
     return struct.unpack('<i', df.read(4))[0]
@@ -120,7 +120,6 @@ objects = {}
 toplevels = set()
 obj_count = 0
 
-temp = os.walk('extracted')
 data_dir = "C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\extracted_new"
 for (dirpath, dirnames, filenames) in os.walk(data_dir):
     for filename in filenames:
@@ -131,9 +130,10 @@ for (dirpath, dirnames, filenames) in os.walk(data_dir):
 
             # Get our object name
             if filename.endswith('.uasset'):
-                cur_obj_name = full_filename[9:-7]
+                cur_obj_name = full_filename[len(data_dir):-7]
             else:
-                cur_obj_name = full_filename[9:-5]
+                cur_obj_name = full_filename[len(data_dir):-5]
+            cur_obj_name = cur_obj_name.replace('\\', '/')
             cur_obj_name_lower = cur_obj_name.lower()
             if cur_obj_name_lower in toplevels:
                 print('WARNING: Found duplicate name {} in {}'.format(cur_obj_name, full_filename))
@@ -198,7 +198,7 @@ for (dirpath, dirnames, filenames) in os.walk(data_dir):
                     eta = '{}m{}s remaining'.format(mins, secs)
                 else:
                     eta = '---- remaining'
-                print('Processed {} objects (of ~182900, as of 2021-11-18 (vault card 3) (218745 in DB)) | {}...'.format(obj_count, eta))
+                print('Processed {} objects (of ~86577, as of 2022-04-20) | {}...'.format(obj_count, eta))
                 db.commit()
 
 # Ensure that we've committed
