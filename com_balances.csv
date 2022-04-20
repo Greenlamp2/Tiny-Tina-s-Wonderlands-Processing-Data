@@ -1,4 +1,4 @@
-Character/Name,Rarity,Balance,Category,Min Parts,Max Parts,Weight,Part,Dependencies,Excluders
+Name,Rarity,Balance,Category,Min Parts,Max Parts,Weight,Part,Dependencies,Excluders
 ,01/Common,\Game\Gear\Pauldrons\_Shared\_Design\Balance\Balance_Armor_01_Common,BODY,1,1,0.5,Part_P_Base_Heavy,,
 ,01/Common,\Game\Gear\Pauldrons\_Shared\_Design\Balance\Balance_Armor_01_Common,BODY,1,1,0.5,Part_P_Base_Light,,
 ,01/Common,\Game\Gear\Pauldrons\_Shared\_Design\Balance\Balance_Armor_01_Common,BODY,1,1,0.5,Part_P_Base_Medium,,
