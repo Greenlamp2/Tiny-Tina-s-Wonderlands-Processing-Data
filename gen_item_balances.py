@@ -343,6 +343,7 @@ for (cname, cobj) in [
 amu_balances.sort()
 
 #Melee
+# /Game/Gear/Melee/.+/_Unique/.+/Balance_
 melee_balances = []
 for glob_pattern, re_pat, extra_label in [
         ('\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_*_*',
