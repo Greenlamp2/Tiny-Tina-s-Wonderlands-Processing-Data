@@ -542,7 +542,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
             'ELEMENT',
             'MATERIAL',
             ]),
-        ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Character/Name', None, [
+        ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Name', None, [
             'BODY',
             'CLASS',
             'BODY SECONDARY',
