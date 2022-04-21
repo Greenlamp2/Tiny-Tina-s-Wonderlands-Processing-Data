@@ -34,33 +34,33 @@ gun_balances = []
 
 # Some text massaging
 transforms = {
-        'sniperrifles': 'Sniper Rifles',
-        'sniperifles': 'Sniper Rifles',
-        'assaultrifles': 'ARs',
-        'assaultrifle': 'ARs',
-        'shotgun': 'Shotguns',
-        'pistol': 'Pistols',
-        'heavyweapons': 'Heavy Weapons',
-        'hw': 'Heavy Weapons',
+    'sniperrifles': 'Sniper Rifles',
+    'sniperifles': 'Sniper Rifles',
+    'assaultrifles': 'ARs',
+    'assaultrifle': 'ARs',
+    'shotgun': 'Shotguns',
+    'pistol': 'Pistols',
+    'heavyweapons': 'Heavy Weapons',
+    'hw': 'Heavy Weapons',
 
-        '_etech': 'E-Tech',
+    '_etech': 'E-Tech',
 
-        'childrenofthevault': 'COV',
-        'ted': 'Tediore',
-        'vla': 'Vladof',
-        'tor': 'Torgue',
-        'atl': 'Atlas',
-        'mal': 'Maliwan',
-        }
+    'childrenofthevault': 'COV',
+    'ted': 'Tediore',
+    'vla': 'Vladof',
+    'tor': 'Torgue',
+    'atl': 'Atlas',
+    'mal': 'Maliwan',
+}
 
 # "Regular" guns - second glob just matches on etech
 for glob_pattern, re_pattern in [
-        ('\\Game\\Gear\\Weapons\\*\\*\\*Shared\\_Design\\*Balance*\\Balance_*',
-         r'^\\Game\\Gear\\Weapons\\(?P<guntype>.*?)\\(?P<manufacturer>.*?)\\.*',
-         ),
-        ('\\Game\\Gear\\Weapons\\_Shared\\_Design\\_Manufacturers\\*\\_Design\\*\\*\\*Balance*\\Balance_*',
-         r'\\Game\\Gear\\Weapons\\_Shared\\_Design\\_Manufacturers\\(?P<rarity_suffix>.*?)\\_Design\\(?P<guntype>.*?)\\(?P<manufacturer>.*?)\\.*',
-         ),
+    ('\\Game\\Gear\\Weapons\\*\\*\\*Shared\\_Design\\*Balance*\\Balance_*',
+     r'^\\Game\\Gear\\Weapons\\(?P<guntype>.*?)\\(?P<manufacturer>.*?)\\.*',
+     ),
+    ('\\Game\\Gear\\Weapons\\_Shared\\_Design\\_Manufacturers\\*\\_Design\\*\\*\\*Balance*\\Balance_*',
+     r'\\Game\\Gear\\Weapons\\_Shared\\_Design\\_Manufacturers\\(?P<rarity_suffix>.*?)\\_Design\\(?P<guntype>.*?)\\(?P<manufacturer>.*?)\\.*',
+     ),
 ]:
 
     pat = re.compile(re_pattern)
@@ -106,86 +106,169 @@ for glob_pattern, re_pattern in [
             transforms.get(match['guntype'].lower(), match['guntype']),
             rarity,
             obj_name,
-            ))
+        ))
 
 # Sort the list so far
 gun_balances.sort()
 
 # Uniques /  Legendaries
 for (label, balance_name) in [
-    ("IntroMission", '/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/IntroMission/Balance/Balance_DAL_PS_FirstGun'),
-    ("TheHost", '/Game/Gear/Weapons/Pistols/Tediore/Shared/_Design/_Unique/TheHost/Balance/Balance_PS_Tediore_05_TheHost'),
-    ("ThrowableHole", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/ThrowableHole/Balance/Balance_SM_TED_05_ThrowableHole'),
-    ("FragmentRain", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/FragmentRain/Balance/Balance_SM_TED_05_FragmentRain'),
-    ("HawkinsWrath", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/HawkinsWrath/Balance/Balance_SG_Torgue_05_HawkinsWrath'),
-    ("Catatumbo", '/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Catatumbo/Balance/Balance_PS_JAK_05_Catatumbo'),
-    ("ReignOfArrows", '/Game/Gear/Weapons/Shotguns/Jakobs/_Shared/_Design/_Unique/ReignOfArrows/Balance/Balance_SG_JAK_05_ReignOfArrows'),
-    ("WhiteRider", '/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/WhiteRider/Balance/Balance_SM_DAHL_05_WhiteRider'),
-    ("LiveWire", '/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/LiveWire/Balance/Balance_SM_DAHL_05_LiveWire'),
-    ("BlazingVolley", '/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/BlazingVolley/Balance/Balance_SM_HYP_05_BlazingVolley'),
-    ("Swordsplosion", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Swordsplosion/Balance/Balance_SG_Torgue_05_Swordsplosion'),
-    ("RogueImp", '/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/RogueImp/Balance/Balance_AR_COV_05_RogueImp'),
-    ("CrossGen", '/Game/Gear/Weapons/AssaultRifles/Jakobs/_Shared/_Design/_Unique/CrossGen/Balance/Balance_AR_JAK_05_CrossGen'),
-    ("BreadSlicer", '/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/BreadSlicer/Balance/Balance_AR_VLA_05_BreadSlicer'),
-    ("Cannonballer", '/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Cannonballer/Balance/Balance_HW_TOR_05_Cannonballer'),
-    ("LiquidCooling", '/Game/Gear/Weapons/Pistols/ChildrenOfTheVault/_Shared/_Design/_Unique/LiquidCooling/Balance/Balance_PS_COV_05_LiquidCoolin'),
-    ("Gluttony", '/Game/Gear/Weapons/Pistols/Tediore/Shared/_Design/_Unique/Gluttony/Balance/Balance_PS_Tediore_05_Gluttony'),
-    ("RedHellion", '/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/RedHellion/Balance/Balance_SG_HYP_05_RedHellion'),
-    ("CrossBlade", '/Game/Gear/Weapons/Shotguns/Jakobs/_Shared/_Design/_Unique/CrossBlade/Balance/Balance_SG_JAK_05_Crossblade'),
-    ("WizardPipe", '/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/WizardPipe/Balance/Balance_SM_HYP_05_WizardsPipe'),
-    ("ThunderAnima", '/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/ThunderAnima/Balance/Balance_AR_COV_ThunderAni'),
-    ("QuadBow", '/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/QuadBow/Balance/Balance_DAL_AR_Quadbow'),
-    ("Donkey", '/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/Donkey/Balance/Balance_AR_VLA_Donkey'),
-    ("Perceiver", '/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/Perceiver/Balance/Balance_DAL_PS_05_Perceiver'),
-    ("MasterworkCrossbow", '/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/MasterworkCrossbow/Balance/Balance_PS_JAK_MasterworkCrossbow'),
-    ("QueensCry", '/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/QueensCry/Balance/Balance_PS_VLA_QueensCry'),
-    ("Envy", '/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/Envy/Balance/Balance_SR_JAK_05_Envy'),
-    ("BlueCake", '/Game/Gear/Weapons/HeavyWeapons/ChildrenOfTheVault/_Shared/_Design/_Unique/BlueCake/Balance/Balance_HW_COV_05_BlueCake'),
-    ("Message", '/Game/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Message/Balance/Balance_PS_TOR_05_Message'),
-    ("AUTOMAGICEXE", '/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/AUTOMAGICEXE/Balance/Balance_PS_VLA_05_AUTOMAGICEXE'),
-    ("SkeepProd", '/Game/Gear/Weapons/SniperRifles/Dahl/_Shared/_Design/_Unique/SkeepProd/Balance/Balance_SR_DAL_05_SkeepProd'),
-    ("DrylsFury", '/Game/Gear/Weapons/SniperRifles/Vladof/_Shared/_Design/_Unique/DrylsFury/Balance/Balance_VLA_SR_05_DrylsFury'),
-    ("Apex", '/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/Apex/Balance/Balance_DAL_PS_05_Apex'),
-    ("AntGreatBow", '/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/AntGreatBow/Balance/Balance_SR_HYP_05_AntGreatBow'),
-    ("AntGreatBow", '/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/AntGreatBow/Balance/Balance_SR_HYP_05_AntGreatBow_Used'),
-    ("Carrouser", '/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/Carrouser/Balance/Balance_SR_JAK_05_Carrouser'),
-    ("PortableSawmill", '/Game/Gear/Weapons/SniperRifles/Vladof/_Shared/_Design/_Unique/PortableSawmill/Balance/Balance_VLA_SR_05_PortableSawmill'),
-    ("RoisensSpite", '/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/RoisensSpite/Balance/Balance_DAL_PS_RoisensSpite'),
-    ("CircGyre", '/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/CircGyre/Balance/Balance_SG_HYP_05_CircGuire'),
-    ("Sworderang", '/Game/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/Sworderang/Balance/Balance_SG_Tediore_05_Sworderang'),
-    ("BoreasBreath", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/BoreasBreath/Balance/Balance_SM_TED_BoreasBreath'),
-    ("Shadowfire", '/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/Shadowfire/Balance/Balance_SM_TED_05_Shadowfire'),
-    ("PiratesLife", '/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/PiratesLife/Balance/Balance_AR_COV_Pirates'),
-    ("DreadLord", '/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/DreadLord/Balance/Balance_AR_VLA_Dreadlord'),
-    ("Birthright", '/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/Birthright/Balance/Balance_PS_VLA_Birthright'),
-    ("Anchor", '/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Anchor/Balance/Balance_HW_TOR_Anchor'),
-    ("DrylsLegacy", '/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/DrylsLegacy/Balance/Balance_SM_HYP_05_DrylsLegacy'),
-    ("Tootherator", '/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/Tootherator/Balance/Balance_SR_HYP_03_Tootherator'),
-    ("Moleman", '/Game/Gear/Weapons/HeavyWeapons/Vladof/_Shared/_Design/_Unique/Moleman/Balance/Balance_HW_VLA_04_Moleman'),
-    ("Heckwader", '/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/Heckwader/Balance/Balance_SM_DAL_Heckwader'),
-    ("Diplomacy", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Diplomacy/Balance/Balance_SG_Torgue_05_Diplomacy'),
-    ("Pookie", '/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Pookie/Balance/Balance_PS_JAK_05_Pookie'),
-    ("Headcannon", '/Game/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Headcannon/Balance/Balance_PS_TOR_05_Headcannon'),
-    ("Repellant", '/Game/Gear/Weapons/Pistols/ChildrenOfTheVault/_Shared/_Design/_Unique/Repellant/Balance/Balance_PS_COV_05_Repellant'),
-    ("IronSides", '/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/IronSides/Balance/Balance_SR_JAK_05_IronSides'),
-    ("Mistrial", '/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/Mistrial/Balance/Balance_DAL_AR_Mistrial'),
-    ("LastRites", '/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/LastRites/Balance/Balance_SG_HYP_05_LastRites'),
-    ("LovePanther", '/Game/Gear/Weapons/HeavyWeapons/ChildrenOfTheVault/_Shared/_Design/_Unique/LovePanther/Balance/Balance_HW_COV_05_LovePanther'),
-    ("KaoKhan", '/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/KaoKhan/Balance/Balance_SR_HYP_KaoKhan'),
-    ("ManualTransmission", '/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/ManualTransmission/Balance/Balance_AR_VLA_ManualTrans'),
-    ("Swordruption", '/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Swordruption/Balance/Balance_SG_Torgue_Swordruption'),
+    (
+    "Carrier", "/Game/Gear/Weapons/AssaultRifles/Atlas/_Shared/_Design/_Unique/Carrier/Balance/Balance_ATL_AR_Carrier"),
+    ("RebelYell",
+     "/Game/Gear/Weapons/AssaultRifles/Atlas/_Shared/_Design/_Unique/RebellYell/Balance/Balance_ATL_AR_RebelYell"),
+    ("RowansCall",
+     "/Game/Gear/Weapons/AssaultRifles/Jakobs/_Shared/_Design/_Unique/RowansCall/Balance/Balance_AR_JAK_RowansCall"),
+    ("RubysWrath",
+     "/Game/Gear/Weapons/HeavyWeapons/ATL/_Shared/_Design/_Unique/RubysWrath/Balance/Balance_HW_ATL_RubysWrath"),
+    ("Flakker", "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Flakker/Balance/Balance_SG_Torgue_Flakker"),
+    ("Boring", "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/TheBoringGun/Balance/Balance_SG_TOR_Boring"),
+    ("TheLob",
+     "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/TheLob/Balance/Balance_SG_Torgue_ETech_TheLob"),
+    ("MalaksBane",
+     "/Game/Gear/Weapons/SniperRifles/Dahl/_Shared/_Design/_Unique/MalaksBane/Balance/Balance_SR_DAL_ETech_MalaksBane"),
+    ("Fearmonger",
+     "/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/Fearmonger/Balance/Balance_SG_HYP_ETech_Fearmonger"),
+    ("Frostbolt",
+     "/Game/Gear/Weapons/SniperRifles/Dahl/_Design/_Unique/Frostbolt/Balance/Balance_SR_DAL_ETech_Frostbolt"),
+    ("IntroGun",
+     "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/IntroMission/Balance/Balance_PS_JAK_IntroGun"),
+    (
+    "FirstGun", "/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/IntroMission/Balance/Balance_DAL_PS_FirstGun"),
+    ("TedMagicCryo",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicCryo/Balance/Balance_SM_TED_TedMagicCryo"),
+    ("TedMagicDark",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicDark/Balance/Balance_SM_TED_TedMagicDark"),
+    ("TedMagicFire",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicFire/Balance/Balance_SM_TED_TedMagicFire"),
+    ("TedMagicShock",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TedMagicShock/Balance/Balance_SM_TED_TedMagicShock"),
+    ("TheHost",
+     "/Game/Gear/Weapons/Pistols/Tediore/Shared/_Design/_Unique/TheHost/Balance/Balance_PS_Tediore_05_TheHost"),
+    ("ThrowableHole",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/ThrowableHole/Balance/Balance_SM_TED_05_ThrowableHole"),
+    ("StabbyMcStabs",
+     "/Game/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/StabbyMcStabsalot/Balance/Balance_SG_Tediore_05_StabbyMcStabs"),
+    ("FragmentRain",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/FragmentRain/Balance/Balance_SM_TED_05_FragmentRain"),
+    ("HawkinsWrath",
+     "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/HawkinsWrath/Balance/Balance_SG_Torgue_05_HawkinsWrath"),
+    ("Catatumbo",
+     "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Catatumbo/Balance/Balance_PS_JAK_05_Catatumbo"),
+    ("ReignOfArrows",
+     "/Game/Gear/Weapons/Shotguns/Jakobs/_Shared/_Design/_Unique/ReignOfArrows/Balance/Balance_SG_JAK_05_ReignOfArrows"),
+    ("WhiteRider",
+     "/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/WhiteRider/Balance/Balance_SM_DAHL_05_WhiteRider"),
+    ("LiveWire", "/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/LiveWire/Balance/Balance_SM_DAHL_05_LiveWire"),
+    ("BlazingVolley",
+     "/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/BlazingVolley/Balance/Balance_SM_HYP_05_BlazingVolley"),
+    ("Swordsplosion",
+     "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Swordsplosion/Balance/Balance_SG_Torgue_05_Swordsplosion"),
+    ("RogueImp",
+     "/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/RogueImp/Balance/Balance_AR_COV_05_RogueImp"),
+    ("CrossGen",
+     "/Game/Gear/Weapons/AssaultRifles/Jakobs/_Shared/_Design/_Unique/CrossGen/Balance/Balance_AR_JAK_05_CrossGen"),
+    ("BreadSlicer",
+     "/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/BreadSlicer/Balance/Balance_AR_VLA_05_BreadSlicer"),
+    ("Cannonballer",
+     "/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Cannonballer/Balance/Balance_HW_TOR_05_Cannonballer"),
+    ("LiquidCoolin",
+     "/Game/Gear/Weapons/Pistols/ChildrenOfTheVault/_Shared/_Design/_Unique/LiquidCooling/Balance/Balance_PS_COV_05_LiquidCoolin"),
+    ("Gluttony",
+     "/Game/Gear/Weapons/Pistols/Tediore/Shared/_Design/_Unique/Gluttony/Balance/Balance_PS_Tediore_05_Gluttony"),
+    ("RedHellion",
+     "/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/RedHellion/Balance/Balance_SG_HYP_05_RedHellion"),
+    ("Crossblade",
+     "/Game/Gear/Weapons/Shotguns/Jakobs/_Shared/_Design/_Unique/CrossBlade/Balance/Balance_SG_JAK_05_Crossblade"),
+    ("WizardsPipe",
+     "/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/WizardPipe/Balance/Balance_SM_HYP_05_WizardsPipe"),
+    ("ThunderAni",
+     "/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/ThunderAnima/Balance/Balance_AR_COV_ThunderAni"),
+    ("Quadbow", "/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/QuadBow/Balance/Balance_DAL_AR_Quadbow"),
+    ("Donkey", "/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/Donkey/Balance/Balance_AR_VLA_Donkey"),
+    ("Perceiver",
+     "/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/Perceiver/Balance/Balance_DAL_PS_05_Perceiver"),
+    ("MasterworkCrossbow",
+     "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/MasterworkCrossbow/Balance/Balance_PS_JAK_MasterworkCrossbow"),
+    ("QueensCry",
+     "/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/QueensCry/Balance/Balance_PS_VLA_QueensCry"),
+    ("Envy", "/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/Envy/Balance/Balance_SR_JAK_05_Envy"),
+    ("BlueCake",
+     "/Game/Gear/Weapons/HeavyWeapons/ChildrenOfTheVault/_Shared/_Design/_Unique/BlueCake/Balance/Balance_HW_COV_05_BlueCake"),
+    ("Message", "/Game/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Message/Balance/Balance_PS_TOR_05_Message"),
+    ("AUTOMAGICEXE",
+     "/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/AUTOMAGICEXE/Balance/Balance_PS_VLA_05_AUTOMAGICEXE"),
+    ("SkeepProd",
+     "/Game/Gear/Weapons/SniperRifles/Dahl/_Shared/_Design/_Unique/SkeepProd/Balance/Balance_SR_DAL_05_SkeepProd"),
+    ("DrylsFury",
+     "/Game/Gear/Weapons/SniperRifles/Vladof/_Shared/_Design/_Unique/DrylsFury/Balance/Balance_VLA_SR_05_DrylsFury"),
+    ("Apex", "/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/Apex/Balance/Balance_DAL_PS_05_Apex"),
+    ("AntGreatBow",
+     "/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/AntGreatBow/Balance/Balance_SR_HYP_05_AntGreatBow"),
+    ("Used",
+     "/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/AntGreatBow/Balance/Balance_SR_HYP_05_AntGreatBow_Used"),
+    ("Carrouser",
+     "/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/Carrouser/Balance/Balance_SR_JAK_05_Carrouser"),
+    ("PortableSawmill",
+     "/Game/Gear/Weapons/SniperRifles/Vladof/_Shared/_Design/_Unique/PortableSawmill/Balance/Balance_VLA_SR_05_PortableSawmill"),
+    ("RoisensSpite",
+     "/Game/Gear/Weapons/Pistols/Dahl/_Shared/_Design/_Unique/RoisensSpite/Balance/Balance_DAL_PS_RoisensSpite"),
+    ("CircGuire",
+     "/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/CircGyre/Balance/Balance_SG_HYP_05_CircGuire"),
+    ("Sworderang",
+     "/Game/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/Sworderang/Balance/Balance_SG_Tediore_05_Sworderang"),
+    ("BoreasBreath",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/BoreasBreath/Balance/Balance_SM_TED_BoreasBreath"),
+    ("Shadowfire",
+     "/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/Shadowfire/Balance/Balance_SM_TED_05_Shadowfire"),
+    ("Pirates",
+     "/Game/Gear/Weapons/AssaultRifles/ChildrenOfTheVault/_Shared/_Design/_Unique/PiratesLife/Balance/Balance_AR_COV_Pirates"),
+    ("Dreadlord",
+     "/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/DreadLord/Balance/Balance_AR_VLA_Dreadlord"),
+    ("Birthright",
+     "/Game/Gear/Weapons/Pistols/Vladof/_Shared/_Design/_Unique/Birthright/Balance/Balance_PS_VLA_Birthright"),
+    ("Anchor", "/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Anchor/Balance/Balance_HW_TOR_Anchor"),
+    ("DrylsLegacy",
+     "/Game/Gear/Weapons/SMGs/Hyperion/_Shared/_Design/_Unique/DrylsLegacy/Balance/Balance_SM_HYP_05_DrylsLegacy"),
+    ("Tootherator",
+     "/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/Tootherator/Balance/Balance_SR_HYP_03_Tootherator"),
+    ("Moleman",
+     "/Game/Gear/Weapons/HeavyWeapons/Vladof/_Shared/_Design/_Unique/Moleman/Balance/Balance_HW_VLA_04_Moleman"),
+    ("Heckwader", "/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/Heckwader/Balance/Balance_SM_DAL_Heckwader"),
+    ("Diplomacy",
+     "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Diplomacy/Balance/Balance_SG_Torgue_05_Diplomacy"),
+    ("Pookie", "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Pookie/Balance/Balance_PS_JAK_05_Pookie"),
+    ("Headcannon",
+     "/Game/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Headcannon/Balance/Balance_PS_TOR_05_Headcannon"),
+    ("Repellant",
+     "/Game/Gear/Weapons/Pistols/ChildrenOfTheVault/_Shared/_Design/_Unique/Repellant/Balance/Balance_PS_COV_05_Repellant"),
+    ("IronSides",
+     "/Game/Gear/Weapons/SniperRifles/Jakobs/_Shared/_Design/_Unique/IronSides/Balance/Balance_SR_JAK_05_IronSides"),
+    ("Mistrial",
+     "/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/Mistrial/Balance/Balance_DAL_AR_Mistrial"),
+    ("LastRites",
+     "/Game/Gear/Weapons/Shotguns/Hyperion/_Shared/_Design/_Unique/LastRites/Balance/Balance_SG_HYP_05_LastRites"),
+    ("LovePanther",
+     "/Game/Gear/Weapons/HeavyWeapons/ChildrenOfTheVault/_Shared/_Design/_Unique/LovePanther/Balance/Balance_HW_COV_05_LovePanther"),
+    ("KaoKhan",
+     "/Game/Gear/Weapons/SniperRifles/Hyperion/_Shared/_Design/_Unique/KaoKhan/Balance/Balance_SR_HYP_KaoKhan"),
+    ("ManualTrans",
+     "/Game/Gear/Weapons/AssaultRifles/Vladof/_Shared/_Design/_Unique/ManualTransmission/Balance/Balance_AR_VLA_ManualTrans"),
+    ("Swordruption",
+     "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Swordruption/Balance/Balance_SG_Torgue_Swordruption"),
 ]:
     gun_balances.append((
         label,
         '',
         'Named Weapon',
         balance_name,
-        ))
+    ))
 
 # Shields
 shield_balances = []
 glob_pattern = '\\Game\\Gear\\Shields\\_Design\\InvBalance\\InvBalD_Shield_*_*_*'
-pat = re.compile(r'^\\Game\\Gear\\Shields\\_Design\\InvBalance\\InvBalD_Shield_(?P<manufacturer>.*?)_(?P<rarity>\d+_.*?)$')
+pat = re.compile(
+    r'^\\Game\\Gear\\Shields\\_Design\\InvBalance\\InvBalD_Shield_(?P<manufacturer>.*?)_(?P<rarity>\d+_.*?)$')
 for obj_name in data.glob(glob_pattern):
     match = pat.match(obj_name).groupdict()
     rarity_lower = match['rarity'].lower()
@@ -204,44 +287,65 @@ for obj_name in data.glob(glob_pattern):
         'Shield',
         rarity,
         obj_name,
-        ))
+    ))
 shield_balances.sort()
 for (sname, sobj) in [
-    ("CryingApple", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/CryingApple/Balance/InvBalD_Shield_CryingApple'),
-    ("ElementalAlements", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/ElementalAlements/Balance/InvBalD_Shield_ElementalAlements'),
-    ("RonRivote", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/RonRivote/Balance/InvBalD_Shield_RonRivote'),
-    ("PowerNap", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/PowerNap/Balance/InvBalD_Shield_PowerNap'),
-    ("TwistedSisters", '/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/TwistedSisters/Balance/InvBalD_Shield_TwistedSisters'),
-    ("Vamp", '/Game/Gear/Shields/_Design/_Uniques/Vamp/Balance/InvBalD_Shield_Legendary_Vamp'),
-    ("Rune_Spirit", '/Game/Gear/Shields/_Design/_Uniques/Rune_Spirit/Balance/InvBalD_Shield_SpiritRune'),
-    ("Rune_Body", '/Game/Gear/Shields/_Design/_Uniques/Rune_Body/Balance/InvBalD_Shield_Rune_Body'),
-    ("Rune_Mind", '/Game/Gear/Shields/_Design/_Uniques/Rune_Mind/Balance/InvBalD_Shield_Rune_Mind'),
-    ("HammerAnvil", '/Game/Gear/Shields/_Design/_Uniques/HammerAnvil/Balance/InvBalD_Shield_HammerAnvil'),
-    ("Rune_Master", '/Game/Gear/Shields/_Design/_Uniques/Rune_Master/Balance/InvBalD_Shield_Rune_Master'),
-    ("FullBattery", '/Game/Gear/Shields/_Design/_Uniques/FullBattery/Balance/InvBalD_Shield_FullBattery'),
-    ("UndeadPact", '/Game/Gear/Shields/_Design/_Uniques/UndeadPact/Balance/InvBalD_Shield_UndeadPAct'),
-    ("CursedWit", '/Game/Gear/Shields/_Design/_Uniques/CursedWit/Balance/InvBalD_Shield_CursedWit'),
-    ("Afterburner", '/Game/Gear/Shields/_Design/_Uniques/Afterburner/Balance/InvBalD_Shield_Afterburner'),
-    ("AncientDeity", '/Game/Gear/Shields/_Design/_Uniques/AncientDeity/Balance/InvBalD_Shield_AncientDeity'),
-    ("BadEgg", '/Game/Gear/Shields/_Design/_Uniques/BadEgg/Balance/InvBalD_Shield_BadEgg'),
-    ("BroncoBuster", '/Game/Gear/Shields/_Design/_Uniques/BroncoBuster/Balance/InvBalD_Shield_BroncoBuster'),
-    ("KineticFriction_Health", '/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Health/Balance/InvBalD_Shield_KineticFriction_Health'),
-    ("KineticFriction_Shield", '/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Shield/Balance/InvBalD_Shield_KineticFriction_Shield'),
-    ("LastGasp", '/Game/Gear/Shields/_Design/_Uniques/LastGasp/Balance/InvBalD_Shield_LastGasp'),
-    ("MacedWard", '/Game/Gear/Shields/_Design/_Uniques/MacedWard/Balance/InvBalD_Shield_MacedWard'),
-    ("Shamwai", '/Game/Gear/Shields/_Design/_Uniques/Shamwai/Balance/InvBalD_Shield_Shamwai'),
-    ("Transistor", '/Game/Gear/Shields/_Design/_Uniques/Transistor/Balance/InvBalD_Shield_Transistor'),
-    ("TrickMirror", '/Game/Gear/Shields/_Design/_Uniques/TrickMirror/Balance/InvBalD_Shield_TrickMirror'),
+    ("BackHam", "/Game/Gear/Shields/_Design/_Uniques/BackHam/Balance/InvBalD_Shield_BackHam"),
+    ("BigBoomBlaster", "/Game/Gear/Shields/_Design/_Uniques/BigBoomBlaster/Balance/InvBalD_Shield_LGD_BigBoomBlaster"),
+    ("BlackHole", "/Game/Gear/Shields/_Design/_Uniques/BlackHole/Balance/InvBalD_Shield_LGD_BlackHole"),
+    ("FrontLoader", "/Game/Gear/Shields/_Design/_Uniques/FrontLoader/Balance/InvBalD_Shield_LGD_FrontLoader"),
+    ("Impaler", "/Game/Gear/Shields/_Design/_Uniques/Impaler/Balance/InvBalD_Shield_LGD_Impaler"),
+    ("NovaBurner", "/Game/Gear/Shields/_Design/_Uniques/NovaBurner/Balance/InvBalD_Shield_LGD_NovaBurner"),
+    ("ReCharger", "/Game/Gear/Shields/_Design/_Uniques/Re-Charger/Balance/InvBalD_Shield_LGD_ReCharger"),
+    ("Rectifier", "/Game/Gear/Shields/_Design/_Uniques/Rectifier/Balance/InvBalD_Shield_LGD_Rectifier"),
+    ("Revengenader", "/Game/Gear/Shields/_Design/_Uniques/Revengenader/Balance/InvBalD_Shield_LGD_Revengenader"),
+    ("RoughRider", "/Game/Gear/Shields/_Design/_Uniques/RoughRider/Balance/InvBalD_Shield_LGD_RoughRider"),
+    ("SlideKick", "/Game/Gear/Shields/_Design/_Uniques/SlideKick/Balance/InvBalD_Shield_LGD_SlideKick"),
+    ("StopGap", "/Game/Gear/Shields/_Design/_Uniques/StopGap/Balance/InvBalD_Shield_LGD_StopGap"),
+    ("Transformer", "/Game/Gear/Shields/_Design/_Uniques/Transformer/Balance/InvBalD_Shield_LGD_Transformer"),
+    ("Vamp", "/Game/Gear/Shields/_Design/_Uniques/Vamp/Balance/InvBalD_Shield_Legendary_Vamp"),
+    ("WhiskeyTangoFoxtrot",
+     "/Game/Gear/Shields/_Design/_Uniques/WhiskeyTangoFoxtrot/Balance/InvBalD_Shield_Legendary_WhiskeyTangoFoxtrot"),
+    ("ScreamOfTerror", "/Game/Gear/Shields/_Design/_Unique/ScreamOfPain/Balance/InvBalD_Shield_ScreamOfTerror"),
+    ("SpiritRune", "/Game/Gear/Shields/_Design/_Uniques/Rune_Spirit/Balance/InvBalD_Shield_SpiritRune"),
+    ("Body", "/Game/Gear/Shields/_Design/_Uniques/Rune_Body/Balance/InvBalD_Shield_Rune_Body"),
+    ("Mind", "/Game/Gear/Shields/_Design/_Uniques/Rune_Mind/Balance/InvBalD_Shield_Rune_Mind"),
+    ("HammerAnvil", "/Game/Gear/Shields/_Design/_Uniques/HammerAnvil/Balance/InvBalD_Shield_HammerAnvil"),
+    ("Master", "/Game/Gear/Shields/_Design/_Uniques/Rune_Master/Balance/InvBalD_Shield_Rune_Master"),
+    ("FullBattery", "/Game/Gear/Shields/_Design/_Uniques/FullBattery/Balance/InvBalD_Shield_FullBattery"),
+    ("UndeadPAct", "/Game/Gear/Shields/_Design/_Uniques/UndeadPact/Balance/InvBalD_Shield_UndeadPAct"),
+    ("CursedWit", "/Game/Gear/Shields/_Design/_Uniques/CursedWit/Balance/InvBalD_Shield_CursedWit"),
+    ("Afterburner", "/Game/Gear/Shields/_Design/_Uniques/Afterburner/Balance/InvBalD_Shield_Afterburner"),
+    ("AncientDeity", "/Game/Gear/Shields/_Design/_Uniques/AncientDeity/Balance/InvBalD_Shield_AncientDeity"),
+    ("BadEgg", "/Game/Gear/Shields/_Design/_Uniques/BadEgg/Balance/InvBalD_Shield_BadEgg"),
+    ("BroncoBuster", "/Game/Gear/Shields/_Design/_Uniques/BroncoBuster/Balance/InvBalD_Shield_BroncoBuster"),
+    ("Health",
+     "/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Health/Balance/InvBalD_Shield_KineticFriction_Health"),
+    ("Shield",
+     "/Game/Gear/Shields/_Design/_Uniques/KineticFriction_Shield/Balance/InvBalD_Shield_KineticFriction_Shield"),
+    ("LastGasp", "/Game/Gear/Shields/_Design/_Uniques/LastGasp/Balance/InvBalD_Shield_LastGasp"),
+    ("MacedWard", "/Game/Gear/Shields/_Design/_Uniques/MacedWard/Balance/InvBalD_Shield_MacedWard"),
+    ("Shamwai", "/Game/Gear/Shields/_Design/_Uniques/Shamwai/Balance/InvBalD_Shield_Shamwai"),
+    ("Transistor", "/Game/Gear/Shields/_Design/_Uniques/Transistor/Balance/InvBalD_Shield_Transistor"),
+    ("TrickMirror", "/Game/Gear/Shields/_Design/_Uniques/TrickMirror/Balance/InvBalD_Shield_TrickMirror"),
+    ("CryingApple",
+     "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/CryingApple/Balance/InvBalD_Shield_CryingApple"),
+    ("ElementalAlements",
+     "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/ElementalAlements/Balance/InvBalD_Shield_ElementalAlements"),
+    ("RonRivote", "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/RonRivote/Balance/InvBalD_Shield_RonRivote"),
+    ("PowerNap", "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/PowerNap/Balance/InvBalD_Shield_PowerNap"),
+    ("TwistedSisters",
+     "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/TwistedSisters/Balance/InvBalD_Shield_TwistedSisters"),
 ]:
     shield_balances.append((sname, 'Shield', 'Named Shield', sobj))
 
-#Pauldrons
+# Pauldrons
 com_balances = []
 for glob_pattern, re_pat, extra_label in [
-        ('\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_*_*',
-            r'^\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_(?P<rarity>\d+_.*?)$',
-            None),
-        ]:
+    ('\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_*_*',
+     r'^\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_(?P<rarity>\d+_.*?)$',
+     None),
+]:
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -264,40 +368,54 @@ for glob_pattern, re_pat, extra_label in [
             'Pauldron',
             rarity,
             obj_name,
-            ))
+        ))
 
 for (cname, cobj) in [
-    ("SelectiveAmnesia", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SelectiveAmnesia/Balance/Balance_Armor_SelectiveAmnesia'),
-    ("Calamity", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Calamity/Balance/Balance_Armor_Calamity'),
-    ("Claw", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Claw/Balance/Balance_Armor_MantisClaw'),
-    ("DiamondGauntlets", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DiamondGauntlets/Balance/Balance_Armor_DiamondGauntlets'),
-    ("HeadOfTheSnake", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/HeadOfTheSnake/Balance/Balance_Armor_HeadOfTheSnake'),
-    ("Pandemecium", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Pandemecium/Balance/Balance_Armor_Pandemecium'),
-    ("SmartArmor", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SmartArmor/Balance/Balance_Armor_SmartArmor'),
-    ("SteelGauntlets", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SteelGauntlets/Balance/Balance_Armor_SteelGauntlets'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Barb'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Knight'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Mage'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Necro'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Ranger'),
-    ("ArmorThatSucks", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Rogue'),
-    ("CorruptedPlatemail", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/CorruptedPlatemail/Balance/Balance_Armor_CorruptedPlatemail'),
-    ("DeathlessMantle", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DeathlessMantle/Balance/Balance_Armor_DeathlessMantle'),
-    ("Amalgam", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam'),
-    ("Bladesinger", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Bladesinger/Balance/Balance_Armor_Bladesinger'),
-    ("BigBMittens", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens'),
-    ("Tabula", '/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula'),
+    ("SelectiveAmnesia",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SelectiveAmnesia/Balance/Balance_Armor_SelectiveAmnesia"),
+    ("Calamity", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Calamity/Balance/Balance_Armor_Calamity"),
+    ("MantisClaw", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Claw/Balance/Balance_Armor_MantisClaw"),
+    ("DiamondGauntlets",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DiamondGauntlets/Balance/Balance_Armor_DiamondGauntlets"),
+    ("HeadOfTheSnake",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/HeadOfTheSnake/Balance/Balance_Armor_HeadOfTheSnake"),
+    ("Pandemecium", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Pandemecium/Balance/Balance_Armor_Pandemecium"),
+    ("SmartArmor", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SmartArmor/Balance/Balance_Armor_SmartArmor"),
+    ("WarpedParadigm",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/WarpedParadigm/Balance/Balance_Armor_WarpedParadigm"),
+    ("SteelGauntlets",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/SteelGauntlets/Balance/Balance_Armor_SteelGauntlets"),
+    ("Barb", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Barb"),
+    ("Knight",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Knight"),
+    ("Mage", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Mage"),
+    (
+            "Necro",
+            "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Necro"),
+    ("Ranger",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Ranger"),
+    (
+            "Rogue",
+            "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Rogue"),
+    ("CorruptedPlatemail",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/CorruptedPlatemail/Balance/Balance_Armor_CorruptedPlatemail"),
+    ("DeathlessMantle",
+     "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DeathlessMantle/Balance/Balance_Armor_DeathlessMantle"),
+    ("Amalgam", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam"),
+    ("Bladesinger", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Bladesinger/Balance/Balance_Armor_Bladesinger"),
+    ("BigBMittens", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens"),
+    ("Tabula", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula"),
 ]:
     com_balances.append((cname, 'Pauldron', 'Named Pauldron', cobj))
 com_balances.sort()
 
-#Amulets
+# Amulets
 amu_balances = []
 for glob_pattern, re_pat, extra_label in [
-        ('\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_*_*',
-            r'^\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_(?P<rarity>\d+_.*?)$',
-            None),
-        ]:
+    ('\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_*_*',
+     r'^\\Game\\Gear\\Amulets\\_Shared\\_Design\\Balance\\Balance_Amulets_(?P<rarity>\d+_.*?)$',
+     None),
+]:
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -320,9 +438,10 @@ for glob_pattern, re_pat, extra_label in [
             'Amulet',
             rarity,
             obj_name,
-            ))
+        ))
 
 for (cname, cobj) in [
+    ("Plot5", "/Game/Gear/Amulets/_Shared/_Unique/Plot5/Balance/Balance_Amulet_Unique_Plot5"),
     ("BlazeOfGlory", "/Game/Gear/Amulets/_Shared/_Unique/BlazeOfGlory/Balance/Balance_Amulet_Unique_BlazeOfGlory"),
     ("Frenzied", "/Game/Gear/Amulets/_Shared/_Unique/Frenzied/Balance/Balance_Amulet_Unique_Frenzied"),
     ("SacSkeep", "/Game/Gear/Amulets/_Shared/_Unique/SacSkeep/Balance_Amulets_SacSkeep"),
@@ -331,28 +450,32 @@ for (cname, cobj) in [
     ("RonRivote", "/Game/Gear/Amulets/_Shared/_Unique/RonRivote/Balance/Balance_Amulet_Unique_RonRivote"),
     ("JointTraining", "/Game/Gear/Amulets/_Shared/_Unique/JointTraining/Balance/Balance_Amulet_Unique_JointTraining"),
     ("Bradluck", "/Game/Gear/Amulets/_Shared/_Unique/Bradluck/Balance/Balance_Amulet_Unique_Bradluck"),
-    ("UniversalSoldier", "/Game/Gear/Amulets/_Shared/_Unique/UniversalSoldier/Balance/Balance_Amulet_Unique_UniversalSoldier"),
+    ("UniversalSoldier",
+     "/Game/Gear/Amulets/_Shared/_Unique/UniversalSoldier/Balance/Balance_Amulet_Unique_UniversalSoldier"),
     ("Harbinger", "/Game/Gear/Amulets/_Shared/_Unique/Harbinger/Balance/Balance_Amulet_Unique_Harbinger"),
     ("Theruge", "/Game/Gear/Amulets/_Shared/_Unique/Theruge/Balance/Balance_Amulet_Unique_Theruge"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Barb"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_GunMage"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_KotC"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Necro"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Ranger"),
-    ("HarmoniousDingleDangle", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Rogue"),
+    ("Barb", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Barb"),
+    ("GunMage",
+     "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_GunMage"),
+    ("KotC", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_KotC"),
+    ("Necro",
+     "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Necro"),
+    ("Ranger",
+     "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Ranger"),
+    ("Rogue",
+     "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Rogue"),
 ]:
-
     amu_balances.append((cname, 'Amulet', 'Named Amulet', cobj))
 amu_balances.sort()
 
-#Melee
+# Melee
 # /Game/Gear/Melee/.+/_Unique/.+/Balance_
 melee_balances = []
 for glob_pattern, re_pat, extra_label in [
-        ('\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_*_*',
-            r'^\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
-            None),
-        ]:
+    ('\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_*_*',
+     r'^\\Game\\Gear\\Melee\\_Shared\\_Design\\Balance\\Balance_M_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
+     None),
+]:
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -375,51 +498,59 @@ for glob_pattern, re_pat, extra_label in [
             match['type'],
             rarity,
             obj_name,
-            ))
+        ))
 
 for (cname, cobj) in [
-    ("Axe_SmithCharade_MissionWeapon", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_MissionWeapon"),
-    ("Sword_IntroMission", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission"),
-    ("Sword_IntroMission_SkellySword", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission_SkellySword"),
-    ("Axe_FirstMelee", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/FirstMelee/Balance_M_Axe_FirstMelee"),
-    ("Blunt_LeChancesLastLeg", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/LeChancesLastLeg/Balance_M_Blunt_LeChancesLastLeg"),
-    ("Sword2H_BansheeClaw", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/BansheeClaw/Balance_M_Sword2H_BansheeClaw"),
-    ("Axe_MiningPick", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/MiningPick/Balance_M_Axe_MiningPick"),
-    ("Blunt_Fish", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Fish/Balance_M_Blunt_Fish"),
-    ("Sword2H_MageStaff", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/MageStaff/Balance_M_Sword2H_MageStaff"),
-    ("Blunt_FryingPan", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/FryingPan/Balance_M_Blunt_FryingPan"),
-    ("Blunt_PegLeg", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/PegLeg/Balance_M_Blunt_PegLeg"),
-    ("Sword_DiamondGuard", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/DiamondGuard/Balance_M_Sword_DiamondGuard"),
-    ("Axe_SnakeStick", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SnakeStick/Balance_M_Axe_SnakeStick"),
-    ("Blunt_Pincushion", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Pincushion/Balance_M_Blunt_Pincushion"),
-    ("Sword_Ragnarok", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/Ragnarok/Balance_M_Sword_Ragnarok"),
-    ("Sword_SpellBlade", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/SpellBlade/Balance_M_Sword_SpellBlade"),
-    ("Sword2H_Dragonlord", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Dragonlord/Balance_M_Sword2H_Dragonlord"),
-    ("Sword2H_PaladinSword", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/PaladinSword/Balance/Balance_M_Sword2H_PaladinSword"),
-    ("Axe_BodySpray", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/BodySpray/Balance/Balance_M_Axe_BodySpray"),
-    ("Sword_Tidesorrow", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow/Balance/Balance_M_Sword_Tidesorrow"),
-    ("Axe_SmithCharade_Reward", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_Reward"),
-    ("Blunt_Minstrel", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Minstrel/Balance/Balance_M_Blunt_Minstrel"),
-    ("Sword2H_BansheeClaw_Leg", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/BansheeClaw_leg/Balance_M_Sword2H_BansheeClaw_Leg"),
-    ("Sword_TwinSoul", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/TwinSoul/Balance_M_Sword_TwinSoul"),
-    ("Sword_GoblinsBane", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/GoblinsBane/Balance/Balance_M_Sword_GoblinsBane"),
-    ("Sword_Tidesorrow_Leg", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow_leg/Balance/Balance_M_Sword_Tidesorrow_Leg"),
+    ("MissionWeapon",
+     "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_MissionWeapon"),
+    ("IntroMission",
+     "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission"),
+    ("SkellySword",
+     "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/IntroMission/Balance/Balance_M_Sword_IntroMission_SkellySword"),
+    ("FirstMelee", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/FirstMelee/Balance_M_Axe_FirstMelee"),
+    ("LeChancesLastLeg",
+     "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/LeChancesLastLeg/Balance_M_Blunt_LeChancesLastLeg"),
+    ("BansheeClaw", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/BansheeClaw/Balance_M_Sword2H_BansheeClaw"),
+    ("MiningPick", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/MiningPick/Balance_M_Axe_MiningPick"),
+    ("Fish", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Fish/Balance_M_Blunt_Fish"),
+    ("MageStaff", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/MageStaff/Balance_M_Sword2H_MageStaff"),
+    ("FryingPan", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/FryingPan/Balance_M_Blunt_FryingPan"),
+    ("PegLeg", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/PegLeg/Balance_M_Blunt_PegLeg"),
+    ("DiamondGuard", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/DiamondGuard/Balance_M_Sword_DiamondGuard"),
+    ("SnakeStick", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SnakeStick/Balance_M_Axe_SnakeStick"),
+    ("Pincushion", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Pincushion/Balance_M_Blunt_Pincushion"),
+    ("Ragnarok", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/Ragnarok/Balance_M_Sword_Ragnarok"),
+    ("SpellBlade", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/SpellBlade/Balance_M_Sword_SpellBlade"),
+    ("Dragonlord", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Dragonlord/Balance_M_Sword2H_Dragonlord"),
+    ("PaladinSword",
+     "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/PaladinSword/Balance/Balance_M_Sword2H_PaladinSword"),
+    ("BodySpray", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/BodySpray/Balance/Balance_M_Axe_BodySpray"),
+    ("Tidesorrow", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow/Balance/Balance_M_Sword_Tidesorrow"),
+    ("Reward", "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/SmithCharade/Balance/Balance_M_Axe_SmithCharade_Reward"),
+    ("Minstrel", "/Game/Gear/Melee/Blunts/_Shared/_Design/_Unique/Minstrel/Balance/Balance_M_Blunt_Minstrel"),
+    ("Leg", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/BansheeClaw_leg/Balance_M_Sword2H_BansheeClaw_Leg"),
+    ("TwinSoul", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/TwinSoul/Balance_M_Sword_TwinSoul"),
+    ("GoblinsBane", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/GoblinsBane/Balance/Balance_M_Sword_GoblinsBane"),
+    (
+            "FishingPole",
+            "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/FishingPole/Balance_M_Sword2H_Test_FishingPole"),
+    ("Leg", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow_leg/Balance/Balance_M_Sword_Tidesorrow_Leg"),
 ]:
     melee_balances.append((
         cname,
         '',
         'Named Melee Weapon',
         cobj,
-        ))
+    ))
 melee_balances.sort()
 
-#Ring
+# Ring
 ring_balances = []
 for glob_pattern, re_pat, extra_label in [
-        ('\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_*_*',
-            r'^\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_(?P<rarity>\d+_.*?)$',
-            None),
-        ]:
+    ('\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_*_*',
+     r'^\\Game\\Gear\\Rings\\_Shared\\Design\\BalanceD\\Balance_Rings_(?P<rarity>\d+_.*?)$',
+     None),
+]:
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -442,33 +573,33 @@ for glob_pattern, re_pat, extra_label in [
             'Ring',
             rarity,
             obj_name,
-            ))
+        ))
 
 for (cname, cobj) in [
-    ("ElderWyvern", '/Game/Gear/Rings/_Shared/_Unique/ElderWyvern/Balance/Balance_Ring_ElderWyvern'),
-    ("Sharklescent", '/Game/Gear/Rings/_Shared/_Unique/Sharklescent/Balance/Balance_Ring_Sharklescent'),
-    ("InsightRing", '/Game/Gear/Rings/_Shared/_Unique/InsightRing/Balance/Balance_Rings_InsightRing'),
-    ("DriftwoodRing", '/Game/Gear/Rings/_Shared/_Unique/DriftwoodRing/Balance_Rings_DriftwoodRing'),
-    ("Cond_LowHealth", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowHealth/Balance_R_LowHealth'),
-    ("Cond_Dungeon", '/Game/Gear/Rings/_Shared/_Unique/Cond_Dungeon/Balance_R_Dungeon'),
-    ("Cond_Boss", '/Game/Gear/Rings/_Shared/_Unique/Cond_Boss/Balance_R_Boss'),
-    ("Cond_FullShield", '/Game/Gear/Rings/_Shared/_Unique/Cond_FullShield/Balance_R_FullShield'),
-    ("Cond_Healthy", '/Game/Gear/Rings/_Shared/_Unique/Cond_Healthy/Balance_R_Healthy'),
-    ("Cond_LowAmmo", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowAmmo/Balance_R_LowAmmo'),
-    ("Cond_LowShield", '/Game/Gear/Rings/_Shared/_Unique/Cond_LowShield/Balance_R_LowShield'),
-    ("Cond_SkillCooldown", '/Game/Gear/Rings/_Shared/_Unique/Cond_SkillCooldown/Balance_R_SkillCooldown'),
-    ("Cond_SkillReady", '/Game/Gear/Rings/_Shared/_Unique/Cond_SkillReady/Balance_R_SkillReady'),
+    ("DriftwoodRing", "/Game/Gear/Rings/_Shared/_Unique/DriftwoodRing/Balance_Rings_DriftwoodRing"),
+    ("ElderWyvern", "/Game/Gear/Rings/_Shared/_Unique/ElderWyvern/Balance/Balance_Ring_ElderWyvern"),
+    ("Sharklescent", "/Game/Gear/Rings/_Shared/_Unique/Sharklescent/Balance/Balance_Ring_Sharklescent"),
+    ("InsightRing", "/Game/Gear/Rings/_Shared/_Unique/InsightRing/Balance/Balance_Rings_InsightRing"),
+    ("LowHealth", "/Game/Gear/Rings/_Shared/_Unique/Cond_LowHealth/Balance_R_LowHealth"),
+    ("Dungeon", "/Game/Gear/Rings/_Shared/_Unique/Cond_Dungeon/Balance_R_Dungeon"),
+    ("Boss", "/Game/Gear/Rings/_Shared/_Unique/Cond_Boss/Balance_R_Boss"),
+    ("FullShield", "/Game/Gear/Rings/_Shared/_Unique/Cond_FullShield/Balance_R_FullShield"),
+    ("Healthy", "/Game/Gear/Rings/_Shared/_Unique/Cond_Healthy/Balance_R_Healthy"),
+    ("LowAmmo", "/Game/Gear/Rings/_Shared/_Unique/Cond_LowAmmo/Balance_R_LowAmmo"),
+    ("LowShield", "/Game/Gear/Rings/_Shared/_Unique/Cond_LowShield/Balance_R_LowShield"),
+    ("SkillCooldown", "/Game/Gear/Rings/_Shared/_Unique/Cond_SkillCooldown/Balance_R_SkillCooldown"),
+    ("SkillReady", "/Game/Gear/Rings/_Shared/_Unique/Cond_SkillReady/Balance_R_SkillReady"),
 ]:
     ring_balances.append((cname, 'Ring', 'Named Ring', cobj))
 ring_balances.sort()
 
-#Spell
+# Spell
 spell_balances = []
 for glob_pattern, re_pat, extra_label in [
-        ('\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_*_*',
-            r'^\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
-            None),
-        ]:
+    ('\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_*_*',
+     r'^\\Game\\Gear\\SpellMods\\_Shared\\_Design\\Balance\\Balance_S_(?P<type>.*?)_(?P<rarity>\d+_.*?)$',
+     None),
+]:
     pat = re.compile(re_pat)
     for obj_name in data.glob(glob_pattern):
         temp = pat.match(obj_name)
@@ -491,81 +622,91 @@ for glob_pattern, re_pat, extra_label in [
             match['type'],
             rarity,
             obj_name,
-            ))
+        ))
 
 for (cname, cobj) in [
-    ("DestructionRains", '/Game/Gear/SpellMods/_Unique/_MissionUniques/DestructionRains/Balance/Balance_Spell_DestructionRains'),
-    ("LavaGoodTime", '/Game/Gear/SpellMods/_Unique/_MissionUniques/LavaGoodTime/Balance/Balance_Spell_LavaGoodTime'),
-    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v1'),
-    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v2'),
-    ("AncientPowers", '/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v3'),
-    ("HoleyHandGrenade", '/Game/Gear/SpellMods/_Unique/_MissionUniques/HoleyHandGrenade/Balance/Balance_Spell_HoleyHandGrenade'),
-    ("LittleBluePill", '/Game/Gear/SpellMods/_Unique/_MissionUniques/LittleBluePill/Balance/Balance_Spell_LittleBluePill'),
-    ("JaggedToothCrew", '/Game/Gear/SpellMods/_Unique/_MissionUniques/JaggedToothCrew/Balance/Balance_Spell_JaggedTooth'),
-    ("Frostburn", '/Game/Gear/SpellMods/_Unique/_MissionUniques/Frostburn/Balance/Balance_Spell_Frostburn'),
-    ("TimeSkip", '/Game/Gear/SpellMods/_Unique/TimeSkip/Balance/Balance_Spell_TimeSkip'),
-    ("Dazzler", '/Game/Gear/SpellMods/_Unique/Dazzler/Balance/Balance_Spell_Dazzler'),
-    ("FrozenOrb", '/Game/Gear/SpellMods/_Unique/FrozenOrb/Balance/Balance_Spell_FrozenOrb'),
-    ("Laserhand", '/Game/Gear/SpellMods/_Unique/Laserhand/Balance/Balance_Spell_Laserhand'),
-    ("Marshmellow", '/Game/Gear/SpellMods/_Unique/Marshmellow/Balance/Balance_Spell_Marshmellow'),
-    ("GelSphere", '/Game/Gear/SpellMods/_Unique/GelSphere/Balance/Balance_Spell_GelSphere'),
-    ("Barrelmaker", '/Game/Gear/SpellMods/_Unique/Barrelmaker/Balance/Balance_Spell_Barrelmaker'),
-    ("Buffmeister", '/Game/Gear/SpellMods/_Unique/Buffmeister/Balance/Balance_Spell_Buffmeister'),
-    ("Reviver", '/Game/Gear/SpellMods/_Unique/Reviver/Balance/Balance_Spell_Reviver'),
-    ("Inflammation", '/Game/Gear/SpellMods/_Unique/Inflammation/Balance/Balance_Spell_Inflammation'),
-    ("GlacialCascade", '/Game/Gear/SpellMods/_Unique/GlacialCascade/Balance/Balance_Spell_GlacialCascade'),
-    ("ThreadOfFate", '/Game/Gear/SpellMods/_Unique/ThreadOfFate/Balance/Balance_Spell_ThreadOfFate'),
-    ("Twister", '/Game/Gear/SpellMods/_Unique/Twister/Balance/Balance_Spell_Twister'),
-    ("ArcaneBolt", '/Game/Gear/SpellMods/_Unique/ArcaneBolt/Balance/Balance_Spell_ArcaneBolt'),
-    ("Sawblades", '/Game/Gear/SpellMods/_Unique/Sawblades/Balance/Balance_Spell_Sawblades'),
-    ("Watcher", '/Game/Gear/SpellMods/_Unique/Watcher/Balance/Balance_Spell_Watcher'),
+    ("FirstSpell", "/Game/Gear/SpellMods/IceSpike/_Shared/_Design/_Unique/FirstSpell/Balance_S_IceSpike_FirstSpell"),
+    ("TimeSkip", "/Game/Gear/SpellMods/_Unique/TimeSkip/Balance/Balance_Spell_TimeSkip"),
+    ("Dazzler", "/Game/Gear/SpellMods/_Unique/Dazzler/Balance/Balance_Spell_Dazzler"),
+    ("FrozenOrb", "/Game/Gear/SpellMods/_Unique/FrozenOrb/Balance/Balance_Spell_FrozenOrb"),
+    ("Laserhand", "/Game/Gear/SpellMods/_Unique/Laserhand/Balance/Balance_Spell_Laserhand"),
+    ("Marshmellow", "/Game/Gear/SpellMods/_Unique/Marshmellow/Balance/Balance_Spell_Marshmellow"),
+    ("GelSphere", "/Game/Gear/SpellMods/_Unique/GelSphere/Balance/Balance_Spell_GelSphere"),
+    ("Barrelmaker", "/Game/Gear/SpellMods/_Unique/Barrelmaker/Balance/Balance_Spell_Barrelmaker"),
+    ("Buffmeister", "/Game/Gear/SpellMods/_Unique/Buffmeister/Balance/Balance_Spell_Buffmeister"),
+    ("Reviver", "/Game/Gear/SpellMods/_Unique/Reviver/Balance/Balance_Spell_Reviver"),
+    ("Inflammation", "/Game/Gear/SpellMods/_Unique/Inflammation/Balance/Balance_Spell_Inflammation"),
+    ("Shield", "/Game/Gear/SpellMods/_Unique/Shield/Balance/Balance_Spell_Shield"),
+    ("Sword", "/Game/Gear/SpellMods/_Unique/Sword/Balance/Balance_Spell_Sword"),
+    ("GlacialCascade", "/Game/Gear/SpellMods/_Unique/GlacialCascade/Balance/Balance_Spell_GlacialCascade"),
+    ("ThreadOfFate", "/Game/Gear/SpellMods/_Unique/ThreadOfFate/Balance/Balance_Spell_ThreadOfFate"),
+    ("Twister", "/Game/Gear/SpellMods/_Unique/Twister/Balance/Balance_Spell_Twister"),
+    ("ArcaneBolt", "/Game/Gear/SpellMods/_Unique/ArcaneBolt/Balance/Balance_Spell_ArcaneBolt"),
+    ("IceFloe", "/Game/Gear/SpellMods/_Unique/IceFloe/Balance/Balance_Spell_IceFloe"),
+    ("Sawblades", "/Game/Gear/SpellMods/_Unique/Sawblades/Balance/Balance_Spell_Sawblades"),
+    ("Watcher", "/Game/Gear/SpellMods/_Unique/Watcher/Balance/Balance_Spell_Watcher"),
+    ("DestructionRains",
+     "/Game/Gear/SpellMods/_Unique/_MissionUniques/DestructionRains/Balance/Balance_Spell_DestructionRains"),
+    ("LavaGoodTime", "/Game/Gear/SpellMods/_Unique/_MissionUniques/LavaGoodTime/Balance/Balance_Spell_LavaGoodTime"),
+    ("v1", "/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v1"),
+    ("v2", "/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v2"),
+    ("v3", "/Game/Gear/SpellMods/_Unique/_MissionUniques/AncientPowers/Balance/Balance_Spell_AncientPowers_v3"),
+    ("HoleyHandGrenade",
+     "/Game/Gear/SpellMods/_Unique/_MissionUniques/HoleyHandGrenade/Balance/Balance_Spell_HoleyHandGrenade"),
+    ("LittleBluePill",
+     "/Game/Gear/SpellMods/_Unique/_MissionUniques/LittleBluePill/Balance/Balance_Spell_LittleBluePill"),
+    ("JaggedTooth", "/Game/Gear/SpellMods/_Unique/_MissionUniques/JaggedToothCrew/Balance/Balance_Spell_JaggedTooth"),
+    ("Frostburn", "/Game/Gear/SpellMods/_Unique/_MissionUniques/Frostburn/Balance/Balance_Spell_Frostburn"),
+    ("FissureSpell",
+     "/Game/Gear/SpellMods/_Unique/_MissionUniques/Plot02GraveyardReward/Balance_Plot02_Graveyard_FissureSpell"),
+    ("Westerspell", "/Game/Gear/SpellMods/_Unique/Westerspell/Balance/Balance_Spell_Westerspell"),
+    ("FirstDark", "/Game/Gear/SpellMods/_Unique/_MissionUniques/FirstDarkSpell/Balance_Spell_FirstDark"),
 ]:
     spell_balances.append((
         cname,
         '',
         'Named Spell',
         cobj,
-        ))
+    ))
 spell_balances.sort()
-
 
 # Loop through
 part_cache = {}
 title_cache = {}
 for (filename, filename_long, balances, man_col_name, type_col_name, partset_names) in [
-        ('gun_balances.csv', 'gun_balances_long.csv', gun_balances, 'Manufacturer/Name', 'Gun Type', None),
-        ('shield_balances.csv', 'shield_balances_long.csv', shield_balances, 'Manufacturer/Name', None, [
-            'BODY',
-            'RARITY',
-            'LEGENDARY AUG',
-            'AUGMENT',
-            'ELEMENT',
-            'MATERIAL',
-            ]),
-        ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Name', None, [
-            'BODY',
-            'CLASS',
-            'BODY SECONDARY',
-            'CLASS SECONDARY',
-            'CLASS STAT',
-            'CLASS STAT SECONDARY',
-            'LEGENDARY AUG',
-            'PASSIVE SKILL COMBO',
-            'PASSIVE SKILL PARTS',
-            'PLAYER STAT',
-            'RARITY',
-            ]),
-        ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, [
-            'BODY',
-            'CLASS STAT',
-            'ELEMENT',
-            'MINOR STAT',
-            'RARITY',
-            ]),
-        ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
-        ('ring_balances.csv', 'ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
-        ('spell_balances.csv', 'spell_balances_long.csv', spell_balances, 'Name', 'Type', None),
-        ]:
+    ('gun_balances.csv', 'gun_balances_long.csv', gun_balances, 'Manufacturer/Name', 'Gun Type', None),
+    ('shield_balances.csv', 'shield_balances_long.csv', shield_balances, 'Manufacturer/Name', None, [
+        'BODY',
+        'RARITY',
+        'LEGENDARY AUG',
+        'AUGMENT',
+        'ELEMENT',
+        'MATERIAL',
+    ]),
+    ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Name', None, [
+        'BODY',
+        'CLASS',
+        'BODY SECONDARY',
+        'CLASS SECONDARY',
+        'CLASS STAT',
+        'CLASS STAT SECONDARY',
+        'LEGENDARY AUG',
+        'PASSIVE SKILL COMBO',
+        'PASSIVE SKILL PARTS',
+        'PLAYER STAT',
+        'RARITY',
+    ]),
+    ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, [
+        'BODY',
+        'CLASS STAT',
+        'ELEMENT',
+        'MINOR STAT',
+        'RARITY',
+    ]),
+    ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
+    ('ring_balances.csv', 'ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
+    ('spell_balances.csv', 'spell_balances_long.csv', spell_balances, 'Name', 'Type', None),
+]:
 
     print('Processing {}'.format(filename))
     with open(filename, 'w') as odf:
@@ -586,7 +727,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                 'Part',
                 'Dependencies',
                 'Excluders',
-                ])
+            ])
             writer.writerow(header)
             writer_long.writerow(header)
 
@@ -594,21 +735,24 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
 
                 # Grab a Balance object
                 bal = Balance.from_data(data, bal_name)
+                if not bal:
+                    continue
 
                 # Quick check...  Thus far all examples of this also have the manufacturers enumerated in the
                 # parts list, so probably we don't need to worry.
                 # (actually just commenting this for now)
                 if len(bal.raw_bal_data['Manufacturers']) > 1:
-                   # Excluding reporting for the ones that I've already looked at
-                   if bal_name not in {
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/Chupa/Balance/InvBalD_GM_Chupa',
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/FireStorm/Balance/InvBalD_GM_VLA_FireStorm',
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/Quasar/Balance/InvBalD_GM_Quasar',
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/StormFront/Balance/InvBalD_GM_StormFront',
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/TranFusion/Balance/InvBalD_GM_TranFusion',
-                           '/Game/Gear/GrenadeMods/_Design/_Unique/WidowMaker/Balance/InvBalD_GM_WidowMaker',
-                           }:
-                       print('WARNING: {} has {} manufacturers'.format(bal_name, len(bal.raw_bal_data['Manufacturers'])))
+                    # Excluding reporting for the ones that I've already looked at
+                    if bal_name not in {
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/Chupa/Balance/InvBalD_GM_Chupa',
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/FireStorm/Balance/InvBalD_GM_VLA_FireStorm',
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/Quasar/Balance/InvBalD_GM_Quasar',
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/StormFront/Balance/InvBalD_GM_StormFront',
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/TranFusion/Balance/InvBalD_GM_TranFusion',
+                        '/Game/Gear/GrenadeMods/_Design/_Unique/WidowMaker/Balance/InvBalD_GM_WidowMaker',
+                    }:
+                        print(
+                            'WARNING: {} has {} manufacturers'.format(bal_name, len(bal.raw_bal_data['Manufacturers'])))
 
                 # Loop through partlists
                 seen_labels = set()
@@ -623,7 +767,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                         # actually selected, so ignore 'em.
                         if parts_min == 0 and parts_max == 0:
                             # Turns out there's a few guns too, but those rows were already getting pruned later.
-                            #print('Skipping category {} for {}; zero min/max on multi-select'.format(apl_idx, partset_name))
+                            # print('Skipping category {} for {}; zero min/max on multi-select'.format(apl_idx, partset_name))
                             continue
                     else:
                         parts_min = 1
@@ -657,18 +801,19 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                                                     # Just gonna print a warning, though I'm excluding notifications for the ones that I've
                                                     # looked at and don't actually care about. :)
                                                     if part_name not in {
-                                                            '/Game/Gear/Shields/_Design/PartSets/Part_Augment/Safespace/Part_Shield_Aug_Knockback',
-                                                            '/Game/Gear/Shields/_Design/_Uniques/Revengenader/Parts/Part_Shield_Aug_PAN_LGD_Revengenader',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ActionSkillCooldownRate',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_MeleeDamage',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_HealthMax',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_HealthRegen',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldCapacity',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldRegenDelay',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldRegenRate',
-                                                            '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ActionSkillDamage',
-                                                            }:
-                                                        print('WARNING: {} Excluders references itself?'.format(part_name))
+                                                        '/Game/Gear/Shields/_Design/PartSets/Part_Augment/Safespace/Part_Shield_Aug_Knockback',
+                                                        '/Game/Gear/Shields/_Design/_Uniques/Revengenader/Parts/Part_Shield_Aug_PAN_LGD_Revengenader',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ActionSkillCooldownRate',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_MeleeDamage',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_HealthMax',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_HealthRegen',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldCapacity',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldRegenDelay',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ShieldRegenRate',
+                                                        '/Game/Gear/ClassMods/_Design/PartSets/Part_Stats/Part_Primary_Stat/ClassMod_Part_Stat_Primary_ActionSkillDamage',
+                                                    }:
+                                                        print('WARNING: {} Excluders references itself?'.format(
+                                                            part_name))
                                                 else:
                                                     excluders.add(excluder[1])
                                         if 'Dependencies' in export:
@@ -695,8 +840,6 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                         continue
 
                     # Figure out what the main label should be for this part type
-                    if bal_name == "/Game/Gear/Amulets/_Shared/_Unique/BlazeOfGlory/Balance/Balance_Amulet_Unique_BlazeOfGlory":
-                        print("ok")
                     label_text = data.get_parts_category_name([p[0] for p in processed_parts], bal_name, apl_idx)
 
                     # Hardcoded fixes.  Grr.
@@ -759,7 +902,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                             part_name_report,
                             ', '.join(sorted([d.split('/')[-1] for d in dependencies])),
                             ', '.join(sorted([e.split('/')[-1] for e in excluders])),
-                            ])
+                        ])
                         writer.writerow(datarow)
 
                         # Write out to an alternate "long" CSV (used by bl3-cli-saveedit mostly)
@@ -773,8 +916,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                             part_name,
                             ', '.join(sorted(dependencies)),
                             ', '.join(sorted(excluders)),
-                            ])
+                        ])
                         writer_long.writerow(datarow_long)
 
             print('... done!')
-

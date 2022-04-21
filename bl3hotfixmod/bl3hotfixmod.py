@@ -1383,6 +1383,7 @@ class Balance(object):
         # Load in Balance
         bal_obj = data.get_data(bal_name)
         if not bal_obj:
+            return None
             raise Exception('Could not find datafile for {}'.format(bal_name))
         if len(bal_obj) != 1:
             raise Exception('Unknown export count ({}) for: {}'.format(len(bal_obj), bal_name))
