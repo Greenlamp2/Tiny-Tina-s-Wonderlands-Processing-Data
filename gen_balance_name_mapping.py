@@ -77,7 +77,8 @@ for filename in files:
     with open(filename) as df:
         reader = csv.DictReader(df)
         for row in reader:
-            balance = row['Balance'].lower()
+            balance = row['Balance']
+            balance = balance.replace('\\', '/')
             rarity = row['Rarity'].lower()
             if 'Gun Type' in row:
                 if rarity == 'named weapon':

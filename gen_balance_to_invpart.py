@@ -146,22 +146,24 @@ for invpart in invparts:
     invpart_full = '{}_C'.format(invpart)
     print('Processing {}...'.format(invpart))
     object_names = data.get_refs_objects_by_short_name(invpart)
+    if len(object_names) > 1:
+        print('WARNING: {} has more than one result'.format(invpart))
     if len(object_names) == 0:
         print('WARNING: {} has no result'.format(invpart))
         continue
-    for object_name in object_names:
-        refs = data.get_refs_to(object_name)
-        for ref in refs:
-            ref_full = '{}.{}'.format(
-                    ref,
-                    ref.split('/')[-1],
-                    )
-            if 'Bal' not in ref_full:
-                continue
-            if ref_full in mapping:
-                print('WARNING: {} already exists in mapping'.format(ref_full))
-                continue
-            mapping[ref_full] = invpart_full
+    object_name = object_names[0]
+    refs = data.get_refs_to(object_name)
+    for ref in refs:
+        ref_full = '{}.{}'.format(
+                ref,
+                ref.split('/')[-1],
+                )
+        if 'Bal' not in ref_full:
+            continue
+        if ref_full in mapping:
+            print('WARNING: {} already exists in mapping'.format(ref_full))
+            continue
+        mapping[ref_full] = invpart_full
 
 with lzma.open(output_file, 'wt') as df:
     json.dump(mapping, df, separators=(',', ':'))
