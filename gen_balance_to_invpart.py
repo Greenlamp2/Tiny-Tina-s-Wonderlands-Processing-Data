@@ -77,9 +77,71 @@ invparts = [
     "BPInvPart_Melee_Dagger",
 ]
 
+invparts2 = [
+    "InventoryData",
+    "InventoryBalanceData",
+    "ItemPoolData",
+    "ManufacturerData",
+    "DownloadableEntitlementPartData",
+    "InventoryGenericPartData",
+    "SpawnOptionData",
+    "EncounterRoomData",
+    "SpawnerStyle_Encounter_Dungeon",
+    "LootableBalanceData",
+    "SpawnerStyle_Den_Dungeon",
+    "OakCustomizationData",
+    "OakDownloadableContentLicenseData",
+]
+
+test = [
+    "BPInvPart_SG_Torgue",
+]
+
 mapping = {}
 data = BL3Data()
 
+# for invpart in test:
+#     invpart_full = '{}_C'.format(invpart)
+#     print('Processing {}...'.format(invpart))
+#     object_names = data.get_refs_objects_by_short_name(invpart)
+#     if len(object_names) == 0:
+#         print('WARNING: {} has no result'.format(invpart))
+#         continue
+#     for object_name in object_names:
+#         refs = data.get_refs_to(object_name)
+#         for ref in refs:
+#             ref_full = '{}.{}'.format(
+#                     ref,
+#                     ref.split('/')[-1],
+#                     )
+#             if 'Bal' not in ref_full:
+#                 continue
+#             if ref_full in mapping:
+#                 print('WARNING: {} already exists in mapping'.format(ref_full))
+#                 continue
+#             mapping[ref_full] = invpart_full
+
+# for invpart in invparts2:
+#     invpart_full = '{}'.format(invpart)
+#     print('Processing {}...'.format(invpart))
+#     object_names = data.get_refs_objects_by_short_name(invpart)
+#     if len(object_names) == 0:
+#         print('WARNING: {} has no result'.format(invpart))
+#         continue
+#     for object_name in object_names:
+#         refs = data.get_refs_to(object_name)
+#         for ref in refs:
+#             ref_full = '{}.{}'.format(
+#                     ref,
+#                     ref.split('/')[-1],
+#                     )
+#             if 'Bal' not in ref_full:
+#                 continue
+#             if ref_full in mapping:
+#                 print('WARNING: {} already exists in mapping'.format(ref_full))
+#                 continue
+#             mapping[ref_full] = invpart_full
+#
 for invpart in invparts:
     invpart_full = '{}_C'.format(invpart)
     print('Processing {}...'.format(invpart))
@@ -93,8 +155,8 @@ for invpart in invparts:
             ref_full = '{}.{}'.format(
                     ref,
                     ref.split('/')[-1],
-                    ).lower()
-            if 'bal' not in ref_full:
+                    )
+            if 'Bal' not in ref_full:
                 continue
             if ref_full in mapping:
                 print('WARNING: {} already exists in mapping'.format(ref_full))

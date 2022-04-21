@@ -93,12 +93,12 @@ start_time = time.time()
 
 # Go ahead and auto-truncate first
 print('Truncating database...')
-# curs.execute('delete from bl3refs')
-# curs.execute('delete from bl3object')
+curs.execute('delete from bl3refs')
+curs.execute('delete from bl3object')
 db.commit()
 
 def insert(db, curs, objname):
-    curs.execute('insert or ignore into bl3object (name) values (?)', (objname,))
+    curs.execute('insert into bl3object (name) values (?)', (objname,))
     new_id = curs.lastrowid
     return new_id
 
