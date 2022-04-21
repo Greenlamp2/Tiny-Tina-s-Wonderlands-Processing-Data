@@ -138,18 +138,18 @@ class BL3Data(object):
 
         # Create a sample INI file it if doesn't exist
         self.config_file = os.path.join(config_dir, 'bl3data.ini')
-        # if not os.path.exists(self.config_file):
-        config = configparser.ConfigParser()
-        config['filesystem'] = {
-                'data_dir': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\extracted_new',
-                'ueserialize_path': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\john-wick-parse.exe',
-                }
-        config['database'] = {
-                'dbfile': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\ttwrefs.sqlite3',
-                }
-        with open(self.config_file, 'w') as odf:
-            config.write(odf)
-        print('Created sample config file {}'.format(self.config_file))
+        if not os.path.exists(self.config_file):
+            config = configparser.ConfigParser()
+            config['filesystem'] = {
+                    'data_dir': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\extracted_new',
+                    'ueserialize_path': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\john-wick-parse.exe',
+                    }
+            config['database'] = {
+                    'dbfile': 'C:\\Users\\gabri\\PycharmProjects\\ttwmods\\hotfixgenerator\\ttwrefs.sqlite3',
+                    }
+            with open(self.config_file, 'w') as odf:
+                config.write(odf)
+            print('Created sample config file {}'.format(self.config_file))
 
         # Read in the config file and at least make sure we have filesystem
         # data available
