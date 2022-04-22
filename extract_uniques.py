@@ -25,18 +25,18 @@ if __name__ == "__main__":
         for asset in assets:
             if "_OakWeapons" in asset or "Maliwan" in asset:
                 continue
-            regexp = r'^\/Game\/Gear\/(?P<type>.*?)(\/.*)?\/(_Unique.?)\/(.*?\/)(Balance\/)?(Balance_|InvBalD_Shield_)(?P<name>.*)\.(?P<name2>.*)$'
+            regexp = r'^\/(Game\/|Game\/PatchDLC\/Indigo1\/)Gear(\/_Design)?\/(?P<type>.*?)(\/.*)?\/(_Unique.?)\/(.*?\/)(Balance\/)?(Balance_|InvBalD_Shield_|PartSet_Spell_)(?P<name>.*)\.(?P<name2>.*)$'
             pat = re.compile(regexp)
             match = pat.match(asset)
             if not match:
                 continue
             match = pat.match(asset).groupdict()
-            type = match["type"]
+            type = match["type"] if match["type"] != "Wards" else "Shields"
             name = match["name"]
             name2 = match["name2"]
-            if not extract[type]:
+            if not extract.get(type, None):
                 extract[type] = []
-            if not check[type]:
+            if not check.get(type, None):
                 check[type] = []
             stripped = asset.split(".")[0]
             stripped_name = name2.split("_")[-1]
