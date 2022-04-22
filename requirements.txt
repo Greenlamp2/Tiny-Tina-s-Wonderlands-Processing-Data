@@ -2,3 +2,7 @@ appdirs
 flatten_json
 py2exe
 mysqlclient
+pandas
+openpyxl
+xlwt
+xlsxwriter
