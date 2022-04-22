@@ -601,7 +601,7 @@ class BL3Data(object):
 
         # First up: if we're NOT dealing with a weapon, we're using some hardcoded
         # values, 'cause it's super annoying otherwise
-        if any([v in balance_name for v in ["/Shield", "/Shields", "\\Shield", "\\Shields"]]):
+        if any([v in balance_name for v in ["/Shield", "/Shields", "\\Shield", "\\Shields", "/Ward", "/Wards", "\\Ward", "\\Wards"]]):
             return self.cats_shields[cat_idx]
         elif any([v in balance_name for v in ["/Pauldron", "/Pauldrons", "\\Pauldron", "\\Pauldrons"]]):
             return self.cats_pauldrons[cat_idx]

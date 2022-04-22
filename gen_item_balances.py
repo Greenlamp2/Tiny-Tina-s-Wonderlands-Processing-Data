@@ -237,6 +237,8 @@ for (label, balance_name) in [
     ("Heckwader", "/Game/Gear/Weapons/SMGs/Dahl/_Shared/_Design/_Unique/Heckwader/Balance/Balance_SM_DAL_Heckwader"),
     ("Diplomacy",
      "/Game/Gear/Weapons/Shotguns/Torgue/_Shared/_Design/_Unique/Diplomacy/Balance/Balance_SG_Torgue_05_Diplomacy"),
+    ("DieVergent",
+     "/Game/PatchDLC/Indigo1/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/DieVergent/Balance/Balance_SG_TED_DieVergent"),
     ("Pookie", "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/Pookie/Balance/Balance_PS_JAK_05_Pookie"),
     ("Headcannon",
      "/Game/Gear/Weapons/Pistols/Torgue/_Shared/_Design/_Unique/Headcannon/Balance/Balance_PS_TOR_05_Headcannon"),
@@ -336,6 +338,8 @@ for (sname, sobj) in [
     ("PowerNap", "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/PowerNap/Balance/InvBalD_Shield_PowerNap"),
     ("TwistedSisters",
      "/Game/Gear/Shields/_Design/_Uniques/_MissionUniques/TwistedSisters/Balance/InvBalD_Shield_TwistedSisters"),
+    ("Counterfeint",
+     "/Game/PatchDLC/Indigo1/Gear/Wards/_Design/_Unique/Counterfeint/Balance/InvBalD_Shield_Counterfeint"),
 ]:
     shield_balances.append((sname, 'Shield', 'Named Shield', sobj))
 
@@ -390,19 +394,19 @@ for (cname, cobj) in [
      "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Knight"),
     ("Mage", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Mage"),
     (
-            "Necro",
-            "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Necro"),
+    "Necro", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Necro"),
     ("Ranger",
      "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Ranger"),
     (
-            "Rogue",
-            "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Rogue"),
+    "Rogue", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/ArmorThatSucks/Balance/Balance_Armor_ArmorThatSucks_Rogue"),
     ("CorruptedPlatemail",
      "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/CorruptedPlatemail/Balance/Balance_Armor_CorruptedPlatemail"),
     ("DeathlessMantle",
      "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/DeathlessMantle/Balance/Balance_Armor_DeathlessMantle"),
     ("Amalgam", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Amalgam/Balance/Balance_Armor_Amalgam"),
     ("Bladesinger", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Bladesinger/Balance/Balance_Armor_Bladesinger"),
+    ("CapeOfTides",
+     "/Game/PatchDLC/Indigo1/Gear/Pauldrons/_Shared/_Design/_Unique/CapeOfTides/Balance/Balance_Armor_CapeOfTides"),
     ("BigBMittens", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens"),
     ("Tabula", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula"),
 ]:
@@ -454,6 +458,8 @@ for (cname, cobj) in [
      "/Game/Gear/Amulets/_Shared/_Unique/UniversalSoldier/Balance/Balance_Amulet_Unique_UniversalSoldier"),
     ("Harbinger", "/Game/Gear/Amulets/_Shared/_Unique/Harbinger/Balance/Balance_Amulet_Unique_Harbinger"),
     ("Theruge", "/Game/Gear/Amulets/_Shared/_Unique/Theruge/Balance/Balance_Amulet_Unique_Theruge"),
+    ("SlipnStun",
+     "/Game/PatchDLC/Indigo1/Gear/Amulets/_Shared/_Unique/SlipnStun/Balance/Balance_Amulet_Unique_SlipnStun"),
     ("Barb", "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_Barb"),
     ("GunMage",
      "/Game/Gear/Amulets/_Shared/_Unique/HarmoniousDingleDangle/Balance/Balance_Amulet_Unique_Plot05_HDD_GunMage"),
@@ -532,8 +538,7 @@ for (cname, cobj) in [
     ("TwinSoul", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/TwinSoul/Balance_M_Sword_TwinSoul"),
     ("GoblinsBane", "/Game/Gear/Melee/Swords/_Shared/_Design/_Unique/GoblinsBane/Balance/Balance_M_Sword_GoblinsBane"),
     (
-            "FishingPole",
-            "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/FishingPole/Balance_M_Sword2H_Test_FishingPole"),
+    "FishingPole", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/FishingPole/Balance_M_Sword2H_Test_FishingPole"),
     ("Leg", "/Game/Gear/Melee/Swords_2H/_Shared/_Design/_Unique/Tidesorrow_leg/Balance/Balance_M_Sword_Tidesorrow_Leg"),
 ]:
     melee_balances.append((
@@ -581,6 +586,7 @@ for (cname, cobj) in [
     ("Sharklescent", "/Game/Gear/Rings/_Shared/_Unique/Sharklescent/Balance/Balance_Ring_Sharklescent"),
     ("InsightRing", "/Game/Gear/Rings/_Shared/_Unique/InsightRing/Balance/Balance_Rings_InsightRing"),
     ("LowHealth", "/Game/Gear/Rings/_Shared/_Unique/Cond_LowHealth/Balance_R_LowHealth"),
+    ("LethalCatch", "/Game/PatchDLC/Indigo1/Gear/Rings/_Shared/_Unique/LethalCatch/Balance/Balance_Ring_LethalCatch"),
     ("Dungeon", "/Game/Gear/Rings/_Shared/_Unique/Cond_Dungeon/Balance_R_Dungeon"),
     ("Boss", "/Game/Gear/Rings/_Shared/_Unique/Cond_Boss/Balance_R_Boss"),
     ("FullShield", "/Game/Gear/Rings/_Shared/_Unique/Cond_FullShield/Balance_R_FullShield"),
@@ -589,6 +595,7 @@ for (cname, cobj) in [
     ("LowShield", "/Game/Gear/Rings/_Shared/_Unique/Cond_LowShield/Balance_R_LowShield"),
     ("SkillCooldown", "/Game/Gear/Rings/_Shared/_Unique/Cond_SkillCooldown/Balance_R_SkillCooldown"),
     ("SkillReady", "/Game/Gear/Rings/_Shared/_Unique/Cond_SkillReady/Balance_R_SkillReady"),
+    ("SharkBane", "/Game/PatchDLC/Indigo1/Gear/Rings/_Shared/_Unique/SharkBane/Balance/Balance_Ring_SharkBane"),
 ]:
     ring_balances.append((cname, 'Ring', 'Named Ring', cobj))
 ring_balances.sort()
@@ -655,7 +662,10 @@ for (cname, cobj) in [
      "/Game/Gear/SpellMods/_Unique/_MissionUniques/HoleyHandGrenade/Balance/Balance_Spell_HoleyHandGrenade"),
     ("LittleBluePill",
      "/Game/Gear/SpellMods/_Unique/_MissionUniques/LittleBluePill/Balance/Balance_Spell_LittleBluePill"),
+    ("Dynamo", "/Game/PatchDLC/Indigo1/Gear/SpellMods/_Unique/Dynamo/Balance/Balance_Spell_Dynamo"),
+    ("Rainbolt", "/Game/PatchDLC/Indigo1/Gear/SpellMods/_Unique/Rainbolt/Balance/Balance_Spell_Rainbolt"),
     ("JaggedTooth", "/Game/Gear/SpellMods/_Unique/_MissionUniques/JaggedToothCrew/Balance/Balance_Spell_JaggedTooth"),
+    ("Tidebreaker", "/Game/PatchDLC/Indigo1/Gear/SpellMods/_Unique/Tidebreaker/Balance/Balance_Spell_Tidebreaker"),
     ("Frostburn", "/Game/Gear/SpellMods/_Unique/_MissionUniques/Frostburn/Balance/Balance_Spell_Frostburn"),
     ("FissureSpell",
      "/Game/Gear/SpellMods/_Unique/_MissionUniques/Plot02GraveyardReward/Balance_Plot02_Graveyard_FissureSpell"),
