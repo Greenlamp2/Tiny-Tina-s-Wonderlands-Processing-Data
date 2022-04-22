@@ -30,7 +30,7 @@ import lzma
 # don't belong, anyway.
 from hotfixgenerator.bl3data import BL3Data
 
-output_file = 'balance_to_inv_key.json.xz'
+output_file = 'db/balance_to_inv_key.json.xz'
 invparts = [
     "BPInvPart_SG_MAL",
     "BPInvPart_AR_DAL",

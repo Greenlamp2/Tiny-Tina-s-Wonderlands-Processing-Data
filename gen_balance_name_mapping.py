@@ -29,15 +29,15 @@ import lzma
 # which uses full object paths, on account of the Mysterious Amulet and
 # Mysterious Artifact, as of DLC5+6, which share the same short name.
 
-output_file = 'balance_name_mapping.json.xz'
+output_file = 'db/balance_name_mapping.json.xz'
 files = [
-        'amulet_balances_long.csv',
-        'com_balances_long.csv',
-        'gun_balances_long.csv',
-        'melee_balances_long.csv',
-        'ring_balances_long.csv',
-        'shield_balances_long.csv',
-        'spell_balances_long.csv',
+        'export/amulet_balances_long.csv',
+        'export/com_balances_long.csv',
+        'export/gun_balances_long.csv',
+        'export/melee_balances_long.csv',
+        'export/ring_balances_long.csv',
+        'export/shield_balances_long.csv',
+        'export/spell_balances_long.csv',
         ]
 
 rarity_map = {

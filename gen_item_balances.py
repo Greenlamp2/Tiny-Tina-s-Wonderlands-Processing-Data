@@ -344,7 +344,7 @@ for (sname, sobj) in [
     shield_balances.append((sname, 'Shield', 'Named Shield', sobj))
 
 # Pauldrons
-com_balances = []
+pauldron_balances = []
 for glob_pattern, re_pat, extra_label in [
     ('\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_*_*',
      r'^\\Game\\Gear\\Pauldrons\\_Shared\\_Design\\Balance\\Balance_Armor_(?P<rarity>\d+_.*?)$',
@@ -367,7 +367,7 @@ for glob_pattern, re_pat, extra_label in [
             rarity = '05/Legendary'
         else:
             raise Exception('Unknown rarity in {}, {}'.format(obj_name, rarity_lower))
-        com_balances.append((
+        pauldron_balances.append((
             '',
             'Pauldron',
             rarity,
@@ -410,8 +410,8 @@ for (cname, cobj) in [
     ("BigBMittens", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/BigBMittens/Balance/Balance_Armor_BigBMittens"),
     ("Tabula", "/Game/Gear/Pauldrons/_Shared/_Design/_Uniques/Tabula/Balance/Balance_Armor_Tabula"),
 ]:
-    com_balances.append((cname, 'Pauldron', 'Named Pauldron', cobj))
-com_balances.sort()
+    pauldron_balances.append((cname, 'Pauldron', 'Named Pauldron', cobj))
+pauldron_balances.sort()
 
 # Amulets
 amu_balances = []
@@ -684,8 +684,8 @@ spell_balances.sort()
 part_cache = {}
 title_cache = {}
 for (filename, filename_long, balances, man_col_name, type_col_name, partset_names) in [
-    ('gun_balances.csv', 'gun_balances_long.csv', gun_balances, 'Manufacturer/Name', 'Gun Type', None),
-    ('shield_balances.csv', 'shield_balances_long.csv', shield_balances, 'Manufacturer/Name', None, [
+    ('export/gun_balances.csv', 'export/gun_balances_long.csv', gun_balances, 'Manufacturer/Name', 'Gun Type', None),
+    ('export/shield_balances.csv', 'export/shield_balances_long.csv', shield_balances, 'Manufacturer/Name', None, [
         'BODY',
         'RARITY',
         'LEGENDARY AUG',
@@ -693,7 +693,7 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
         'ELEMENT',
         'MATERIAL',
     ]),
-    ('com_balances.csv', 'com_balances_long.csv', com_balances, 'Name', None, [
+    ('export/pauldron_balances.csv', 'export/pauldron_balances_long.csv', pauldron_balances, 'Name', None, [
         'BODY',
         'CLASS',
         'BODY SECONDARY',
@@ -706,16 +706,16 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
         'PLAYER STAT',
         'RARITY',
     ]),
-    ('amulet_balances.csv', 'amulet_balances_long.csv', amu_balances, 'Name', None, [
+    ('export/amulet_balances.csv', 'export/amulet_balances_long.csv', amu_balances, 'Name', None, [
         'BODY',
         'CLASS STAT',
         'ELEMENT',
         'MINOR STAT',
         'RARITY',
     ]),
-    ('melee_balances.csv', 'melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
-    ('ring_balances.csv', 'ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
-    ('spell_balances.csv', 'spell_balances_long.csv', spell_balances, 'Name', 'Type', None),
+    ('export/melee_balances.csv', 'export/melee_balances_long.csv', melee_balances, 'Name', 'Type', None),
+    ('export/ring_balances.csv', 'export/ring_balances_long.csv', ring_balances, 'Name', 'Type', None),
+    ('export/spell_balances.csv', 'export/spell_balances_long.csv', spell_balances, 'Name', 'Type', None),
 ]:
 
     print('Processing {}'.format(filename))

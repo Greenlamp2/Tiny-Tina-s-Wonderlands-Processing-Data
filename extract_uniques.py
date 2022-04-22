@@ -14,7 +14,7 @@ if __name__ == "__main__":
         extract[gear] = []
         check[gear] = []
     with lzma.open(io.BytesIO(pkg_resources.resource_string(
-            __name__, 'inventoryserialdb.json.xz'
+            __name__, 'db/inventoryserialdb.json.xz'
             ))) as df:
         db = json.load(df)
     keys = db.keys()
