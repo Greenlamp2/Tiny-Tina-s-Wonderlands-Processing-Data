@@ -32,7 +32,7 @@ import lzma
 output_file = 'db/balance_name_mapping.json.xz'
 files = [
         'export/amulet_balances_long.csv',
-        'export/com_balances_long.csv',
+        'export/pauldron_balances_long.csv',
         'export/gun_balances_long.csv',
         'export/melee_balances_long.csv',
         'export/ring_balances_long.csv',
