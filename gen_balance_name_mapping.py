@@ -79,6 +79,8 @@ for filename in files:
         for row in reader:
             balance = row['Balance']
             balance = balance.replace('\\', '/')
+            part = row['Part']
+            part = part.replace('\\', '/')
             rarity = row['Rarity'].lower()
             if 'Gun Type' in row:
                 if rarity == 'named weapon':
@@ -136,6 +138,7 @@ for filename in files:
                             )
 
             mapping[balance] = label
+            mapping[part] = part.split("/")[-1]
 
 # Write out
 with lzma.open(output_file, 'wt') as df:
