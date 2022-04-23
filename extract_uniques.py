@@ -25,7 +25,7 @@ if __name__ == "__main__":
         for asset in assets:
             if "_OakWeapons" in asset or "Maliwan" in asset:
                 continue
-            regexp = r'^\/(Game\/|Game\/PatchDLC\/Indigo1\/)Gear(\/_Design)?\/(?P<type>.*?)(\/.*)?\/(_Unique.?)\/(.*?\/)(Balance\/)?(Balance_|InvBalD_Shield_|PartSet_Spell_)(?P<name>.*)\.(?P<name2>.*)$'
+            regexp = r'^\/(Game\/|Game\/PatchDLC\/Indigo1\/)Gear(\/_Design)?\/(?P<type>.*?)(\/.*)?\/(_Unique.?)\/(.*?\/)(Balance\/)?(Balance_|InvBalD_Shield_|PartSet_Spell_|Bal_)(?P<name>.*)\.(?P<name2>.*)$'
             pat = re.compile(regexp)
             match = pat.match(asset)
             if not match:
