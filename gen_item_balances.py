@@ -790,6 +790,11 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                     for part_idx, part in enumerate(category.partlist):
 
                         part_name = part.part_name
+                        # This override is needed because dev give not legit dieVergent from the wheels in the first DLC.
+                        # and there is only 1 barrel 2
+                        if bal_name == "/Game/PatchDLC/Indigo1/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/_Unique/DieVergent/Balance/Balance_SG_TED_DieVergent" and part_name == "/Game/Gear/Weapons/Shotguns/Tediore/_Shared/_Design/Parts/Barrel/Barrel_Magic/Part_SG_TED_Barrel_04_B_MIRV":
+                            parts_min = 1
+                            parts_max = 1
                         weight = data.process_bvc(part.weight)
 
                         # Populate the cache, if we need to
