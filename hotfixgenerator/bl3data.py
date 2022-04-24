@@ -378,7 +378,10 @@ class BL3Data(object):
         """
         Given a `table_name`, `row_name`, and `col_name`, return the specified cell.
         """
-        data = self.get_exports(table_name, 'DataTable')[0]
+        datas = self.get_exports(table_name, 'DataTable')
+        if len(datas) == 0:
+            return None
+        data = datas[0]
         if row_name in data \
             and "Value" in data[row_name] \
             and data[row_name]["Value"]["DataTableValue"]["RowName"] != "None":
@@ -427,16 +430,22 @@ class BL3Data(object):
                         table_name = lookup['ValueA']['DataTableValue']['DataTable'][1]
                         row = lookup['ValueA']['DataTableValue']['RowName']
                         value = self.datatable_lookup(table_name, row, 'Value')
-                        bvcA = value['BaseValueConstant']
-                    else:
-                        bvcA = lookup['ValueA']['BaseValueScale']
+                        bvcA = value['BaseValueConstant'] * value['BaseValueScale']
+                    elif "BaseValueAttribute" in lookup["ValueA"]:
+                        table_name = lookup['ValueA']['BaseValueAttribute'][1]
+                        value = self.datatable_lookup(table_name, "None", 'Value') or 1.0
+                        bvcA = value * lookup['ValueA']['BaseValueScale']
+
                     if 'DataTableValue' in lookup['ValueB']:
                         table_name = lookup['ValueB']['DataTableValue']['DataTable'][1]
                         row = lookup['ValueB']['DataTableValue']['RowName']
                         value = self.datatable_lookup(table_name, row, 'Value')
-                        bvcB = value['BaseValueConstant']
-                    else:
-                        bvcB = lookup['ValueB']['BaseValueScale']
+                        bvcB = value['BaseValueConstant'] * value['BaseValueScale']
+                    elif "BaseValueAttribute" in lookup["ValueB"]:
+                        table_name = lookup['ValueB']['BaseValueAttribute'][1]
+                        value = self.datatable_lookup(table_name, "None", 'Value') or 1.0
+                        bvcA = value * lookup['ValueB']['BaseValueScale']
+
                     bvc = bvcA + bvcB
                 elif lookup_type == 'ConstantAttributeValueResolver':
                     bvc = lookup['Value']['BaseValueConstant']
