@@ -379,8 +379,14 @@ class BL3Data(object):
         Given a `table_name`, `row_name`, and `col_name`, return the specified cell.
         """
         data = self.get_exports(table_name, 'DataTable')[0]
+        if row_name in data \
+            and "Value" in data[row_name] \
+            and data[row_name]["Value"]["DataTableValue"]["RowName"] != "None":
+            return data[row_name]["Value"]["BaseValueScale"] * self.datatable_lookup(table_name, data[row_name]["Value"]["DataTableValue"]["RowName"], data[row_name]["Value"]["DataTableValue"]["ValueName"])
         if row_name in data and col_name in data[row_name]:
             return data[row_name][col_name]
+        elif row_name in data and "Value" in data[row_name]:
+            return data[row_name]["Value"]["BaseValueConstant"]
         else:
             return None
 
@@ -431,10 +437,7 @@ class BL3Data(object):
                         bvcB = value['BaseValueConstant']
                     else:
                         bvcB = lookup['ValueB']['BaseValueScale']
-                    if 'Add' in operator:
-                        bvc = bvcA + bvcB
-                    else:
-                        print('ok')
+                    bvc = bvcA + bvcB
                 elif lookup_type == 'ConstantAttributeValueResolver':
                     bvc = lookup['Value']['BaseValueConstant']
                     #print('{} -> {}'.format(attr_name, bvc))
