@@ -802,6 +802,16 @@ for (filename, filename_long, balances, man_col_name, type_col_name, partset_nam
                                 and part_name == "/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/Parts/Body/Part_PS_JAK_Body":
                             parts_min = 1
                             parts_max = 1
+                        if bal_name == "/Game/Gear/Melee/Axes/_Shared/_Design/_Unique/BodySpray/Balance/Balance_M_Axe_BodySpray" \
+                                and (part_name == "/Game/Gear/Melee/Axes/_Shared/_Design/Parts/Blade/Blade_02/Part_M_Axe_Blade_02_A" \
+                                     or part_name == "/Game/Gear/Melee/Axes/_Shared/_Design/Parts/Blade/Blade_01/Part_M_Axe_Blade_01_B"):
+                            parts_min = 2
+                            parts_max = 2
+                        if bal_name == "/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/_Unique/Mistrial/Balance/Balance_DAL_AR_Mistrial" \
+                                and (part_name == "/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/Parts/Body/Part_DAL_AR_Body_A" \
+                                     or part_name == "/Game/Gear/Weapons/AssaultRifles/Dahl/_Shared/_Design/Parts/Body/Part_DAL_AR_Body_C"):
+                            parts_min = 2
+                            parts_max = 2
                         weight = data.process_bvc(part.weight)
 
                         # Populate the cache, if we need to
