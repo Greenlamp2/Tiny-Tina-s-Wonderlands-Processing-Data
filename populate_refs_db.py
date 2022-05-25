@@ -70,21 +70,21 @@ blacklist_to = {
 # in there.
 db = sqlite3.connect('ttwrefs.sqlite3')
 curs = db.cursor()
-# curs.execute('''
-#     create table bl3object
-#     (
-#         id INTEGER PRIMARY KEY AUTOINCREMENT,
-#         name text not null UNIQUE
-#     );
-# ''')
-# curs.execute('''
-#     create table bl3refs
-#     (
-#         from_obj INTEGER not null,
-#         to_obj INTEGER not null,
-#         UNIQUE(from_obj, to_obj)
-#     );
-# ''')
+curs.execute('''
+    create table bl3object
+    (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name text not null UNIQUE
+    );
+''')
+curs.execute('''
+    create table bl3refs
+    (
+        from_obj INTEGER not null,
+        to_obj INTEGER not null,
+        UNIQUE(from_obj, to_obj)
+    );
+''')
 
 # Let's time this.  Obviously the ETA comparison will vary if you're not
 # on my machine.

@@ -935,3 +935,32 @@ Counterfeint,Named Shield,InvBalD_Shield_Counterfeint,ELEMENT,1,1,1,Shield_Part_
 Counterfeint,Named Shield,InvBalD_Shield_Counterfeint,ELEMENT,1,1,1,Shield_Part_Element_Poison,,
 Counterfeint,Named Shield,InvBalD_Shield_Counterfeint,ELEMENT,1,1,1,Shield_Part_Element_Shock,,
 Counterfeint,Named Shield,InvBalD_Shield_Counterfeint,MATERIAL,1,1,1,Part_Shield_Mat_ANS_Counterfeint,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,BODY,1,1,1,Shield_Part_Body_01_Anshin,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,RARITY,1,1,1,Shield_Part_Rarity_Anshin_05_Legendary,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,LEGENDARY AUG,1,1,1,Part_Shield_Aug_ANS_LichsAugur,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Absorb,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Adaptive,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Adrenaline,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Amp,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Brimming,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Capacity,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Fleet,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Healthy,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Knockback,Shield_Part_Body_02_Pangolin,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Nova,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_RechargeDelay,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_RechargeRate,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Reflect,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Resistance,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Roid,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Spike,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_TriggerHappy,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Turtle,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,AUGMENT,2,2,1,Part_Shield_Aug_Vagabond,,"Shield_Part_Rarity_Anshin_02_Uncommon, Shield_Part_Rarity_Hyperion_02_Uncommon, Shield_Part_Rarity_Pangolin_02_Uncommon"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_Cryo,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_DarkMagic,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_Fire,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_Normal,,"Part_Shield_Aug_Nova, Part_Shield_Aug_Resistance"
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_Poison,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,ELEMENT,1,1,1,Shield_Part_Element_Shock,,
+LichsAugur,Named Shield,InvBalD_Shield_LichsAugur,MATERIAL,1,1,1,Part_Shield_Mat_ANS_LichsAugur,,

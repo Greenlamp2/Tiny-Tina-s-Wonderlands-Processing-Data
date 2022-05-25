@@ -6864,6 +6864,33 @@ ManualTrans,,Named Weapon,Balance_AR_VLA_ManualTrans,ELEMENTAL,1,1,0.25,Part_AR_
 ManualTrans,,Named Weapon,Balance_AR_VLA_ManualTrans,ELEMENTAL,1,1,0.25,Part_AR_VLA_Ele_DarkMagic,,
 ManualTrans,,Named Weapon,Balance_AR_VLA_ManualTrans,ELEMENTAL,1,1,1.8,None,,
 ManualTrans,,Named Weapon,Balance_AR_VLA_ManualTrans,MATERIAL,1,1,1,Part_AR_VLA_Material_04_Epic,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY,2,2,1,Part_PS_TOR_Body,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY,2,2,1,Part_PS_TOR_Body_SpeedLoader,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY ACCESSORY,3,4,1,Part_PS_TOR_Body_A,Part_PS_TOR_Body,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY ACCESSORY,3,4,1,Part_PS_TOR_Body_B,Part_PS_TOR_Body,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY ACCESSORY,3,4,1,Part_PS_TOR_Body_C,Part_PS_TOR_Body,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BODY ACCESSORY,3,4,1,Part_PS_TOR_Body_D,Part_PS_TOR_Body,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BARREL,1,1,1,Part_TOR_Barrel_Butterbm,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BARREL 2,2,2,1,Part_PS_TOR_Barrel_04_A,,"Part_PS_TOR_Barrel_01, Part_PS_TOR_Barrel_02, Part_PS_TOR_Barrel_03"
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BARREL 2,2,2,1,Part_PS_TOR_Barrel_04_B,,"Part_PS_TOR_Barrel_01, Part_PS_TOR_Barrel_02, Part_PS_TOR_Barrel_03"
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,BARREL 2,2,2,1,Part_PS_TOR_Barrel_04_C,,"Part_PS_TOR_Barrel_01, Part_PS_TOR_Barrel_02, Part_PS_TOR_Barrel_03"
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,GRIP,1,1,1,Part_PS_TOR_Grip_02,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,GRIP,1,1,1,Part_PS_TOR_Grip_03,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,GRIP,1,1,1,Part_PS_TOR_Grip_01,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,STOCK,1,1,1,Part_PS_TOR_Stock_02,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,STOCK,1,1,1,Part_PS_TOR_Stock_01,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,HAMMER,1,1,1,Part_PS_TOR_Hammer_01,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,HAMMER,1,1,1,Part_PS_TOR_Hammer_03,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,HAMMER,1,1,1,Part_PS_TOR_Hammer_02,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,MAGAZINE,1,1,1,Part_PS_TOR_Mag_03,,Part_PS_TOR_Barrel_04
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,MAGAZINE,1,1,1,Part_PS_TOR_Mag_01,,Part_PS_TOR_Barrel_04
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,MAGAZINE,1,1,1,Part_PS_TOR_Mag_02,,Part_PS_TOR_Barrel_04
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,MAGAZINE,1,1,1,Part_PS_TOR_Mag_04,Part_PS_TOR_Barrel_04,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,SCOPE,1,1,1,Part_PS_TOR_IronSight,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,SCOPE,1,1,1,Part_PS_TOR_Scope_01,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,SCOPE,1,1,1,Part_PS_TOR_Scope_02,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,SCOPE,1,1,1,Part_PS_TOR_Scope_03,,
+Butterbm,,Named Weapon,Balance_PS_TOR_05_Butterbm,MATERIAL,1,1,1,Part_TOR_Material_Butterbm,,
 Swordruption,,Named Weapon,Balance_SG_Torgue_Swordruption,BODY,1,1,1,Part_SG_Torgue_Body,,
 Swordruption,,Named Weapon,Balance_SG_Torgue_Swordruption,BODY ACCESSORY,1,1,1,Part_SG_Torgue_Body_B,Part_SG_Torgue_Body,
 Swordruption,,Named Weapon,Balance_SG_Torgue_Swordruption,BARREL,1,1,1,Part_SG_Torgue_Barrel_Swordruption,,
